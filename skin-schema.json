@@ -1,0 +1,59 @@
+{
+    "type" : "object",
+    "definitions" : {
+        "icon" : {
+            "type" : "string"
+        },
+        "style" : {
+            "type" : "object"
+        }
+    },
+    "required" : [ "skin" ],
+    "properties" : {
+        "skin" : {
+            "type" : "object",
+            "properties" : {
+                "playButton" : {
+                    "type" : "object",
+                    "properties" : {
+                        "icon" : { "$ref" : "#/definitions/icon" },
+                        "style" : { "$ref" : "#/definitions/style" }
+                    }
+                },
+                "pauseButton" : {
+                    "type" : "object",
+                    "properties" : {
+                        "icon" : { "$ref" : "#/definitions/icon" },
+                        "style" : { "$ref" : "#/definitions/style" }
+                    }
+                },
+                "controlBar" : {
+                    "type" : "object",
+                    "properties" : {
+                        "style" : { "$ref" : "#/definitions/style" }
+                    }
+                },
+                "scrubberBar" : {
+                    "type" : "object",
+                    "properties" : {
+                        "style" : { "$ref" : "#/definitions/style" }
+                    }
+                },
+                "progressBar" : {
+                    "type" : "object",
+                    "properties" : {
+                        "style" : { "$ref" : "#/definitions/style" }
+                    }
+                },
+                "progressIcon" : {
+                    "type" : "object",
+                    "properties" : {
+                        "icon" : { "$ref" : "#/definitions/icon" },
+                        "style" : { "$ref" : "#/definitions/style" }
+                    }
+                }
+            }
+        }
+    }
+}
+
