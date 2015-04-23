@@ -2,7 +2,7 @@
   "accentColor": "white",
   "startScreen": {
     "mode": "largePromo",
-    "playPausePosition": "center"
+    "playButtonPosition": "center"
   },
   "controlBar": {
     "autoHide": true,
