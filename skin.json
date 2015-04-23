@@ -2,7 +2,8 @@
   "accentColor": "white",
   "startScreen": {
     "mode": "default",
-    "playButtonPosition": "center"
+    "playButtonPosition": "center",
+    "showMetadata": true
   },
   "controlBar": {
     "autoHide": true,
