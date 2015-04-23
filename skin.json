@@ -1,7 +1,7 @@
 {
   "accentColor": "white",
   "startScreen": {
-    "mode": "largePromo",
+    "mode": "default",
     "playButtonPosition": "center"
   },
   "controlBar": {
