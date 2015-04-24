@@ -2,9 +2,20 @@
   "accentColor": "white",
   "startScreen": {
     "mode": "default",
-    "playButtonPosition": "center",
-    "infoPanelPosition": "center",
-    "showMetadata": true
+    "playButton": {
+        "position": center,
+        "fontSize": 70
+      },
+    "infoPanel": {
+      "position": SE,
+      "fontSize": 70,
+      "show": true
+      },
+    "logoPosition": {
+      "position": SW,
+      "fontSize": 70,
+      "show": true
+    }
   },
   "controlBar": {
     "autoHide": true,
