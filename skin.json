@@ -3,6 +3,7 @@
   "startScreen": {
     "mode": "default",
     "playButtonPosition": "center",
+    "infoPanelPosition": "center",
     "showMetadata": true
   },
   "controlBar": {
