@@ -1,59 +1,23 @@
 {
     "type" : "object",
-    "definitions" : {
-        "icon" : {
-            "type" : "string"
-        },
-        "style" : {
-            "type" : "object"
-        }
-    },
-    "required" : [ "skin" ],
     "properties" : {
-        "skin" : {
+        "accentColor" : { "type" : "string" },
+        "startScreen" : {
             "type" : "object",
             "properties" : {
-                "playButton" : {
-                    "type" : "object",
-                    "properties" : {
-                        "icon" : { "$ref" : "#/definitions/icon" },
-                        "style" : { "$ref" : "#/definitions/style" }
-                    }
+                "mode" : { "type" : "string" },
+                "playButtonPosition" : {
+                    "enum" : [ "center" ]
                 },
-                "pauseButton" : {
-                    "type" : "object",
-                    "properties" : {
-                        "icon" : { "$ref" : "#/definitions/icon" },
-                        "style" : { "$ref" : "#/definitions/style" }
-                    }
-                },
-                "controlBar" : {
-                    "type" : "object",
-                    "properties" : {
-                        "style" : { "$ref" : "#/definitions/style" }
-                    }
-                },
-                "scrubberBar" : {
-                    "type" : "object",
-                    "properties" : {
-                        "style" : { "$ref" : "#/definitions/style" }
-                    }
-                },
-                "progressBar" : {
-                    "type" : "object",
-                    "properties" : {
-                        "style" : { "$ref" : "#/definitions/style" }
-                    }
-                },
-                "progressIcon" : {
-                    "type" : "object",
-                    "properties" : {
-                        "icon" : { "$ref" : "#/definitions/icon" },
-                        "style" : { "$ref" : "#/definitions/style" }
-                    }
-                }
+                "showMetadata" : { "type" : "boolean" }
+            }
+        },
+        "controlBar" : {
+            "type" : "object",
+            "properties" : {
+                "autoHide" : { "type" : "boolean" },
+                "items" : { "type" : "array" }
             }
         }
     }
 }
-

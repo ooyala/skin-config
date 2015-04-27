@@ -1,6 +1,12 @@
 var fs = require( 'fs' );
-var json_schema_path = process.argv[2];
-var json_data_path = process.argv[3];
+
+// assumes this is run via node.
+function usage( message ) {
+    if( message ) {
+        console.log( message );
+    }
+    console.log( "USAGE: " + process.argv[1] + " <path-to-schema> <path-to-json>" );
+}
 
 // unclear to me yet which library to bet on, if not something else entirely.
 
@@ -52,7 +58,11 @@ function run( json_schema_path, json_data_path ) {
     } );
 }
 
-run( json_schema_path, json_data_path );
-
-
-
+var json_schema_path = process.argv[2];
+var json_data_path = process.argv[3];
+if( ! json_schema_path || ! json_data_path ) {
+    usage( "ERROR: bad/missing argument" );
+}
+else {
+    run( json_schema_path, json_data_path );
+}
