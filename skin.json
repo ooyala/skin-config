@@ -5,6 +5,9 @@
     "playButtonPosition": "center",
     "showMetadata": true
   },
+  "endScreen": {
+    "mode": "default"
+  },
   "controlBar": {
     "autoHide": true,
     "items": ["playPause", "volume", "timeDuration", "discovery"]
