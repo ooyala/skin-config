@@ -5,9 +5,19 @@
     "playButtonPosition": "center",
     "showMetadata": true
   },
-  "endScreen": {
-    "mode": "default"
+
+  "pauseScreen": {
+    "mode": "discovery"
   },
+  
+  "endScreen": {
+    "mode": "discovery"
+  },
+
+  "discoveryScreen": {
+    "title": "Customizable Discovery Title"
+  },
+  
   "controlBar": {
     "autoHide": true,
     "items": ["playPause", "volume", "timeDuration", "discovery"]
