@@ -12,6 +12,24 @@
                 "showMetadata" : { "type" : "boolean" }
             }
         },
+        "pauseScreen" : {
+            "type" : "object",
+            "properties" : {
+                "mode" : { "type" : "string" }
+            }
+        },
+        "endScreen" : {
+            "type" : "object",
+            "properties" : {
+                "mode" : { "type" : "string" }
+            }
+        },
+        "discoveryScreen" : {
+            "type" : "object",
+            "properties" : {
+                "title" : { "type" : "string" }
+            }
+        },
         "controlBar" : {
             "type" : "object",
             "properties" : {
