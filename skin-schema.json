@@ -34,7 +34,12 @@
             "type" : "object",
             "properties" : {
                 "autoHide" : { "type" : "boolean" },
-                "items" : { "type" : "array" }
+                "items" : { "type" : "array" },
+                "watermark": {
+                    "url" : {"type" : "string"},
+                    "widthHeightRatio": {"type" : "float"}
+                },
+
             }
         }
     }
