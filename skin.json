@@ -20,6 +20,10 @@
   
   "controlBar": {
     "autoHide": true,
-    "items": ["playPause", "volume", "timeDuration", "discovery"]
+    "items": ["playPause", "volume", "timeDuration", "discovery", "watermark"],
+    "watermark": {
+      "url": "http://static1.squarespace.com/static/520df253e4b04f7fbda9c4d9/t/55084401e4b07c3c95d3882f/1426605058603/unnamed.png",
+      "widthHeightRatio": 6.172
+    }
   }
 }
