@@ -6,10 +6,13 @@
             "type" : "object",
             "properties" : {
                 "mode" : { "type" : "string" },
+                "showPlayButton" : { "type" : "boolean" },
                 "playButtonPosition" : {
-                    "enum" : [ "center" ]
+                    "enum" : [ "center", "bottomLeft" ]
                 },
-                "showMetadata" : { "type" : "boolean" }
+                "showTitle" : { "type" : "boolean" },
+                "showDescription" : { "type" : "boolean" },
+                "showPromo": { "type" : "boolean" }
             }
         },
         "controlBar" : {
