@@ -6,6 +6,7 @@
     "playButtonPosition": "center",
     "showTitle": true,
     "showDescription": true,
+    "infoPanelPosition": "NW",
     "showPromo": true
   },
   "endScreen": {

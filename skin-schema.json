@@ -12,6 +12,9 @@
                 },
                 "showTitle" : { "type" : "boolean" },
                 "showDescription" : { "type" : "boolean" },
+                "infoPanelPosition" : {
+                    "enum" : [ "NW", "SW" ]
+                },
                 "showPromo": { "type" : "boolean" }
             }
         },
