@@ -4,8 +4,8 @@
     "mode": "default",
     "showPlayButton": true,
     "playButtonPosition": "center",
-    "showTitle": true,
-    "showDescription": true,
+    "showTitle": false,
+    "showDescription": false,
     "infoPanelPosition": "NW",
     "showPromo": true
   },
