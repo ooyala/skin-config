@@ -18,6 +18,27 @@
                 "showPromo": { "type" : "boolean" }
             }
         },
+        "pauseScreen" : {
+            "type" : "object",
+            "properties" : {
+                "showPlayButton" : { "type" : "boolean" }
+            }
+        },
+        "endScreen" : {
+            "type" : "object",
+            "properties" : {
+                "showReplay" : { "type" : "boolean" },
+                "showTitle" : { "type" : "boolean" },
+                "showDescription" : { "type" : "boolean" },
+            }
+        },
+        "discoveryPanel" : {
+            "type" : "object",
+            "properties" : {
+                "showInPause" : { "type" : "boolean" },
+                "showInEnd" : { "type" : "boolean" },
+            }
+        },
         "controlBar" : {
             "type" : "object",
             "properties" : {

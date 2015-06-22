@@ -9,8 +9,18 @@
     "infoPanelPosition": "NW",
     "showPromo": true
   },
+  "pauseScreen": {
+    "showPlayButton" : true
+  },
   "endScreen": {
-    "mode": "default"
+    "mode": "default",
+    "showReplay" : true,
+    "showTitle" : true,
+    "showDescription" : true
+  },
+  "discoveryPanel": {
+    "showInPause": true,
+    "showInEnd": false
   },
   "controlBar": {
     "autoHide": true,
