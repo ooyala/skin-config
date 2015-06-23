@@ -14,11 +14,12 @@
   },
   "endScreen": {
     "mode": "default",
-    "showReplay" : true,
+    "showReplayButton" : true,
     "showTitle" : true,
     "showDescription" : true
   },
   "discoveryPanel": {
+    "mode": "default",
     "showInPause": true,
     "showInEnd": false
   },

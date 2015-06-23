@@ -21,22 +21,24 @@
         "pauseScreen" : {
             "type" : "object",
             "properties" : {
+                "mode" : { "enum" : ["default", "discovery", "upNext"] },
                 "showPlayButton" : { "type" : "boolean" }
             }
         },
         "endScreen" : {
             "type" : "object",
             "properties" : {
-                "showReplay" : { "type" : "boolean" },
+                "mode" : { "enum" : ["default", "discovery", "upNext"] },
+                "showReplayButton" : { "type" : "boolean" },
                 "showTitle" : { "type" : "boolean" },
-                "showDescription" : { "type" : "boolean" },
+                "showDescription" : { "type" : "boolean" }
             }
         },
         "discoveryPanel" : {
             "type" : "object",
             "properties" : {
                 "showInPause" : { "type" : "boolean" },
-                "showInEnd" : { "type" : "boolean" },
+                "showInEnd" : { "type" : "boolean" }
             }
         },
         "controlBar" : {
