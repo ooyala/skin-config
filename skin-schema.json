@@ -37,8 +37,7 @@
         "discoveryPanel" : {
             "type" : "object",
             "properties" : {
-                "showInPause" : { "type" : "boolean" },
-                "showInEnd" : { "type" : "boolean" }
+                "title" : { "type" : "string" }
             }
         },
         "controlBar" : {
