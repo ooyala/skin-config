@@ -6,7 +6,7 @@
     "playButtonPosition": "center",
     "showTitle": false,
     "showDescription": false,
-    "infoPanelPosition": "NW",
+    "infoPanelPosition": "topLeft",
     "showPromo": true
   },
   "pauseScreen": {

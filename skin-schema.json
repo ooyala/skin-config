@@ -13,7 +13,7 @@
                 "showTitle" : { "type" : "boolean" },
                 "showDescription" : { "type" : "boolean" },
                 "infoPanelPosition" : {
-                    "enum" : [ "NW", "SW" ]
+                    "enum" : [ "topLeft", "bottomLeft" ]
                 },
                 "showPromo": { "type" : "boolean" }
             }
