@@ -5,7 +5,7 @@
         "startScreen" : {
             "type" : "object",
             "properties" : {
-                "mode" : { "type" : "string" },
+                "promoImageSize" : { "enum" : ["default", "small"] },
                 "showPlayButton" : { "type" : "boolean" },
                 "playButtonPosition" : {
                     "enum" : [ "center", "bottomLeft" ]
@@ -21,14 +21,14 @@
         "pauseScreen" : {
             "type" : "object",
             "properties" : {
-                "mode" : { "enum" : ["default", "discovery", "upNext"] },
+                "screenToShowInPause" : { "enum" : ["default", "discovery"] },
                 "showPlayButton" : { "type" : "boolean" }
             }
         },
         "endScreen" : {
             "type" : "object",
             "properties" : {
-                "mode" : { "enum" : ["default", "discovery", "upNext"] },
+                "screenToShowInEnd" : { "enum" : ["default", "discovery"] },
                 "showReplayButton" : { "type" : "boolean" },
                 "showTitle" : { "type" : "boolean" },
                 "showDescription" : { "type" : "boolean" }

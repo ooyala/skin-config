@@ -1,7 +1,7 @@
 {
   "accentColor": "white",
   "startScreen": {
-    "mode": "default",
+    "promoImageSize": "default",
     "showPlayButton": true,
     "playButtonPosition": "center",
     "showTitle": false,
@@ -13,10 +13,10 @@
     "showPlayButton" : true
   },
   "pauseScreen": {
-    "mode": "discovery"
+    "screenToShowInPause": "discovery",
   },
   "endScreen": {
-    "mode": "discovery",
+    "screenToShowInEnd": "discovery",
     "showReplayButton" : true,
     "showTitle" : true,
     "showDescription" : true
