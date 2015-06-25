@@ -13,15 +13,15 @@
     "showPlayButton" : true
   },
   "pauseScreen": {
-    "screenToShowInPause": "discovery",
+    "screenToShowOnPause": "discovery",
   },
   "endScreen": {
-    "screenToShowInEnd": "discovery",
+    "screenToShowOnEnd": "discovery",
     "showReplayButton" : true,
     "showTitle" : true,
     "showDescription" : true
   },
-  "discoveryPanel": {
+  "discoveryScreen": {
     "mode": "default",
     "title": "Customizable Discovery Title"
   },
