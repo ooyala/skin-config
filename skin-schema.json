@@ -5,23 +5,33 @@
         "startScreen" : {
             "type" : "object",
             "properties" : {
-                "mode" : { "type" : "string" },
+                "promoImageSize" : { "enum" : ["default", "small"] },
+                "showPlayButton" : { "type" : "boolean" },
                 "playButtonPosition" : {
-                    "enum" : [ "center" ]
+                    "enum" : [ "center", "bottomLeft" ]
                 },
-                "showMetadata" : { "type" : "boolean" }
+                "showTitle" : { "type" : "boolean" },
+                "showDescription" : { "type" : "boolean" },
+                "infoPanelPosition" : {
+                    "enum" : [ "topLeft", "bottomLeft" ]
+                },
+                "showPromo": { "type" : "boolean" }
             }
         },
         "pauseScreen" : {
             "type" : "object",
             "properties" : {
-                "mode" : { "type" : "string" }
+                "screenToShowOnPause" : { "enum" : ["default", "discovery"] },
+                "showPlayButton" : { "type" : "boolean" }
             }
         },
         "endScreen" : {
             "type" : "object",
             "properties" : {
-                "mode" : { "type" : "string" }
+                "screenToShowOnEnd" : { "enum" : ["default", "discovery"] },
+                "showReplayButton" : { "type" : "boolean" },
+                "showTitle" : { "type" : "boolean" },
+                "showDescription" : { "type" : "boolean" }
             }
         },
         "discoveryScreen" : {

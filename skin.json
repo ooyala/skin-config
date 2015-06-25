@@ -1,23 +1,30 @@
 {
   "accentColor": "white",
   "startScreen": {
-    "mode": "default",
+    "promoImageSize": "default",
+    "showPlayButton": true,
     "playButtonPosition": "center",
-    "showMetadata": true
+    "showTitle": false,
+    "showDescription": false,
+    "infoPanelPosition": "topLeft",
+    "showPromo": true
   },
-
   "pauseScreen": {
-    "mode": "discovery"
+    "showPlayButton" : true
   },
-  
+  "pauseScreen": {
+    "screenToShowOnPause": "discovery",
+  },
   "endScreen": {
-    "mode": "discovery"
+    "screenToShowOnEnd": "discovery",
+    "showReplayButton" : true,
+    "showTitle" : true,
+    "showDescription" : true
   },
-
   "discoveryScreen": {
+    "mode": "default",
     "title": "Customizable Discovery Title"
   },
-  
   "controlBar": {
     "autoHide": true,
     "items": ["playPause", "volume", "timeDuration", "discovery"]
