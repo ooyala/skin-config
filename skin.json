@@ -10,10 +10,8 @@
     "showPromo": true
   },
   "pauseScreen": {
-    "showPlayButton" : true
-  },
-  "pauseScreen": {
-    "screenToShowOnPause": "discovery",
+    "showPlayButton" : true,
+    "screenToShowOnPause": "discovery"
   },
   "endScreen": {
     "screenToShowOnEnd": "discovery",
