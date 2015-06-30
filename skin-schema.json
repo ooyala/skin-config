@@ -48,8 +48,36 @@
                 "watermark": {
                     "url" : {"type" : "string"},
                     "widthHeightRatio": {"type" : "float"}
+                }
+            }
+        },
+        "sharing": {
+            "type": "object",
+            "properties": {
+                "Facebook": {
+                    "buttonName": { "type": "string" },
+                    "imgUrl": { "type": "string" }
                 },
-
+                "Twitter": {
+                    "buttonName": { "type": "string" },
+                    "imgUrl": { "type": "string" }
+                },
+                "Pinterest": {
+                    "buttonName": { "type": "string" },
+                    "imgUrl": { "type": "string" }
+                },
+                "GooglePlus": {
+                    "buttonName": { "type": "string" },
+                    "imgUrl": { "type": "string" }
+                }
+            }
+        },
+        "general": {
+            "type": "object",
+            "properties": {
+                "watermark": {
+                    "url" : {"type" : "string"}
+                }
             }
         }
     }
