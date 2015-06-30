@@ -8,12 +8,12 @@
                 "promoImageSize" : { "enum" : ["default", "small"] },
                 "showPlayButton" : { "type" : "boolean" },
                 "playButtonPosition" : {
-                    "enum" : [ "center", "bottomLeft" ]
+                    "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ]
                 },
                 "showTitle" : { "type" : "boolean" },
                 "showDescription" : { "type" : "boolean" },
                 "infoPanelPosition" : {
-                    "enum" : [ "topLeft", "bottomLeft" ]
+                    "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
                 },
                 "showPromo": { "type" : "boolean" }
             }
