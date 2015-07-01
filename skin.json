@@ -5,8 +5,28 @@
     "playButtonPosition": "center",
     "showMetadata": true
   },
+  "ccOptions": {
+    "defaultLanguage": "en",
+    "text":{
+      "defaultFont": "Verdana",
+      "defaultSize": "15",
+      "defaultColor": "rgba(0,0,255,1)",
+      "defaultOpacity":"1",
+      "defaultShadow":""
+    },
+    "window": {
+      "defaultBackgroundColor":"rgba(255,255,255,1)",
+      "defaultBackgroundOpacity":"1",
+      "defaultBorderColor":"rgba(255,255,255,1)",
+      "defaultBorderOpacity":"1"
+    },
+    "defaultTransition":"tr3"
+  },
+  "pauseScreen": {
+    "mode": "default"
+  },
   "controlBar": {
     "autoHide": true,
-    "items": ["playPause", "volume", "timeDuration", "discovery"]
+    "items": ["playPause", "volume", "timeDuration", "discovery", "closedCaption"]
   }
 }
