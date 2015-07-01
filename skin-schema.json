@@ -47,7 +47,8 @@
                 "items" : { "type" : "array" },
                 "watermark": {
                     "url" : {"type" : "string"},
-                    "widthHeightRatio": {"type" : "float"}
+                    "width": {"type" : "float"},
+                    "height": {"type" : "float"}
                 },
 
             }
