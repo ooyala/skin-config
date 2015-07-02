@@ -51,6 +51,12 @@
                 },
 
             }
+        },
+        "upNext" : {
+            "type" : "object",
+            "properties" : {
+                "timeToShow": {"type" : "float"}
+            }
         }
     }
 }
