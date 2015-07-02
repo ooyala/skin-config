@@ -8,12 +8,12 @@
                 "promoImageSize" : { "enum" : ["default", "small"] },
                 "showPlayButton" : { "type" : "boolean" },
                 "playButtonPosition" : {
-                    "enum" : [ "center", "bottomLeft" ]
+                    "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ]
                 },
                 "showTitle" : { "type" : "boolean" },
                 "showDescription" : { "type" : "boolean" },
                 "infoPanelPosition" : {
-                    "enum" : [ "topLeft", "bottomLeft" ]
+                    "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
                 },
                 "showPromo": { "type" : "boolean" }
             }
@@ -47,26 +47,16 @@
                 "items" : { "type" : "array" },
                 "watermark": {
                     "url" : {"type" : "string"},
-                    "widthHeightRatio": {"type" : "float"}
+                    "width": {"type" : "float"},
+                    "height": {"type" : "float"}
                 }
             }
         },
         "sharing": {
-            "type": "object",
+            "type": "array",
             "properties": {
-                "Facebook": {
-                    "buttonName": { "type": "string" },
-                    "imgUrl": { "type": "string" }
-                },
-                "Twitter": {
-                    "buttonName": { "type": "string" },
-                    "imgUrl": { "type": "string" }
-                },
-                "Pinterest": {
-                    "buttonName": { "type": "string" },
-                    "imgUrl": { "type": "string" }
-                },
-                "GooglePlus": {
+                "type": "object",
+                "properties": {
                     "buttonName": { "type": "string" },
                     "imgUrl": { "type": "string" }
                 }
