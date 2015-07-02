@@ -47,9 +47,27 @@
                 "items" : { "type" : "array" },
                 "watermark": {
                     "url" : {"type" : "string"},
-                    "widthHeightRatio": {"type" : "float"}
-                },
-
+                    "width": {"type" : "float"},
+                    "height": {"type" : "float"}
+                }
+            }
+        },
+        "sharing": {
+            "type": "array",
+            "properties": {
+                "type": "object",
+                "properties": {
+                    "buttonName": { "type": "string" },
+                    "imgUrl": { "type": "string" }
+                }
+            }
+        },
+        "general": {
+            "type": "object",
+            "properties": {
+                "watermark": {
+                    "url" : {"type" : "string"}
+                }
             }
         },
         "upNext" : {
