@@ -73,6 +73,7 @@
         "upNext" : {
             "type" : "object",
             "properties" : {
+                "showUpNext" : { "type" : "boolean" },
                 "timeToShow": {"type" : "float"}
             }
         }

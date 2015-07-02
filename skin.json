@@ -33,6 +33,7 @@
     }
   },
   "upNext": {
+    "showUpNext": true,
     "timeToShow": 5
   },
   "sharing": [
