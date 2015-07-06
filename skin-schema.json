@@ -82,6 +82,22 @@
                 "showUpNext" : { "type" : "boolean" },
                 "timeToShow": {"type" : "number"}
             }
+        },
+        "discoveryScreen" : {
+            "type" : "object",
+            "properties" : {
+                "listTitle" : { "type" : "string" },
+                "listTileImage" : { 
+                    "type" : "object",
+                    "properties" : {
+                        "url" : { "type" : "string" },
+                        "iosResource": {"type" : "string"}
+                    }
+                },
+                "showInPause" : {"type" : "boolean"},
+                "showTitle" : {"type" : "boolean"},
+                "showDuration": {"type" : "boolean"}
+            }
         }
     }
 }
