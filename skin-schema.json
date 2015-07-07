@@ -86,11 +86,12 @@
         "discoveryScreen" : {
             "type" : "object",
             "properties" : {
-                "panelTitle" : { "type" : "string" },
-                "panelTileImage" : { 
+                "panelTitle" : { 
                     "type" : "object",
                     "properties" : {
-                        "uri" : { "type" : "string" }
+                        "text" : { "type": "string" },
+                        "imageUri" : { "type" : "string" },
+                        "showImage" : { "type" : "boolean" }
                     }
                 },
                 "showContentTitle" : {"type" : "boolean"},
