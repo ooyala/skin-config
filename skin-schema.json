@@ -86,16 +86,15 @@
         "discoveryScreen" : {
             "type" : "object",
             "properties" : {
-                "listTitle" : { "type" : "string" },
-                "listTileImage" : { 
+                "panelTitle" : { "type" : "string" },
+                "panelTileImage" : { 
                     "type" : "object",
                     "properties" : {
-                        "url" : { "type" : "string" }
+                        "uri" : { "type" : "string" }
                     }
                 },
-                "showInPause" : {"type" : "boolean"},
-                "showTitle" : {"type" : "boolean"},
-                "showDuration": {"type" : "boolean"}
+                "showContentTitle" : {"type" : "boolean"},
+                "showContentDuration": {"type" : "boolean"}
             }
         }
     }
