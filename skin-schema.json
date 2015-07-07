@@ -22,7 +22,15 @@
             "type" : "object",
             "properties" : {
                 "screenToShowOnPause" : { "enum" : ["default", "discovery"] },
-                "showPlayButton" : { "type" : "boolean" }
+                "showPauseIcon" : { "type" : "boolean" },
+                "pauseIconPosition" : {
+                    "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ]
+                },
+                "showTitle" : { "type" : "boolean" },
+                "showDescription" : { "type" : "boolean" },
+                "infoPanelPosition" : {
+                    "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
+                }
             }
         },
         "endScreen" : {
