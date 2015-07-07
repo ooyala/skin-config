@@ -46,10 +46,9 @@
     "watermark": {"url": "http://www.palantir.net/presentations/dcamsterdam2014-decoupled-drupal-silex/assets/ooyala-logo.png"}
   },
   "discoveryScreen" : {
-    "listTitle" : "customized discovery",
-    "listImage": {"url": "http://www.palantir.net/presentations/dcamsterdam2014-decoupled-drupal-silex/assets/ooyala-logo.png"},
+    "listImage": {"url": "ooyala-logo.png"},
     "showInPause" : true,
-    "showTitle" : true,
-    "showDuration": true
+    "showTitle" : false,
+    "showDuration": false
   }
 }

@@ -90,8 +90,7 @@
                 "listTileImage" : { 
                     "type" : "object",
                     "properties" : {
-                        "url" : { "type" : "string" },
-                        "iosResource": {"type" : "string"}
+                        "url" : { "type" : "string" }
                     }
                 },
                 "showInPause" : {"type" : "boolean"},
