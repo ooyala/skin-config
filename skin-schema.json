@@ -90,6 +90,21 @@
                 "showUpNext" : { "type" : "boolean" },
                 "timeToShow": {"type" : "number"}
             }
+        },
+        "discoveryScreen" : {
+            "type" : "object",
+            "properties" : {
+                "panelTitle" : { 
+                    "type" : "object",
+                    "properties" : {
+                        "text" : { "type": "string" },
+                        "imageUri" : { "type" : "string" },
+                        "showImage" : { "type" : "boolean" }
+                    }
+                },
+                "showContentTitle" : {"type" : "boolean"},
+                "showContentDuration": {"type" : "boolean"}
+            }
         }
     }
 }
