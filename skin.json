@@ -54,8 +54,7 @@
     {"name": "Quality", "type": "MoreOptions"},
     {"name": "CC", "type": "MoreOptions"},
     {"name": "Share", "type": "MoreOptions"},
-    {"name": "Setting", "type": "MoreOptions"},
-    {"name": "Dismiss", "type": "MoreOptions"}
+    {"name": "Setting", "type": "MoreOptions"}
   ],
   "discoveryScreen" : {
     "panelTitle": {
