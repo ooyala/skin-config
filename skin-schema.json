@@ -22,7 +22,15 @@
             "type" : "object",
             "properties" : {
                 "screenToShowOnPause" : { "enum" : ["default", "discovery"] },
-                "showPlayButton" : { "type" : "boolean" }
+                "showPauseIcon" : { "type" : "boolean" },
+                "pauseIconPosition" : {
+                    "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ]
+                },
+                "showTitle" : { "type" : "boolean" },
+                "showDescription" : { "type" : "boolean" },
+                "infoPanelPosition" : {
+                    "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
+                }
             }
         },
         "endScreen" : {
@@ -91,6 +99,21 @@
                     "name": {"type": "string"},
                     "type": {"type": "string"}
                 }
+            }
+        },
+        "discoveryScreen" : {
+            "type" : "object",
+            "properties" : {
+                "panelTitle" : { 
+                    "type" : "object",
+                    "properties" : {
+                        "text" : { "type": "string" },
+                        "imageUri" : { "type" : "string" },
+                        "showImage" : { "type" : "boolean" }
+                    }
+                },
+                "showContentTitle" : {"type" : "boolean"},
+                "showContentDuration": {"type" : "boolean"}
             }
         }
     }

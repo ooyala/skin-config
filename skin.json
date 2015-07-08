@@ -4,14 +4,18 @@
     "promoImageSize": "default",
     "showPlayButton": true,
     "playButtonPosition": "center",
-    "showTitle": false,
-    "showDescription": false,
+    "showTitle": true,
+    "showDescription": true,
     "infoPanelPosition": "topLeft",
     "showPromo": true
   },
   "pauseScreen": {
-    "showPlayButton" : true,
-    "screenToShowOnPause": "discovery"
+    "showPauseIcon" : true,
+    "pauseIconPosition": "center",
+    "showTitle": true,
+    "showDescription": true,
+    "infoPanelPosition": "topLeft",
+    "screenToShowOnPause": "default"
   },
   "endScreen": {
     "screenToShowOnEnd": "discovery",
@@ -52,5 +56,14 @@
     {"name": "Share", "type": "MoreOptions"},
     {"name": "Setting", "type": "MoreOptions"},
     {"name": "Dismiss", "type": "MoreOptions"}
-  ]
+  ],
+  "discoveryScreen" : {
+    "panelTitle": {
+      "text":"Recommended",
+      "imageUri": "ooyala-logo.png",
+      "showImage": true
+    },
+    "showContentTitle" : true,
+    "showContentDuration": false
+  }
 }
