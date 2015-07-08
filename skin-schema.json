@@ -44,7 +44,12 @@
             "type" : "object",
             "properties" : {
                 "autoHide" : { "type" : "boolean" },
-                "items" : { "type" : "array" },
+                "items" : {
+                  "type" : "array"
+                  "items" : {
+                    "enum" : ["playPause", "volume", "timeDuration", "flexibleSpace", "discovery", "fullscreen", "moreOptions", "watermark"]
+                  }
+                },
                 "watermark": {
                     "type": "object",
                     "properties": {
