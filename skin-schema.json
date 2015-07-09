@@ -84,7 +84,7 @@
                 }
             }
         },
-        "upNext" : {
+        "upNextScreen" : {
             "type" : "object",
             "properties" : {
                 "showUpNext" : { "type" : "boolean" },
