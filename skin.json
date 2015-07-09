@@ -64,5 +64,16 @@
     },
     "showContentTitle" : true,
     "showContentDuration": false
+  },
+  "localizableStrings" : {
+    "en" : {
+      "learnMore" : "Learn More"
+    },
+    "es" : {
+      "learnMore" : "aprender más"
+    },
+    "zh" : {
+      "learnMore" : "了解更多"
+    }
   }
 }
