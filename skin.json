@@ -55,6 +55,7 @@
     "showContentDuration": false
   },
   "localizableStrings" : {
+    "defaultLanguage" : "en",
     "en" : {
       "learnMore" : "Learn More"
     },

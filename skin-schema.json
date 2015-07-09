@@ -100,6 +100,9 @@
         },
         "localizableStrings" : {
             "type" : "object",
+            "properties": {
+                "defaultLanguage" : {"type" : "string", "pattern" : "^[a-z]{2}$"}
+            },
             "patternProperties" : {
                 "^[a-z]{2}$" : {
                     "type" : "object",
@@ -111,7 +114,8 @@
                 }
             },
             "description" : "map of localizable strings, key should be 2 character locale id",
-            "required" : ["en"]
-        }
+            "required" : ["defaultLanguage"]
+        },
+        "required": ["localizableStrings"]
     }
 }
