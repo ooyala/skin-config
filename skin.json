@@ -49,7 +49,7 @@
     "panelTitle": {
       "text":"Recommended",
       "imageUri": "ooyala-logo.png",
-      "showImage": false
+      "showImage": true
     },
     "showContentTitle" : true,
     "showContentDuration": false
