@@ -97,6 +97,21 @@
                 "showContentTitle" : {"type" : "boolean"},
                 "showContentDuration": {"type" : "boolean"}
             }
+        },
+        "localizableStrings" : {
+            "type" : "object",
+            "patternProperties" : {
+                "^[a-z]{2}$" : {
+                    "type" : "object",
+                    "description" : "key is the string id, value is the localized string",
+                    "patternProperties": {
+                        "[A-Za-z][A-Za-z0-9_]" : {"type" : "string"}
+                    },
+                    "required" : ["learnMore"]
+                }
+            },
+            "description" : "map of localizable strings, key should be 2 character locale id",
+            "required" : ["en"]
         }
     }
 }
