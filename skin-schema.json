@@ -91,6 +91,16 @@
                 "timeToShow": {"type" : "number"}
             }
         },
+        "buttons": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {"type": "string"},
+                    "type": {"enum" : ["MoreOptions", "FeatureOptions"]}
+                }
+            }
+        },
         "discoveryScreen" : {
             "type" : "object",
             "properties" : {
