@@ -68,21 +68,21 @@
   "localizableStrings" : {
     "defaultLanguage" : "en",
     "en" : {
-      "learnMore" : "Learn More",
-      "CC_PREVIEW": "CLOSE CAPTION PREVIEW",
-      "CC_SAMPLE": "Sample Text",
-      "AD_PLAYING": "Ad Playing",
+      "Learn More" : "Learn More",
+      "CLOSE CAPTION PREVIEW": "CLOSE CAPTION PREVIEW",
+      "Sample Text": "Sample Text",
+      "Ad Playing": "Ad Playing",
       "LIVE": "LIVE",
-      "GO_LIVE": "GO LIVE",
-      "CC_OPTIONS": "CC Options",
+      "GO LIVE": "GO LIVE",
+      "CC Options": "CC Options",
       "On": "On",
-      "Off": "Off",
+      "Off": "Off"
     },
     "es" : {
-      "learnMore" : "aprender más"
+      "Learn More" : "aprender más"
     },
     "zh" : {
-      "learnMore" : "了解更多"
+      "Learn More" : "了解更多"
     }
   }
 }

@@ -131,7 +131,7 @@
                     "patternProperties": {
                         "[A-Za-z][A-Za-z0-9_]" : {"type" : "string"}
                     },
-                    "required" : ["learnMore"]
+                    "required" : ["Learn More"]
                 }
             },
             "description" : "map of localizable strings, key should be 2 character locale id",
