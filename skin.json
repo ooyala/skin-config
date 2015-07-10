@@ -57,7 +57,15 @@
   "localizableStrings" : {
     "defaultLanguage" : "en",
     "en" : {
-      "learnMore" : "Learn More"
+      "learnMore" : "Learn More",
+      "CC_PREVIEW": "CLOSE CAPTION PREVIEW",
+      "CC_SAMPLE": "Sample Text",
+      "AD_PLAYING": "Ad Playing",
+      "LIVE": "LIVE",
+      "GO_LIVE": "GO LIVE",
+      "CC_OPTIONS": "CC Options",
+      "On": "On",
+      "Off": "Off",
     },
     "es" : {
       "learnMore" : "aprender más"
