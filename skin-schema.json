@@ -105,6 +105,13 @@
                 "showContentTitle" : {"type" : "boolean"},
                 "showContentDuration": {"type" : "boolean"}
             }
+        },
+        "ccOptions" : {
+            "type" : "object",
+            "properties" : {
+                "defaultEnabled" : { "type" : "boolean" },
+                "defaultLanguage" : { "type" : "string" }
+            }
         }
     }
 }
