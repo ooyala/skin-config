@@ -49,6 +49,11 @@
   "general": {
     "watermark": {"url": "http://www.palantir.net/presentations/dcamsterdam2014-decoupled-drupal-silex/assets/ooyala-logo.png"}
   },
+  "moreOptions": {
+    "brightOpacity": 1.0,
+    "darkOpacity": 0.4,
+    "iconSize": 30
+  },
   "buttons":[
     {"name": "Discovery", "type": "FeatureOptions", "color": "white"},
     {"name": "Quality", "type": "MoreOptions", "color": "white"},

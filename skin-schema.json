@@ -99,6 +99,14 @@
                 }
             }
         },
+        "moreOptions": {
+            "type": "object",
+            "properties": {
+                "brightOpacitiy": "number",
+                "darkOpacity": "number",
+                "iconSize": "number"
+            }            
+        },
         "buttons": {
             "type": "array",
             "items": {
@@ -106,7 +114,8 @@
                 "properties": {
                     "name": {"type": "string"},
                     "type": {"enum" : ["MoreOptions", "FeatureOptions"]},
-                    "color": {"type": "string"}
+                    "color": {"type": "string"},
+                    "hightlight": {"enum": ["bright", "dark"]}
                 }
             }
         },
