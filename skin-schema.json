@@ -52,7 +52,12 @@
             "type" : "object",
             "properties" : {
                 "autoHide" : { "type" : "boolean" },
-                "items" : { "type" : "array" },
+                "items" : {
+                  "type" : "array",
+                  "items" : {
+                    "enum" : ["playPause", "volume", "timeDuration", "flexibleSpace", "discovery", "fullscreen", "moreOptions", "watermark", "share", "closedCaption", "bitrateSelector"]
+                  }
+                },
                 "watermark": {
                     "type": "object",
                     "properties": {
@@ -84,11 +89,24 @@
                 }
             }
         },
-        "upNext" : {
+        "upNextScreen" : {
             "type" : "object",
             "properties" : {
                 "showUpNext" : { "type" : "boolean" },
-                "timeToShow": {"type" : "number"}
+                "timeToShow": {
+                    "type" : "string",
+                    "pattern": "^[0-9]+$|^[0-9]{1,2}%$"
+                }
+            }
+        },
+        "buttons": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {"type": "string"},
+                    "type": {"enum" : ["MoreOptions", "FeatureOptions"]}
+                }
             }
         },
         "discoveryScreen" : {
@@ -112,6 +130,26 @@
                 "defaultEnabled" : { "type" : "boolean" },
                 "defaultLanguage" : { "type" : "string" }
             }
-        }
+        },
+        
+        "localizableStrings" : {
+            "type" : "object",
+            "properties": {
+                "defaultLanguage" : {"type" : "string", "pattern" : "^[a-z]{2}$"}
+            },
+            "patternProperties" : {
+                "^[a-z]{2}$" : {
+                    "type" : "object",
+                    "description" : "key is the string id, value is the localized string",
+                    "patternProperties": {
+                        "[A-Za-z][A-Za-z0-9_]" : {"type" : "string"}
+                    },
+                    "required" : ["Learn More"]
+                }
+            },
+            "description" : "map of localizable strings, key should be 2 character locale id",
+            "required" : ["defaultLanguage"]
+        },
+        "required": ["localizableStrings"]
     }
 }
