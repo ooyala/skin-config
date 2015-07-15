@@ -102,7 +102,7 @@
         "moreOptions" : {
             "type" : "array",
             "items" : {
-                "enum" : ["discovery", "fullscreen", "share", "closedCaption", "bitrateSelector"]
+                "enum" : ["discovery", "fullscreen", "share", "closedCaption", "bitrateSelector", "settings"]
             }
         },
         "discoveryScreen" : {
