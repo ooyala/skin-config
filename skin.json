@@ -66,23 +66,7 @@
     "showContentDuration": false
   },
   "localizableStrings" : {
-    "defaultLanguage" : "en",
-    "en" : {
-      "Learn More" : "Learn More",
-      "CLOSE CAPTION PREVIEW": "CLOSE CAPTION PREVIEW",
-      "Sample Text": "Sample Text",
-      "Ad Playing": "Ad Playing",
-      "LIVE": "LIVE",
-      "GO LIVE": "GO LIVE",
-      "CC Options": "CC Options",
-      "On": "On",
-      "Off": "Off"
-    },
-    "es" : {
-      "Learn More" : "aprender más"
-    },
-    "zh" : {
-      "Learn More" : "了解更多"
-    }
+    "default" : "en",
+    "languages" : ["en", "es", "zh"]
   }
 }
