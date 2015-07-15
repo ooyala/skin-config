@@ -29,7 +29,7 @@
   },
   "controlBar": {
     "autoHide": true,
-    "items": ["playPause", "volume", "timeDuration", "flexibleSpace", "fullscreen", "discovery","moreOptions", "watermark"],
+    "items": ["playPause", "volume", "timeDuration", "flexibleSpace", "fullscreen", "discovery","moreOptions", "watermark", "closedCaption"],
     "watermark": {
       "url": "http://static1.squarespace.com/static/520df253e4b04f7fbda9c4d9/t/55084401e4b07c3c95d3882f/1426605058603/unnamed.png",
       "width": 500,
@@ -59,24 +59,13 @@
     "showContentTitle" : true,
     "showContentDuration": false
   },
+  "ccOptions": {
+    "defaultEnabled": true,
+    "defaultLanguage": "en"
+  },
+
   "localizableStrings" : {
-    "defaultLanguage" : "en",
-    "en" : {
-      "Learn More" : "Learn More",
-      "CLOSE CAPTION PREVIEW": "CLOSE CAPTION PREVIEW",
-      "Sample Text": "Sample Text",
-      "Ad Playing": "Ad Playing",
-      "LIVE": "LIVE",
-      "GO LIVE": "GO LIVE",
-      "CC Options": "CC Options",
-      "On": "On",
-      "Off": "Off"
-    },
-    "es" : {
-      "Learn More" : "aprender más"
-    },
-    "zh" : {
-      "Learn More" : "了解更多"
-    }
+    "default" : "en",
+    "languages" : ["en", "es", "zh"]
   }
 }

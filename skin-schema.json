@@ -120,23 +120,24 @@
                 "showContentDuration": {"type" : "boolean"}
             }
         },
+        "ccOptions" : {
+            "type" : "object",
+            "properties" : {
+                "defaultEnabled" : { "type" : "boolean" },
+                "defaultLanguage" : { "type" : "string" }
+            }
+        },
+        
         "localizableStrings" : {
             "type" : "object",
             "properties": {
-                "defaultLanguage" : {"type" : "string", "pattern" : "^[a-z]{2}$"}
-            },
-            "patternProperties" : {
-                "^[a-z]{2}$" : {
-                    "type" : "object",
-                    "description" : "key is the string id, value is the localized string",
-                    "patternProperties": {
-                        "[A-Za-z][A-Za-z0-9_]" : {"type" : "string"}
-                    },
-                    "required" : ["Learn More"]
+                "default" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
+                "languages" : {
+                    "type": "array",
+                    "items": {"type": "string", "pattern": "^[a-z]{2}$"}
                 }
             },
-            "description" : "map of localizable strings, key should be 2 character locale id",
-            "required" : ["defaultLanguage"]
+            "required" : ["default"] 
         },
         "required": ["localizableStrings"]
     }
