@@ -63,7 +63,9 @@
       "showImage": true
     },
     "showContentTitle" : true,
-    "showContentDuration": false
+    "showContentDuration": false,
+    "showCountDownTimerOnEndScreen": true,
+    "timeToShow" : "10"
   },
   "localizableStrings" : {
     "en" : {
