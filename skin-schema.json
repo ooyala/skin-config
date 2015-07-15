@@ -75,7 +75,7 @@
                 "properties": {
                     "buttonName": { "type": "string" },
                     "imgUrl": { "type": "string" }
-              }
+                }
             }
         },
         "general": {
@@ -99,13 +99,23 @@
                 }
             }
         },
+        "moreOptions": {
+            "type": "object",
+            "properties": {
+                "brightOpacitiy": "number",
+                "darkOpacity": "number",
+                "iconSize": "number"
+            }            
+        },
         "buttons": {
             "type": "array",
             "items": {
                 "type": "object",
                 "properties": {
                     "name": {"type": "string"},
-                    "type": {"enum" : ["MoreOptions", "FeatureOptions"]}
+                    "type": {"enum" : ["MoreOptions", "FeatureOptions"]},
+                    "color": {"type": "string"},
+                    "hightlight": {"enum": ["bright", "dark"]}
                 }
             }
         },
