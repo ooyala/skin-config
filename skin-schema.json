@@ -101,8 +101,10 @@
         },
         "moreOptions" : {
             "type" : "array",
-            "items" : {
-                "enum" : ["discovery", "fullscreen", "share", "closedCaption", "bitrateSelector"]
+            "properties" : {
+                "items" : {
+                    "enum" : ["discovery", "fullscreen", "share", "closedCaption", "bitrateSelector", "settings"]
+                }
             }
         },
         "discoveryScreen" : {
@@ -135,9 +137,10 @@
                 "languages" : {
                     "type": "array",
                     "items": {"type": "string", "pattern": "^[a-z]{2}$"}
-                },
-                "description": "all the languages listed in the array should have a separate json file included in the bundle to make localization work"
+                }
+                
             },
+            "description": "all the languages listed in the array should have a separate json file included in the bundle to make localization work",
             "required" : ["default"] 
         },
         "required": ["localizableStrings"]
