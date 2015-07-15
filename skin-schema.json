@@ -99,14 +99,10 @@
                 }
             }
         },
-        "buttons": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "name": {"type": "string"},
-                    "type": {"enum" : ["MoreOptions", "FeatureOptions"]}
-                }
+        "moreOptions" : {
+            "type" : "array",
+            "items" : {
+                "enum" : ["discovery", "fullscreen", "share", "closedCaption", "bitrateSelector"]
             }
         },
         "discoveryScreen" : {
