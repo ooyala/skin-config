@@ -1,6 +1,6 @@
 {
     "name" : "skin-validator",
     "version" : "0.1.0",
-    "dependencies" : {"tv4":">=1.1.9", "jjv":">=1.0.2"},
+    "dependencies" : {"tv4":">=1.1.9", "jjv":">=1.0.2", "strip-json-comments":">=1.0.2"},
     "engines" : { "node" : "*" }
 }
