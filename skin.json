@@ -76,7 +76,6 @@
     "defaultLanguage": "en"
   },
   "icons" : {
-    // TODO: replace fontawesome with correct final font.
     "play" : { "fontFamilyName": "fontawesome", "fontString" : "\uf04b" },
     "pause" : { "fontFamilyName": "fontawesome", "fontString" : "\uf04c" },
     "volumeDown" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf027" },
