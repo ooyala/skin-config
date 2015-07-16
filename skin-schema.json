@@ -102,9 +102,11 @@
         "moreOptions": {
             "type": "object",
             "properties": {
-                "brightOpacitiy": "number",
-                "darkOpacity": "number",
-                "iconSize": "number"
+                "brightOpacitiy": {"type": "number"},
+                "darkOpacity": {"type": "number"},
+                "iconSize": {"type": "number"},
+                "color": {"type": "string"},
+                "buttons": {"type": "array"}
             }            
         },
         "buttons": {

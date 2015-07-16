@@ -52,15 +52,10 @@
   "moreOptions": {
     "brightOpacity": 1.0,
     "darkOpacity": 0.4,
-    "iconSize": 30
+    "iconSize": 30,
+    "color": "white",
+    "buttons": ["Discovery","VideoQuality","CC", "Share", "Fullscreen", "Settings"]
   },
-  "buttons":[
-    {"name": "Discovery", "type": "FeatureOptions", "color": "white"},
-    {"name": "Quality", "type": "MoreOptions", "color": "white"},
-    {"name": "CC", "type": "MoreOptions", "color": "white"},
-    {"name": "Share", "type": "MoreOptions", "color": "white"},
-    {"name": "Setting", "type": "MoreOptions", "color": "white"}
-  ],
   "discoveryScreen" : {
     "panelTitle": {
       "text":"Recommended",
