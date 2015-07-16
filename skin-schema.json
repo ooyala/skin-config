@@ -1,5 +1,6 @@
 {
     "type" : "object",
+    "required": ["localizableStrings"],
     "properties" : {
         "accentColor" : { "type" : "string" },
         "startScreen" : {
@@ -106,7 +107,12 @@
                 "darkOpacity": {"type": "number"},
                 "iconSize": {"type": "number"},
                 "color": {"type": "string"},
-                "buttons": {"type": "array"}
+                "buttons": {
+                    "type": "array",
+                    "items": {
+                        "enum" : ["Discovery", "VideoQuality", "CC", "Share", "Settings"]
+                    }
+                }
             }            
         },
         "discoveryScreen" : {
@@ -124,24 +130,24 @@
                 "showContentDuration": {"type" : "boolean"}
             }
         },
+        "ccOptions" : {
+            "type" : "object",
+            "properties" : {
+                "defaultEnabled" : { "type" : "boolean" },
+                "defaultLanguage" : { "type" : "string" }
+            }
+        },
         "localizableStrings" : {
             "type" : "object",
             "properties": {
-                "defaultLanguage" : {"type" : "string", "pattern" : "^[a-z]{2}$"}
-            },
-            "patternProperties" : {
-                "^[a-z]{2}$" : {
-                    "type" : "object",
-                    "description" : "key is the string id, value is the localized string",
-                    "patternProperties": {
-                        "[A-Za-z][A-Za-z0-9_]" : {"type" : "string"}
-                    },
-                    "required" : ["Learn More"]
+                "default" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
+                "languages" : {
+                    "type": "array",
+                    "items": {"type": "string", "pattern": "^[a-z]{2}$"}
                 }
             },
-            "description" : "map of localizable strings, key should be 2 character locale id",
-            "required" : ["defaultLanguage"]
-        },
-        "required": ["localizableStrings"]
+            "description": "all the languages listed in the array should have a separate json file included in the bundle to make localization work",
+            "required" : ["default"] 
+        }
     }
 }

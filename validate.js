@@ -1,4 +1,5 @@
 var fs = require( 'fs' );
+var stripComments = require( 'strip-json-comments' )
 
 // assumes this is run via node.
 function usage( message ) {
@@ -37,8 +38,9 @@ function validate( schema_object, json_object ) {
 }
 
 function json_parse( msg, json_str ) {
-   try {
-       return JSON.parse( json_str );
+    try {
+        json_str = stripComments( json_str.toString( 'utf8' ) );
+        return JSON.parse( json_str );
     }
     catch( e ) {
         var err = "INVALID: " + msg + ", " + e.message;
@@ -49,10 +51,10 @@ function json_parse( msg, json_str ) {
 function run( json_schema_path, json_data_path ) {
     fs.readFile( json_schema_path, function( err, schema_string ) {
         if( err ) { throw err; }
-        var schema_object = json_parse( "schema input", schema_string );
+        var schema_object = json_parse( "schema input", schema_string, 'utf8' );
         fs.readFile( json_data_path, function( err, json_string ) {
             if( err ) { throw err; }
-            var json_object = json_parse( "json input", json_string );
+            var json_object = json_parse( "json input", json_string, 'utf8' );
             validate( schema_object, json_object );
         } );
     } );
