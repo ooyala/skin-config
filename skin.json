@@ -25,7 +25,17 @@
   },
   "controlBar": {
     "autoHide": true,
-    "items": ["playPause", "volume", "timeDuration", "flexibleSpace", "fullscreen", "discovery","moreOptions", "watermark", "closedCaption"],
+      "items": [
+          { "name" : "playPause", "collapsable" : false },
+          { "name" : "volume", "collapsable" : true },
+          { "name" : "timeDuration", "collapsable" : true },
+          { "name" : "flexibleSpace", "collapsable" : true },
+          { "name" : "fullscreen", "collapsable" : false },
+          { "name" : "discovery", "collapsable" : true },
+          { "name" : "moreOptions", "collapsable" : false },
+          { "name" : "watermark", "collapsable" : false },
+          { "name" : "closedCaption", "collapsable" : true }
+      ],
     "watermark": {
       "url": "http://static1.squarespace.com/static/520df253e4b04f7fbda9c4d9/t/55084401e4b07c3c95d3882f/1426605058603/unnamed.png",
       "width": 500,
@@ -59,7 +69,26 @@
     "defaultEnabled": true,
     "defaultLanguage": "en"
   },
-
+  "icons" : {
+    // TODO: replace fontawesome with correct final font.
+    "play" : { "fontFamilyName": "fontawesome", "fontString" : "\uf04b" },
+    "pause" : { "fontFamilyName": "fontawesome", "fontString" : "\uf04c" },
+    "volumeDown" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf027" },
+    "volumeOff" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf026" },
+    "volumeUp" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf028" },
+    "expand" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf065" },
+    "compress" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf066" },
+    "ellipsis" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf142" },
+    "replay" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf01e" },
+    "share" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf045" },
+    "cc" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf20a" },
+    "discovery" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf14e" },
+    "quality" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf080" },
+    "setting" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf013" },
+    "dismiss" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf00d" },
+    "toggleOn" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf205" },
+    "toggleOff" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf204" }
+  },
   "localizableStrings" : {
     "default" : "en",
     "languages" : ["en", "es", "zh"]
