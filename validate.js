@@ -11,6 +11,16 @@ function usage( message ) {
 
 // unclear to me yet which library to bet on, if not something else entirely.
 
+function validate_with_jsonschema( schema_object, json_object ) {
+    var Validator = require('jsonschema').Validator;
+    var v = new Validator();
+    var r = v.validate( json_object, schema_object );
+    if( r.errors && r.errors.length ) {
+        var err = "VALIDATION FAILED: " + r.errors;
+        throw err;
+    }
+}
+
 function validate_with_jjv( schema_object, json_object ) {
     var jjv = require( 'jjv' );
     var env = jjv();
@@ -32,29 +42,32 @@ function validate_with_tv4( schema_object, json_object ) {
 }
 
 function validate( schema_object, json_object ) {
+    validate_with_jsonschema( schema_object, json_object );
     validate_with_jjv( schema_object, json_object );
     validate_with_tv4( schema_object, json_object );
-    console.log( "passed" );
+    console.log( "Passed." );
 }
 
-function json_parse( msg, json_str ) {
+function json_parse( msg, json_buf ) {
     try {
-        json_str = stripComments( json_str.toString( 'utf8' ) );
+        var json_str = stripComments( json_buf.toString( 'utf8' ) );
+        var jsonlint = require("jsonlint");
+        jsonlint.parse( json_str );
         return JSON.parse( json_str );
     }
     catch( e ) {
-        var err = "INVALID: " + msg + ", " + e.message;
+        var err = "FAILED TO PARSE INPUT JSON: " + msg + ", " + e.message;
         throw err;
     }
 }
 
 function run( json_schema_path, json_data_path ) {
-    fs.readFile( json_schema_path, function( err, schema_string ) {
+    fs.readFile( json_schema_path, function( err, schema_buf ) {
         if( err ) { throw err; }
-        var schema_object = json_parse( "schema input", schema_string, 'utf8' );
-        fs.readFile( json_data_path, function( err, json_string ) {
+        var schema_object = json_parse( "schema input", schema_buf, 'utf8' );
+        fs.readFile( json_data_path, function( err, json_buf ) {
             if( err ) { throw err; }
-            var json_object = json_parse( "json input", json_string, 'utf8' );
+            var json_object = json_parse( "json input", json_buf, 'utf8' );
             validate( schema_object, json_object );
         } );
     } );
