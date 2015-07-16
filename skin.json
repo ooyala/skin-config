@@ -23,10 +23,6 @@
     "showTitle" : true,
     "showDescription" : true
   },
-  "discoveryScreen": {
-    "mode": "default",
-    "title": "Customizable Discovery Title"
-  },
   "controlBar": {
     "autoHide": true,
     "items": ["playPause", "volume", "timeDuration", "flexibleSpace", "fullscreen", "discovery","moreOptions", "watermark", "closedCaption"],
