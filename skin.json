@@ -54,7 +54,7 @@
     "darkOpacity": 0.4,
     "iconSize": 30,
     "color": "white",
-    "buttons": ["Discovery","VideoQuality","CC", "Share", "Fullscreen", "Settings"]
+    "buttons": ["Discovery","VideoQuality","CC", "Share", "Settings"]
   },
   "discoveryScreen" : {
     "panelTitle": {
