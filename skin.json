@@ -7,7 +7,13 @@
     "showTitle": true,
     "showDescription": true,
     "infoPanelPosition": "topLeft",
-    "showPromo": true
+    "showPromo": true,
+    "icons": {
+      "play": {
+        "fontIcon": "fontawesome",
+        "fontCharacter": "\uf04b"
+      }
+    }
   },
   "pauseScreen": {
     "showPauseIcon" : true,
@@ -15,17 +21,79 @@
     "showTitle": true,
     "showDescription": true,
     "infoPanelPosition": "topLeft",
-    "screenToShowOnPause": "default"
+    "screenToShowOnPause": "default",
+    "icons": {
+      "play": {
+        "fontIcon": "fontawesome",
+        "fontCharacter": "\uf04b"
+      },
+      "pause": {
+        "fontIcon": "fontawesome",
+        "fontCharacter": "\uf04c"
+      }
+    }
   },
   "endScreen": {
     "screenToShowOnEnd": "discovery",
     "showReplayButton" : true,
     "showTitle" : true,
-    "showDescription" : true
+    "showDescription" : true,
+    "icons": {
+      "replay": {
+        "fontIcon": "fontawesome",
+        "fontCharacter": "\uf01e"
+      }
+    }
   },
   "controlBar": {
     "autoHide": true,
     "items": ["playPause", "volume", "timeDuration", "flexibleSpace", "fullscreen", "discovery","moreOptions", "watermark", "closedCaption"],
+    "icons": {
+      "play": {
+        "fontIcon": "fontawesome",
+        "fontCharacter": "\uf04b"
+      },
+      "pause": {
+        "fontIcon": "fontawesome",
+        "fontCharacter": "\uf04c"
+      },
+      "replay": {
+        "fontIcon": "fontawesome",
+        "fontCharacter": "\uf01e"
+      },
+      "volume": {
+        "fontIcon": "fontawesome",
+        "fontCharacter": "\uf027"
+      },
+      "discovery": {
+        "fontIcon": "fontawesome",
+        "fontCharacter": "\uf14e"
+      },
+      "expand": {
+        "fontIcon": "fontawesome",
+        "fontCharacter": "\uf065"
+      },
+      "compress": {
+        "fontIcon": "fontawesome",
+        "fontCharacter": "\uf066"
+      },
+      "share": {
+        "fontIcon": "fontawesome",
+        "fontCharacter": "\uf045"
+      },
+      "closedCaption": {
+        "fontIcon": "fontawesome",
+        "fontCharacter": "\uf20a"
+      },
+      "bitrateSelector": {
+        "fontIcon": "fontawesome",
+        "fontCharacter": "\uf080"
+      },
+      "ellipses": {
+        "fontIcon": "fontawesome",
+        "fontCharacter": "\uf142"
+      }
+    },
     "watermark": {
       "url": "http://static1.squarespace.com/static/520df253e4b04f7fbda9c4d9/t/55084401e4b07c3c95d3882f/1426605058603/unnamed.png",
       "width": 500,
