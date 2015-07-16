@@ -23,10 +23,6 @@
     "showTitle" : true,
     "showDescription" : true
   },
-  "discoveryScreen": {
-    "mode": "default",
-    "title": "Customizable Discovery Title"
-  },
   "controlBar": {
     "autoHide": true,
     "items": ["playPause", "volume", "timeDuration", "flexibleSpace", "fullscreen", "discovery","moreOptions", "watermark", "closedCaption"],
@@ -49,6 +45,13 @@
   "general": {
     "watermark": {"url": "http://www.palantir.net/presentations/dcamsterdam2014-decoupled-drupal-silex/assets/ooyala-logo.png"}
   },
+  "buttons":[
+    {"name": "Discovery", "type": "FeatureOptions"},
+    {"name": "Quality", "type": "MoreOptions"},
+    {"name": "CC", "type": "MoreOptions"},
+    {"name": "Share", "type": "MoreOptions"},
+    {"name": "Setting", "type": "MoreOptions"}
+  ],
   "moreOptions":["discovery","bitrateSelector","closedCaption", "share", "fullscreen", "settings"],
   "discoveryScreen" : {
     "panelTitle": {
