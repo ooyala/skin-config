@@ -77,7 +77,7 @@
                 "properties": {
                     "buttonName": { "type": "string" },
                     "imgUrl": { "type": "string" }
-              }
+                }
             }
         },
         "general": {
@@ -101,14 +101,21 @@
                 }
             }
         },
-        "moreOptions" : {
-            "type" : "array",
-            "properties" : {
-                "items" : {
-                    // TODO: change to using the button schema, like the control bar items.
-                    "enum" : ["discovery", "fullscreen", "share", "closedCaption", "bitrateSelector", "settings"]
+        "moreOptions": {
+            "type": "object",
+            "properties": {
+                "brightOpacitiy": {"type": "number"},
+                "darkOpacity": {"type": "number"},
+                "iconSize": {"type": "number"},
+                "color": {"type": "string"},
+                "buttons": {
+                    "type": "array",
+                    "items": {
+                        // TODO: change to using the button schema, like the control bar items.
+                        "enum" : ["Discovery", "VideoQuality", "CC", "Share", "Settings"]
+                    }
                 }
-            }
+            }            
         },
         "discoveryScreen" : {
             "type" : "object",
