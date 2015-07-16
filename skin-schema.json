@@ -1,5 +1,6 @@
 {
     "type" : "object",
+    "required": ["localizableStrings"],
     "properties" : {
         "accentColor" : { "type" : "string" },
         "startScreen" : {
@@ -134,15 +135,14 @@
             "type" : "object",
             "properties": {
                 "default" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
+                // all the languages listed in the array should have a separate json file included in the bundle to make localization work.
                 "languages" : {
                     "type": "array",
                     "items": {"type": "string", "pattern": "^[a-z]{2}$"}
                 }
-                
             },
             "description": "all the languages listed in the array should have a separate json file included in the bundle to make localization work",
             "required" : ["default"] 
-        },
-        "required": ["localizableStrings"]
+        }
     }
 }
