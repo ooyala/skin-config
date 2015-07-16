@@ -77,7 +77,7 @@
                 "properties": {
                     "buttonName": { "type": "string" },
                     "imgUrl": { "type": "string" }
-              }
+                }
             }
         },
         "general": {
@@ -101,13 +101,20 @@
                 }
             }
         },
-        "moreOptions" : {
-            "type" : "array",
-            "properties" : {
-                "items" : {
-                    "enum" : ["discovery", "fullscreen", "share", "closedCaption", "bitrateSelector", "settings"]
+        "moreOptions": {
+            "type": "object",
+            "properties": {
+                "brightOpacitiy": {"type": "number"},
+                "darkOpacity": {"type": "number"},
+                "iconSize": {"type": "number"},
+                "color": {"type": "string"},
+                "buttons": {
+                    "type": "array",
+                    "items": {
+                        "enum" : ["Discovery", "VideoQuality", "CC", "Share", "Settings"]
+                    }
                 }
-            }
+            }            
         },
         "discoveryScreen" : {
             "type" : "object",
@@ -131,12 +138,10 @@
                 "defaultLanguage" : { "type" : "string" }
             }
         },
-        
         "localizableStrings" : {
             "type" : "object",
             "properties": {
                 "default" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
-                // all the languages listed in the array should have a separate json file included in the bundle to make localization work.
                 "languages" : {
                     "type": "array",
                     "items": {"type": "string", "pattern": "^[a-z]{2}$"}
