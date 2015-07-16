@@ -163,7 +163,7 @@
             "description" : "Specify a button that appears in the user interface.",
             "type" : "object",
             "additionalProperties" : "false",
-            "required" : ["name", "collapsable"],
+            "required" : ["name", "collapsable", "minWidth"],
             "properties" : {
                 "name" : {
                     "description" : "These are the currently supported buttons. Each implementation in JavaScript knows how to render itself.",
@@ -172,7 +172,11 @@
                 "collapsable" : {
                     "description" : "True: the button can disappear when the screen real estate is too small.",
                     "type" : "boolean"
-                }
+                },
+                "minWidth" : {
+                    "description" : "If the button doesn't have this much room, and 'collapsable' is true then the button becomes hidden.",
+                    "type" : "number"
+                }          
             }
         },
         "icon" : {

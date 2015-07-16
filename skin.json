@@ -26,15 +26,15 @@
   "controlBar": {
     "autoHide": true,
       "items": [
-          { "name" : "playPause", "collapsable" : false },
-          { "name" : "volume", "collapsable" : true },
-          { "name" : "timeDuration", "collapsable" : true },
-          { "name" : "flexibleSpace", "collapsable" : true },
-          { "name" : "fullscreen", "collapsable" : false },
-          { "name" : "discovery", "collapsable" : true },
-          { "name" : "moreOptions", "collapsable" : false },
-          { "name" : "watermark", "collapsable" : false },
-          { "name" : "closedCaption", "collapsable" : true }
+          { "name" : "playPause", "collapsable" : false, "minWidth" : 20 },
+          { "name" : "volume", "collapsable" : true, "minWidth" : 20 },
+          { "name" : "timeDuration", "collapsable" : true, "minWidth" : 20 },
+          { "name" : "flexibleSpace", "collapsable" : true, "minWidth" : 20 },
+          { "name" : "fullscreen", "collapsable" : false, "minWidth" : 20 },
+          { "name" : "discovery", "collapsable" : true, "minWidth" : 20 },
+          { "name" : "moreOptions", "collapsable" : false, "minWidth" : 20 },
+          { "name" : "watermark", "collapsable" : false, "minWidth" : 20 },
+          { "name" : "closedCaption", "collapsable" : true, "minWidth" : 20 }
       ],
     "watermark": {
       "url": "http://static1.squarespace.com/static/520df253e4b04f7fbda9c4d9/t/55084401e4b07c3c95d3882f/1426605058603/unnamed.png",
