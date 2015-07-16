@@ -109,18 +109,6 @@
                 "buttons": {"type": "array"}
             }            
         },
-        "buttons": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "name": {"type": "string"},
-                    "type": {"enum" : ["MoreOptions", "FeatureOptions"]},
-                    "color": {"type": "string"},
-                    "hightlight": {"enum": ["bright", "dark"]}
-                }
-            }
-        },
         "discoveryScreen" : {
             "type" : "object",
             "properties" : {
