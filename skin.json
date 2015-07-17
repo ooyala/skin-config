@@ -69,7 +69,9 @@
       "showImage": true
     },
     "showContentTitle" : true,
-    "showContentDuration": false
+    "showContentDuration": false,
+    "showCountDownTimerOnEndScreen": true,
+    "countDownTime" : "10"
   },
   "ccOptions": {
     "defaultEnabled": true,
