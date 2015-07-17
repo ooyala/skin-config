@@ -65,7 +65,7 @@
     "showContentTitle" : true,
     "showContentDuration": false,
     "showCountDownTimerOnEndScreen": true,
-    "timeToShow" : "10"
+    "countDownTime" : "10"
   },
   "localizableStrings" : {
     "en" : {
