@@ -162,7 +162,7 @@
         "button" : {
             "description" : "Specify a button that appears in the user interface.",
             "type" : "object",
-            "additionalProperties" : "false",
+            "additionalProperties" : false,
             "required" : ["name", "collapsable", "minWidth"],
             "properties" : {
                 "name" : {
@@ -183,7 +183,7 @@
             "description" : "Icons are renderable from fonts. Bitmaps are not supported.",
             "type" : "object",
             "required" : ["fontFamilyName", "fontString"],
-            "additionalProperties" : "false",
+            "additionalProperties" : false,
             "properties" : {
                 "fontFamilyName" : {
                     "description" : "The name of the font family to use.",
