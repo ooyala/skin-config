@@ -54,6 +54,7 @@
             "type" : "object",
             "properties" : {
                 "autoHide" : { "type" : "boolean" },
+                "height": {"type" : "number"},
                 "items" : {
                   "type" : "array",
                   "items" : {
