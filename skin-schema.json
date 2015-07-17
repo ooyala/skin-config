@@ -140,7 +140,7 @@
             }
         },
         "icons" : {
-            "description" : "The set of all required icons, for redering all the various buttons' states.",
+            "description" : "The set of all required icons, for redering all the various buttons' states. Note that this is the superset of all icons needed by versions of the player (i.e. web vs. apps)",
             "type" : "object",
             "patternProperties" : { "" : { "$ref" : "#/definitions/icon" } },
             "required" : ["play", "pause", "volumeDown", "volumeUp", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn" ]
