@@ -1,5 +1,51 @@
 {
   "accentColor": "white",
+  "icons": {
+    "play": {
+      "iconFont": "untitled-font-1",
+      "iconCharacter": "\u0068"
+    },
+    "pause": {
+      "iconFont": "untitled-font-1",
+      "iconCharacter": "\u0067"
+    },
+    "replay": {
+      "iconFont": "fontawesome",
+      "iconCharacter": "\uf01e"
+    },
+    "volume": {
+      "iconFont": "fontawesome",
+      "iconCharacter": "\uf027"
+    },
+    "discovery": {
+      "iconFont": "fontawesome",
+      "iconCharacter": "\uf14e"
+    },
+    "expand": {
+      "iconFont": "fontawesome",
+      "iconCharacter": "\uf065"
+    },
+    "compress": {
+      "iconFont": "fontawesome",
+      "iconCharacter": "\uf066"
+    },
+    "share": {
+      "iconFont": "fontawesome",
+      "iconCharacter": "\uf045"
+    },
+    "closedCaption": {
+      "iconFont": "fontawesome",
+      "iconCharacter": "\uf20a"
+    },
+    "bitrateSelector": {
+      "iconFont": "fontawesome",
+      "iconCharacter": "\uf080"
+    },
+    "moreOptions": {
+      "iconFont": "fontawesome",
+      "iconCharacter": "\uf142"
+    }
+  },
   "startScreen": {
     "promoImageSize": "default",
     "showPlayButton": true,
@@ -7,13 +53,7 @@
     "showTitle": true,
     "showDescription": true,
     "infoPanelPosition": "topLeft",
-    "showPromo": true,
-    "icons": {
-      "play": {
-        "fontIcon": "fontawesome",
-        "fontCharacter": "\uf04b"
-      }
-    }
+    "showPromo": true
   },
   "pauseScreen": {
     "showPauseIcon" : true,
@@ -21,79 +61,17 @@
     "showTitle": true,
     "showDescription": true,
     "infoPanelPosition": "topLeft",
-    "screenToShowOnPause": "default",
-    "icons": {
-      "play": {
-        "fontIcon": "fontawesome",
-        "fontCharacter": "\uf04b"
-      },
-      "pause": {
-        "fontIcon": "fontawesome",
-        "fontCharacter": "\uf04c"
-      }
-    }
+    "screenToShowOnPause": "default"
   },
   "endScreen": {
     "screenToShowOnEnd": "discovery",
     "showReplayButton" : true,
     "showTitle" : true,
-    "showDescription" : true,
-    "icons": {
-      "replay": {
-        "fontIcon": "fontawesome",
-        "fontCharacter": "\uf01e"
-      }
-    }
+    "showDescription" : true
   },
   "controlBar": {
     "autoHide": true,
     "items": ["playPause", "volume", "timeDuration", "flexibleSpace", "fullscreen", "discovery","moreOptions", "watermark", "closedCaption"],
-    "icons": {
-      "play": {
-        "fontIcon": "fontawesome",
-        "fontCharacter": "\uf04b"
-      },
-      "pause": {
-        "fontIcon": "fontawesome",
-        "fontCharacter": "\uf04c"
-      },
-      "replay": {
-        "fontIcon": "fontawesome",
-        "fontCharacter": "\uf01e"
-      },
-      "volume": {
-        "fontIcon": "fontawesome",
-        "fontCharacter": "\uf027"
-      },
-      "discovery": {
-        "fontIcon": "fontawesome",
-        "fontCharacter": "\uf14e"
-      },
-      "expand": {
-        "fontIcon": "fontawesome",
-        "fontCharacter": "\uf065"
-      },
-      "compress": {
-        "fontIcon": "fontawesome",
-        "fontCharacter": "\uf066"
-      },
-      "share": {
-        "fontIcon": "fontawesome",
-        "fontCharacter": "\uf045"
-      },
-      "closedCaption": {
-        "fontIcon": "fontawesome",
-        "fontCharacter": "\uf20a"
-      },
-      "bitrateSelector": {
-        "fontIcon": "fontawesome",
-        "fontCharacter": "\uf080"
-      },
-      "ellipses": {
-        "fontIcon": "fontawesome",
-        "fontCharacter": "\uf142"
-      }
-    },
     "watermark": {
       "url": "http://static1.squarespace.com/static/520df253e4b04f7fbda9c4d9/t/55084401e4b07c3c95d3882f/1426605058603/unnamed.png",
       "width": 500,
