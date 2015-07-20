@@ -1,203 +1,203 @@
 {
-    "type" : "object",
-    "additionalProperties" : false,
-    "required": ["localizableStrings"],
-    "properties" : {
-        "accentColor" : { "type" : "string" },
-        "startScreen" : {
-            "type" : "object",
-            "properties" : {
-                "promoImageSize" : { "enum" : ["default", "small"] },
-                "showPlayButton" : { "type" : "boolean" },
-                "playButtonPosition" : {
-                    "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ]
-                },
-                "showTitle" : { "type" : "boolean" },
-                "showDescription" : { "type" : "boolean" },
-                "infoPanelPosition" : {
-                    "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
-                },
-                "showPromo": { "type" : "boolean" }
-            }
+  "type" : "object",
+  "additionalProperties" : false,
+  "required": ["localizableStrings"],
+  "properties" : {
+    "accentColor" : { "type" : "string" },
+    "startScreen" : {
+      "type" : "object",
+      "properties" : {
+        "promoImageSize" : { "enum" : ["default", "small"] },
+        "showPlayButton" : { "type" : "boolean" },
+        "playButtonPosition" : {
+          "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ]
         },
-        "pauseScreen" : {
-            "type" : "object",
-            "properties" : {
-                "screenToShowOnPause" : { "enum" : ["default", "discovery"] },
-                "showPauseIcon" : { "type" : "boolean" },
-                "pauseIconPosition" : {
-                    "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ]
-                },
-                "showTitle" : { "type" : "boolean" },
-                "showDescription" : { "type" : "boolean" },
-                "infoPanelPosition" : {
-                    "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
-                }
-            }
+        "showTitle" : { "type" : "boolean" },
+        "showDescription" : { "type" : "boolean" },
+        "infoPanelPosition" : {
+          "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
         },
-        "endScreen" : {
-            "type" : "object",
-            "properties" : {
-                "screenToShowOnEnd" : { "enum" : ["default", "discovery"] },
-                "showReplayButton" : { "type" : "boolean" },
-                "showTitle" : { "type" : "boolean" },
-                "showDescription" : { "type" : "boolean" }
-            }
-        },
-        "discoveryScreen" : {
-            "type" : "object",
-            "properties" : {
-                "title" : { "type" : "string" }
-            }
-        },
-        "controlBar" : {
-            "description" : "The playback control bar. Generally contains a play-pause button, scrubber control, etc.",
-            "type" : "object",
-            "properties" : {
-                "autoHide" : { "type" : "boolean" },
-                "items" : {
-                    "description" : "The list of buttons to (maximally) show, in left-to-right order.",
-                    "type" : "array",
-                    "items" : { "$ref" : "#/definitions/button" }
-                },
-                "watermark": {
-                    "type": "object",
-                    "properties": {
-                        "url" : {"type" : "string"},
-                        "width": {"type" : "number"},
-                        "height": {"type" : "number"}
-                    }
-                }
-            }
-        },
-        "sharing": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "buttonName": { "type": "string" },
-                    "imgUrl": { "type": "string" }
-                }
-            }
-        },
-        "general": {
-            "type": "object",
-            "properties": {
-                "watermark": {
-                    "type": "object",
-                    "properties" : {
-                        "url" : {"type" : "string"}
-                    }
-                }
-            }
-        },
-        "upNextScreen" : {
-            "type" : "object",
-            "properties" : {
-                "showUpNext" : { "type" : "boolean" },
-                "timeToShow": {
-                    "type" : "string",
-                    "pattern": "^[0-9]+$|^[0-9]{1,2}%$"
-                }
-            }
-        },
-        "moreOptions": {
-            "type": "object",
-            "properties": {
-                "brightOpacitiy": {"type": "number"},
-                "darkOpacity": {"type": "number"},
-                "iconSize": {"type": "number"},
-                "color": {"type": "string"},
-                "buttons": {
-                    "type": "array",
-                    "items": {
-                        // TODO: change to using the button schema, like the control bar items.
-                        "enum" : ["Discovery", "VideoQuality", "CC", "Share", "Settings"]
-                    }
-                }
-            }            
-        },
-        "discoveryScreen" : {
-            "type" : "object",
-            "properties" : {
-                "panelTitle" : { 
-                    "type" : "object",
-                    "properties" : {
-                        "text" : { "type": "string" },
-                        "imageUri" : { "type" : "string" },
-                        "showImage" : { "type" : "boolean" }
-                    }
-                },
-                "showContentTitle" : {"type" : "boolean"},
-                "showContentDuration": {"type" : "boolean"}
-            }
-        },
-        "ccOptions" : {
-            "type" : "object",
-            "properties" : {
-                "defaultEnabled" : { "type" : "boolean" },
-                "defaultLanguage" : { "type" : "string" }
-            }
-        },
-        "icons" : {
-            "description" : "The set of all required icons, for redering all the various buttons' states. Note that this is the superset of all icons needed by versions of the player (i.e. web vs. apps)",
-            "type" : "object",
-            "patternProperties" : { "" : { "$ref" : "#/definitions/icon" } },
-            "required" : ["play", "pause", "volumeDown", "volumeUp", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn" ]
-        },
-        "localizableStrings" : {
-            "description": "all the languages listed in the array should have a separate json file included in the bundle to make localization work",
-            "type" : "object",
-            "properties": {
-                "default" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
-                "languages" : {
-                    "type": "array",
-                    "items": {"type": "string", "pattern": "^[a-z]{2}$"}
-                }
-            },
-            "required" : ["default"] 
-        }
+        "showPromo": { "type" : "boolean" }
+      }
     },
-    "definitions": {
-        "button" : {
-            "description" : "Specify a button that appears in the user interface.",
-            "type" : "object",
-            "required" : ["name", "collapsable", "webMinWidth", "sdkMinWidth"],
-            "additionalProperties" : false,
-            "properties" : {
-                "name" : {
-                    "description" : "These are the currently supported buttons. Each implementation in JavaScript knows how to render itself.",
-                    "enum" : ["playPause", "volume", "timeDuration", "flexibleSpace", "discovery", "fullscreen", "moreOptions", "watermark", "share", "closedCaption", "bitrateSelector"]
-                },
-                "collapsable" : {
-                    "description" : "True: the button can disappear when the screen real estate is too small.",
-                    "type" : "boolean"
-                },
-                "webMinWidth" : {
-                    "description" : "For Web (e.g. HTML5) players. If the button doesn't have this much room, and 'collapsable' is true then the button becomes hidden.",
-                    "type" : "number"
-                },
-                "sdkMinWidth" : {
-                    "description" : "For Mobile SDK App (i.e. Android, iOS) players. If the button doesn't have this much room, and 'collapsable' is true then the button becomes hidden.",
-                    "type" : "number"
-                }          
-            }
+    "pauseScreen" : {
+      "type" : "object",
+      "properties" : {
+        "screenToShowOnPause" : { "enum" : ["default", "discovery"] },
+        "showPauseIcon" : { "type" : "boolean" },
+        "pauseIconPosition" : {
+          "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ]
         },
-        "icon" : {
-            "description" : "Icons are renderable from fonts. Bitmaps are not supported.",
-            "type" : "object",
-            "required" : ["fontFamilyName", "fontString"],
-            "additionalProperties" : false,
-            "properties" : {
-                "fontFamilyName" : {
-                    "description" : "The name of the font family to use.",
-                    "type" : "string"
-                },
-                "fontString" : {
-                    "description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
-                    "type" : "string"
-                }
-            }
+        "showTitle" : { "type" : "boolean" },
+        "showDescription" : { "type" : "boolean" },
+        "infoPanelPosition" : {
+          "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
         }
+      }
+    },
+    "endScreen" : {
+      "type" : "object",
+      "properties" : {
+        "screenToShowOnEnd" : { "enum" : ["default", "discovery"] },
+        "showReplayButton" : { "type" : "boolean" },
+        "showTitle" : { "type" : "boolean" },
+        "showDescription" : { "type" : "boolean" }
+      }
+    },
+    "discoveryScreen" : {
+      "type" : "object",
+      "properties" : {
+        "title" : { "type" : "string" }
+      }
+    },
+    "controlBar" : {
+      "description" : "The playback control bar. Generally contains a play-pause button, scrubber control, etc.",
+      "type" : "object",
+      "properties" : {
+        "autoHide" : { "type" : "boolean" },
+        "items" : {
+          "description" : "The list of buttons to (maximally) show, in left-to-right order.",
+          "type" : "array",
+          "items" : { "$ref" : "#/definitions/button" }
+        },
+        "watermark": {
+          "type": "object",
+          "properties": {
+            "url" : {"type" : "string"},
+            "width": {"type" : "number"},
+            "height": {"type" : "number"}
+          }
+        }
+      }
+    },
+    "sharing": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "buttonName": { "type": "string" },
+          "imgUrl": { "type": "string" }
+        }
+      }
+    },
+    "general": {
+      "type": "object",
+      "properties": {
+        "watermark": {
+          "type": "object",
+          "properties" : {
+            "url" : {"type" : "string"}
+          }
+        }
+      }
+    },
+    "upNextScreen" : {
+      "type" : "object",
+      "properties" : {
+        "showUpNext" : { "type" : "boolean" },
+        "timeToShow": {
+          "type" : "string",
+          "pattern": "^[0-9]+$|^[0-9]{1,2}%$"
+        }
+      }
+    },
+    "moreOptions": {
+      "type": "object",
+      "properties": {
+        "brightOpacitiy": {"type": "number"},
+        "darkOpacity": {"type": "number"},
+        "iconSize": {"type": "number"},
+        "color": {"type": "string"},
+        "buttons": {
+          "type": "array",
+          "items": {
+            // TODO: change to using the button schema, like the control bar items.
+            "enum" : ["Discovery", "VideoQuality", "CC", "Share", "Settings"]
+          }
+        }
+      }            
+    },
+    "discoveryScreen" : {
+      "type" : "object",
+      "properties" : {
+        "panelTitle" : { 
+          "type" : "object",
+          "properties" : {
+            "text" : { "type": "string" },
+            "imageUri" : { "type" : "string" },
+            "showImage" : { "type" : "boolean" }
+          }
+        },
+        "showContentTitle" : {"type" : "boolean"},
+        "showContentDuration": {"type" : "boolean"}
+      }
+    },
+    "ccOptions" : {
+      "type" : "object",
+      "properties" : {
+        "defaultEnabled" : { "type" : "boolean" },
+        "defaultLanguage" : { "type" : "string" }
+      }
+    },
+    "icons" : {
+      "description" : "The set of all required icons, for redering all the various buttons' states. Note that this is the superset of all icons needed by versions of the player (i.e. web vs. apps)",
+      "type" : "object",
+      "patternProperties" : { "" : { "$ref" : "#/definitions/icon" } },
+      "required" : ["play", "pause", "volumeDown", "volumeUp", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn" ]
+    },
+    "localizableStrings" : {
+      "description": "all the languages listed in the array should have a separate json file included in the bundle to make localization work",
+      "type" : "object",
+      "properties": {
+        "default" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
+        "languages" : {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^[a-z]{2}$"}
+        }
+      },
+      "required" : ["default"] 
     }
+  },
+  "definitions": {
+    "button" : {
+      "description" : "Specify a button that appears in the user interface.",
+      "type" : "object",
+      "required" : ["name", "collapsable", "webMinWidth", "sdkMinWidth"],
+      "additionalProperties" : false,
+      "properties" : {
+        "name" : {
+          "description" : "These are the currently supported buttons. Each implementation in JavaScript knows how to render itself.",
+          "enum" : ["playPause", "volume", "timeDuration", "flexibleSpace", "discovery", "fullscreen", "moreOptions", "watermark", "share", "closedCaption", "bitrateSelector"]
+        },
+        "collapsable" : {
+          "description" : "True: the button can disappear when the screen real estate is too small.",
+          "type" : "boolean"
+        },
+        "webMinWidth" : {
+          "description" : "For Web (e.g. HTML5) players. If the button doesn't have this much room, and 'collapsable' is true then the button becomes hidden.",
+          "type" : "number"
+        },
+        "sdkMinWidth" : {
+          "description" : "For Mobile SDK App (i.e. Android, iOS) players. If the button doesn't have this much room, and 'collapsable' is true then the button becomes hidden.",
+          "type" : "number"
+        }          
+      }
+    },
+    "icon" : {
+      "description" : "Icons are renderable from fonts. Bitmaps are not supported.",
+      "type" : "object",
+      "required" : ["fontFamilyName", "fontString"],
+      "additionalProperties" : false,
+      "properties" : {
+        "fontFamilyName" : {
+          "description" : "The name of the font family to use.",
+          "type" : "string"
+        },
+        "fontString" : {
+          "description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+          "type" : "string"
+        }
+      }
+    }
+  }
 }
