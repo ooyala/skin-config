@@ -25,6 +25,7 @@
   },
   "controlBar": {
     "autoHide": true,
+    "height": 60,
       "items": [
           { "name" : "playPause", "collapsable" : false, "webMinWidth" : 18, "sdkMinWidth" : 20 },
           { "name" : "volume", "collapsable" : true, "webMinWidth" : 18, "sdkMinWidth" : 20 },
