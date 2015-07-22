@@ -62,16 +62,6 @@
         "showDescription" : { "type" : "boolean" }
       }
     },
-    "discoveryScreen" : {
-      "type" : "object",
-      "properties" : {
-        "title" : { "type" : "string" }
-        "titleFont" : {
-          "description" : "The font of the title",
-          "$ref" : "#/definitions/fontStyle"
-        },
-      }
-    },
     "controlBar" : {
       "description" : "The playback control bar. Generally contains a play-pause button, scrubber control, etc.",
       "type" : "object",
@@ -157,6 +147,10 @@
             "imageUri" : { "type" : "string" },
             "showImage" : { "type" : "boolean" }
           }
+        },
+        "titleFont" : {
+          "description" : "The font of the title",
+          "$ref" : "#/definitions/fontStyle"
         },
         "showContentTitle" : {"type" : "boolean"},
         "showContentDuration": {"type" : "boolean"}
@@ -244,7 +238,7 @@
           "type" : "string"
         },
         "shadowOffset" : {
-          "type" : "object"
+          "type" : "object",
           "properties" : {
             "width" : {"type" : "number"},
             "height" : {"type" : "number"}
@@ -266,11 +260,11 @@
           "type" : "number"
         },
         "borderStyle" : {
-          "type" : "string"
+          "type" : "string",
           "enum" : ["solid", "dotted", "dashed"]
         }
       }
-    }
+    },
     "fontStyle" : {
       "description" : "A collection of styles that can be used by font renderings throughout the UI. Any value placed in here gets directly parsed as a react stylesheet. Supported style customizations are color, fontFamily, weight, fontSize. See React stylesheets for more specifics on each field. All values are optional, and have defaults specified in the code depending on the section. See each section for default values.",
       "type": "object",
