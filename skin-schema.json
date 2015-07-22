@@ -6,7 +6,10 @@
     "startScreen" : {
       "type" : "object",
       "properties" : {
-        "iconStyle" : { "$ref" : "#/definitions/iconStyle" },
+        "playIconStyle" : {
+          "description" : "Default color is white with an opacity of 1",
+          "$ref" : "#/definitions/iconStyle"
+        },
         "promoImageSize" : { "enum" : ["default", "small"] },
         "showPlayButton" : { "type" : "boolean" },
         "playButtonPosition" : {
@@ -14,6 +17,14 @@
         },
         "showTitle" : { "type" : "boolean" },
         "showDescription" : { "type" : "boolean" },
+        "titleFont" : {
+          "description" : "The font of the title",
+          "$ref" : "#/definitions/fontStyle"
+        },
+        "descriptionFont" : {
+          "description" : "The font of the description",
+          "$ref" : "#/definitions/fontStyle"
+        },
         "infoPanelPosition" : {
           "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
         },
@@ -23,7 +34,9 @@
     "pauseScreen" : {
       "type" : "object",
       "properties" : {
-        "iconStyle" : { "$ref" : "#/definitions/iconStyle" },
+        "pauseIconStyle" : {
+          "description" : "Default color is white with an opacity of 1",
+          "$ref" : "#/definitions/iconStyle" },
         "screenToShowOnPause" : { "enum" : ["default", "discovery"] },
         "showPauseIcon" : { "type" : "boolean" },
         "pauseIconPosition" : {
@@ -39,7 +52,10 @@
     "endScreen" : {
       "type" : "object",
       "properties" : {
-        "iconStyle" : { "$ref" : "#/definitions/iconStyle" },
+        "replayIconStyle" : {
+          "description" : "Default color is white with an opacity of 1",
+          "$ref" : "#/definitions/iconStyle"
+        },
         "screenToShowOnEnd" : { "enum" : ["default", "discovery"] },
         "showReplayButton" : { "type" : "boolean" },
         "showTitle" : { "type" : "boolean" },
@@ -50,13 +66,20 @@
       "type" : "object",
       "properties" : {
         "title" : { "type" : "string" }
+        "titleFont" : {
+          "description" : "The font of the title",
+          "$ref" : "#/definitions/fontStyle"
+        },
       }
     },
     "controlBar" : {
       "description" : "The playback control bar. Generally contains a play-pause button, scrubber control, etc.",
       "type" : "object",
       "properties" : {
-        "iconStyle" : { "$ref" : "#/definitions/iconStyle" },
+        "iconStyle" : {
+          "description" : "Default color is #8E8E8E with an opacity of 1",
+          "$ref" : "#/definitions/iconStyle"
+        },
         "autoHide" : { "type" : "boolean" },
         "items" : {
           "description" : "The list of buttons to (maximally) show, in left-to-right order.",
@@ -86,15 +109,6 @@
     "general": {
       "type": "object",
       "properties": {
-        "font" : {
-          "type": "object",
-          "properties" : {
-            "fontFamily": {"type" : "string"},
-            "color": {"type" : "string"},
-            "weight": {"type" : "string"},
-            "fontSize": {"type" : "number"}
-          }
-        },
         "watermark": {
           "type": "object",
           "properties" : {
@@ -106,7 +120,6 @@
     "upNextScreen" : {
       "type" : "object",
       "properties" : {
-        "iconStyle" : { "$ref" : "#/definitions/iconStyle" },
         "showUpNext" : { "type" : "boolean" },
         "timeToShow": {
           "type" : "string",
@@ -117,7 +130,10 @@
     "moreOptions": {
       "type": "object",
       "properties": {
-        "iconStyle" : { "$ref" : "#/definitions/iconStyle" },
+        "iconStyle" : {
+          "description" : "Default color is white with an opacity of 1",
+          "$ref" : "#/definitions/iconStyle"
+        },
         "brightOpacitiy": {"type": "number"},
         "darkOpacity": {"type": "number"},
         "iconSize": {"type": "number"},
@@ -214,18 +230,56 @@
       }
     },
     "iconStyle" : {
-      "description" : "A collection of styles that can be used by icon renderings throughout the UI.",
+      "description" : "A collection of styles that can be used by icon renderings throughout the UI. Any value placed in here gets directly parsed as a react stylesheet. Supported style customizations are color, opacity, shadowColor, shadowOffset, shadowOpacity, shadowRadius, borderColor, borderRadius, and borderStyle. See React stylesheets for more specifics on each field. All values are optional, and have defaults specified in the code depending on the section. See each section for default values.",
       "type" : "object",
       "additionalProperties" : false,
       "properties" : {
         "color" : {
-          "description" : "The color of the icon.",
           "type" : "string"
         },
         "opacity" : {
-          "description" : "The opacity of the icon.",
           "type" : "number"
+        },
+        "shadowColor" : {
+          "type" : "string"
+        },
+        "shadowOffset" : {
+          "type" : "object"
+          "properties" : {
+            "width" : {"type" : "number"},
+            "height" : {"type" : "number"}
+          }
+        },
+        "shadowOpacity" : {
+          "type" : "number"
+        },
+        "shadowRadius" : {
+          "type" : "number"
+        },
+        "borderColor" : {
+          "type" : "string"
+        },
+        "borderRadius" : {
+          "type" : "number"
+        },
+        "borderWidth" : {
+          "type" : "number"
+        },
+        "borderStyle" : {
+          "type" : "string"
+          "enum" : ["solid", "dotted", "dashed"]
         }
+      }
+    }
+    "fontStyle" : {
+      "description" : "A collection of styles that can be used by font renderings throughout the UI. Any value placed in here gets directly parsed as a react stylesheet. Supported style customizations are color, fontFamily, weight, fontSize. See React stylesheets for more specifics on each field. All values are optional, and have defaults specified in the code depending on the section. See each section for default values.",
+      "type": "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "fontFamily": {"type" : "string"},
+        "color": {"type" : "string"},
+        "weight": {"type" : "string"},
+        "fontSize": {"type" : "number"}
       }
     }
   }
