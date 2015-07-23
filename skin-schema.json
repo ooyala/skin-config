@@ -107,7 +107,7 @@
         "brightOpacitiy": {"type": "number"},
         "darkOpacity": {"type": "number"},
         "iconSize": {"type": "number"},
-        "color": {"type": "string"},
+        "color": {"type": "number"},
         "buttons": {
           "type": "array",
           "items": {
@@ -115,12 +115,12 @@
             "enum" : ["discovery", "quality", "closedCaption", "share", "settings"]
           }
         }
-      }            
+      }
     },
     "discoveryScreen" : {
       "type" : "object",
       "properties" : {
-        "panelTitle" : { 
+        "panelTitle" : {
           "type" : "object",
           "properties" : {
             "text" : { "type": "string" },
@@ -155,7 +155,7 @@
           "items": {"type": "string", "pattern": "^[a-z]{2}$"}
         }
       },
-      "required" : ["default"] 
+      "required" : ["default"]
     }
   },
   "definitions": {
@@ -180,7 +180,7 @@
         "sdkMinWidth" : {
           "description" : "For Mobile SDK App (i.e. Android, iOS) players. If the button doesn't have this much room, and 'collapsable' is true then the button becomes hidden.",
           "type" : "number"
-        }          
+        }
       }
     },
     "icon" : {
