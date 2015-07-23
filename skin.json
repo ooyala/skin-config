@@ -10,9 +10,13 @@
     "showTitle": true,
     "showDescription": true,
     "titleFont": {
+      "fontSize": 20,
+      "fontFamily": "Arial-BoldMT",
       "color": "white"
     },
     "descriptionFont" : {
+      "fontSize": 16,
+      "fontFamily": "ArialMT",
       "color": "white"
     },
     "infoPanelPosition": "topLeft",
@@ -74,13 +78,7 @@
     {"buttonName": "GooglePlus", "imgUrl": "https://www.plusyourbusiness.com/wp-content/uploads/2013/11/GooglePlus-Logo-Official.png"}
   ],
   "general": {
-    "watermark": {"url": "http://www.palantir.net/presentations/dcamsterdam2014-decoupled-drupal-silex/assets/ooyala-logo.png"},
-    "font": {
-      "fontFamily": "arial",
-      "color": "white",
-      "weight": "normal",
-      "fontSize": 16
-    }
+    "watermark": {"url": "http://www.palantir.net/presentations/dcamsterdam2014-decoupled-drupal-silex/assets/ooyala-logo.png"}
   },
   "moreOptions": {
     "brightOpacity": 1.0,
@@ -99,6 +97,8 @@
       "showImage": true
     },
     "titleFont" : {
+      "fontSize": 20,
+      "fontFamily": "Arial-BoldMT",
       "color": "white"
     },
     "showContentTitle" : true,
