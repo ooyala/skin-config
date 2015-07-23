@@ -72,7 +72,9 @@
         },
         "autoHide" : { "type" : "boolean" },
         "items" : {
-          "description" : "The list of buttons to (maximally) show, in left-to-right order.",
+          "description" : "The list of buttons to (maximally) show, in left-to-right order. 
+                          For watermark, we recommend 30px height and less then 120px width for desktop, (??? for mobile), 
+                          which is the default size for OOYALA logo.",
           "type" : "array",
           "items" : { "$ref" : "#/definitions/button" }
         },

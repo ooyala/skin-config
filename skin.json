@@ -50,16 +50,19 @@
       "opacity": 1
     },
     "autoHide": true,
+    "height": 60,
       "items": [
-          { "name" : "playPause", "collapsable" : false, "webMinWidth" : 18, "sdkMinWidth" : 20 },
-          { "name" : "volume", "collapsable" : true, "webMinWidth" : 18, "sdkMinWidth" : 20 },
-          { "name" : "timeDuration", "collapsable" : true, "webMinWidth" : 18, "sdkMinWidth" : 20 },
-          { "name" : "flexibleSpace", "collapsable" : true, "webMinWidth" : 18, "sdkMinWidth" : 20 },
-          { "name" : "fullscreen", "collapsable" : false, "webMinWidth" : 18, "sdkMinWidth" : 20 },
-          { "name" : "discovery", "collapsable" : true, "webMinWidth" : 18, "sdkMinWidth" : 20 },
-          { "name" : "moreOptions", "collapsable" : false, "webMinWidth" : 18, "sdkMinWidth" : 20 },
-          { "name" : "watermark", "collapsable" : false, "webMinWidth" : 18, "sdkMinWidth" : 20 },
-          { "name" : "closedCaption", "collapsable" : true, "webMinWidth" : 18, "sdkMinWidth" : 20 }
+          { "name" : "playPause", "collapsable" : false, "webMinWidth" : 25, "sdkMinWidth" : 25 },
+          { "name" : "volume", "collapsable" : true, "webMinWidth" : 100, "sdkMinWidth" : 25 },
+          { "name" : "timeDuration", "collapsable" : true, "webMinWidth" : 140, "sdkMinWidth" : 25 },
+          { "name" : "flexibleSpace", "collapsable" : false, "webMinWidth" : 1, "sdkMinWidth" : 1 },
+          { "name" : "quality", "collapsable" : true, "webMinWidth" : 25, "sdkMinWidth" : 25 },
+          { "name" : "share", "collapsable" : true, "webMinWidth" : 25, "sdkMinWidth" : 25 },
+          { "name" : "discovery", "collapsable" : true, "webMinWidth" : 25, "sdkMinWidth" : 25 },
+          { "name" : "closedCaption", "collapsable" : true, "webMinWidth" : 25, "sdkMinWidth" : 25 },
+          { "name" : "watermark", "collapsable" : false, "webMinWidth" : 120, "sdkMinWidth" : 120 },
+          { "name" : "fullscreen", "collapsable" : false, "webMinWidth" : 25, "sdkMinWidth" : 25 },
+          { "name" : "moreOptions", "collapsable" : false, "webMinWidth" : 25, "sdkMinWidth" : 25 }
       ],
     "watermark": {
       "url": "http://static1.squarespace.com/static/520df253e4b04f7fbda9c4d9/t/55084401e4b07c3c95d3882f/1426605058603/unnamed.png",
@@ -84,7 +87,8 @@
     "brightOpacity": 1.0,
     "darkOpacity": 0.4,
     "iconSize": 30,
-    "buttons": ["Discovery", "VideoQuality", "CC", "Share", "Settings"],
+    "color": "white",
+    "buttons": ["discovery", "quality", "closedCaption", "share", "settings"],
     "iconStyle": {
       "color": "white",
       "opacity": 1
