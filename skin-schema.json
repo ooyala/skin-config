@@ -56,9 +56,7 @@
       "properties" : {
         "autoHide" : { "type" : "boolean" },
         "items" : {
-          "description" : "The list of buttons to (maximally) show, in left-to-right order. 
-                          For watermark, we recommend 30px height and less then 120px width for desktop, (??? for mobile), 
-                          which is the default size for OOYALA logo.",
+          "description" : "The list of buttons to (maximally) show, in left-to-right order. For watermark, we recommend 30px height and less then 120px width for desktop, (??? for mobile), which is the default size for OOYALA logo.",
           "type" : "array",
           "items" : { "$ref" : "#/definitions/button" }
         },
@@ -114,7 +112,7 @@
           "type": "array",
           "items": {
             // TODO: change to using the button schema, like the control bar items.
-            "enum" : ["Discovery", "VideoQuality", "CC", "Share", "Settings"]
+            "enum" : ["discovery", "quality", "closedCaption", "share", "settings"]
           }
         }
       }            
@@ -169,7 +167,7 @@
       "properties" : {
         "name" : {
           "description" : "These are the currently supported buttons. Each implementation in JavaScript knows how to render itself.",
-          "enum" : ["playPause", "volume", "timeDuration", "flexibleSpace", "discovery", "fullscreen", "moreOptions", "watermark", "share", "closedCaption", "bitrateSelector"]
+          "enum" : ["playPause", "volume", "timeDuration", "flexibleSpace", "discovery", "fullscreen", "moreOptions", "watermark", "share", "closedCaption", "bitrateSelector", "quality"]
         },
         "collapsable" : {
           "description" : "True: the button can disappear when the screen real estate is too small.",
