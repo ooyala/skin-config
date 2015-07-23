@@ -67,7 +67,7 @@
   },
   "discoveryScreen" : {
     "panelTitle": {
-      "text":"Discovery",
+      "text":"Discover",
       "imageUri": "ooyala-logo.png",
       "showImage": true
     },
