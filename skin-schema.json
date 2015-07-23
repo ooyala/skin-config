@@ -107,7 +107,7 @@
         "brightOpacitiy": {"type": "number"},
         "darkOpacity": {"type": "number"},
         "iconSize": {"type": "number"},
-        "color": {"type": "number"},
+        "color": {"type": "string"},
         "buttons": {
           "type": "array",
           "items": {
