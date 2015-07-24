@@ -1,6 +1,6 @@
 {
   "startScreen": {
-    "promoImageSize": "default",
+    "promoImageSize": "fullscreen",
     "showPlayButton": true,
     "playButtonPosition": "center",
     "playIconStyle": {
@@ -51,7 +51,7 @@
     },
     "autoHide": true,
     "height": 60,
-    "watermark": {
+    "brandingLogo": {
       "imageResource": { "url" : "http://static1.squarespace.com/static/520df253e4b04f7fbda9c4d9/t/55084401e4b07c3c95d3882f/1426605058603/unnamed.png" },
       "width": 500,
       "height": 81

@@ -1,7 +1,7 @@
 {
   "type" : "object",
   "additionalProperties" : false,
-  "required": ["localizableStrings"],
+  "required": ["localizableStrings"], // TODO: everything!
   "properties" : {
     "startScreen" : {
       "type" : "object",
@@ -10,10 +10,13 @@
           "description" : "Default color is white with an opacity of 1",
           "$ref" : "#/definitions/iconStyle"
         },
-        "promoImageSize" : { "enum" : ["default", "small"] },
-        "showPlayButton" : { "type" : "boolean" },
+        "showPromo": { "type" : "boolean" },
+        "promoImageSize" : {
+          "description" : "Configure how large the promo image should be when displayed. The 'small' setting will use styling out of the style sheets.",
+          "enum" : ["fullscreen", "small"]
+        },
         "playButtonPosition" : {
-          "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ]
+          "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight", "hidden" ] // TODO: find any nones that should be hidden.
         },
         "showTitle" : { "type" : "boolean" },
         "showDescription" : { "type" : "boolean" },
@@ -26,28 +29,38 @@
           "$ref" : "#/definitions/fontStyle"
         },
         "infoPanelPosition" : {
-          "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
-        },
-        "showPromo": { "type" : "boolean" }
+          "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight", "hidden" ]
+        }
       }
     },
-    "pauseScreen" : {
+    "screenToShowOnPauseClicked" : { // TODO: support this in mobile.
+      "enum" : ["pauseScreen", "discoveryScreen"]
+    },
+    "pauseScreen" : { // TODO: support this in mobile.
+      "description" : "The screen displayed when playback is paused.",
       "type" : "object",
       "properties" : {
         "pauseIconStyle" : {
           "description" : "Default color is white with an opacity of 1",
-          "$ref" : "#/definitions/iconStyle" },
-        "screenToShowOnPause" : { "enum" : ["default", "discovery"] },
-        "showPauseIcon" : { "type" : "boolean" },
-        "pauseIconPosition" : {
-          "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ]
+          "$ref" : "#/definitions/iconStyle"
         },
-        "showTitle" : { "type" : "boolean" },
-        "showDescription" : { "type" : "boolean" },
+        "showPauseIcon" : { "type" : "boolean" },
+        "showTitle" : {
+          "description" : "If showTitle and showDescription are false, the infoPanel will not appear.",
+          "type" : "boolean"
+        },
+        "showDescription" : {
+          "description" : "If showTitle and showDescription are false, the infoPanel will not appear.",
+          "type" : "boolean"
+        },
         "infoPanelPosition" : {
+          "description" : "If showTitle and showDescription are false, the infoPanel will not appear.",
           "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
         }
       }
+    },
+    "screenToShowOnEnd" : {
+      "enum" : ["endScreen", "discoveryScreen"]
     },
     "endScreen" : {
       "type" : "object",
@@ -56,7 +69,6 @@
           "description" : "Default color is white with an opacity of 1",
           "$ref" : "#/definitions/iconStyle"
         },
-        "screenToShowOnEnd" : { "enum" : ["default", "discovery"] },
         "showReplayButton" : { "type" : "boolean" },
         "showTitle" : { "type" : "boolean" },
         "showDescription" : { "type" : "boolean" }
@@ -76,7 +88,7 @@
       "description" : "The playback control bar. Generally contains a play-pause button, scrubber control, etc. The set of items to show comes from the 'buttons' part of the schema.",
       "type" : "object",
       "additionalProperties" : false,
-      "required" : [ "height", "autoHide", "watermark" ],
+      "required" : [ "height", "autoHide", "brandingLogo" ],
       "properties" : {
         "iconStyle" : {
           "description" : "Default color is #8E8E8E with an opacity of 1",
@@ -84,7 +96,7 @@
         },
         "height" : { "type" : "number" },
         "autoHide" : { "type" : "boolean" },
-        "watermark": {
+        "brandingLogo": {
           "type": "object",
           "additionalProperties" : false,
           "properties": {
@@ -106,7 +118,8 @@
         }
       }
     },
-    "general": {
+    "general": { // TODO: move screen to show on end type stuff into here?
+      "description" : "Configuration of things that do not appear in only one part of the UI.",
       "type": "object",
       "properties": {
         "watermark": {
