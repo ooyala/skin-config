@@ -31,11 +31,9 @@
     },
     "showTitle": true,
     "showDescription": true,
-    "infoPanelPosition": "topLeft",
-    "screenToShowOnPause": "default"
+    "infoPanelPosition": "topLeft"
   },
   "endScreen": {
-    "screenToShowOnEnd": "discovery",
     "showReplayButton" : true,
     "replayIconStyle": {
       "color": "white",
@@ -68,9 +66,11 @@
     {"buttonName": "GooglePlus", "imageResource": { "url" : "https://www.plusyourbusiness.com/wp-content/uploads/2013/11/GooglePlus-Logo-Official.png"} }
   ],
   "general": {
+    "screenToShowOnPauseClicked": "pauseScreen",
+    "screenToShowOnEnd": "discoveryScreen",
     "watermark": { "imageResource": { "url" : "http://www.palantir.net/presentations/dcamsterdam2014-decoupled-drupal-silex/assets/ooyala-logo.png" } }
   },
-  "moreOptions": {
+  "moreOptionsScreen": {
     "brightOpacity": 1.0,
     "darkOpacity": 0.4,
     "iconSize": 30,

@@ -1,7 +1,7 @@
 {
   "type" : "object",
   "additionalProperties" : false,
-  "required": ["localizableStrings"], // TODO: everything!
+  "required": ["general", "startScreen", "pauseScreen", "endScreen", "upNextScreen", "moreOptionsScreen", "discoveryScreen", "ccOptions", "icons", "buttons", "controlBar", "sharing", "localizableStrings" ],
   "properties" : {
     "startScreen" : {
       "type" : "object",
@@ -33,9 +33,6 @@
         }
       }
     },
-    "screenToShowOnPauseClicked" : { // TODO: support this in mobile.
-      "enum" : ["pauseScreen", "discoveryScreen"]
-    },
     "pauseScreen" : { // TODO: support this in mobile.
       "description" : "The screen displayed when playback is paused.",
       "type" : "object",
@@ -58,9 +55,6 @@
           "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
         }
       }
-    },
-    "screenToShowOnEnd" : {
-      "enum" : ["endScreen", "discoveryScreen"]
     },
     "endScreen" : {
       "type" : "object",
@@ -118,10 +112,17 @@
         }
       }
     },
-    "general": { // TODO: move screen to show on end type stuff into here?
+    "general": {
       "description" : "Configuration of things that do not appear in only one part of the UI.",
       "type": "object",
+      "required" : ["screenToShowOnPauseClicked", "screenToShowOnEnd"],
       "properties": {
+        "screenToShowOnPauseClicked" : { // TODO: support this in mobile.
+          "enum" : ["pauseScreen", "discoveryScreen"]
+        },
+        "screenToShowOnEnd" : {
+          "enum" : ["endScreen", "discoveryScreen"]
+        },
         "watermark": {
           "type": "object",
           "additionalProperties" : false,
@@ -141,7 +142,7 @@
         }
       }
     },
-    "moreOptions": {
+    "moreOptionsScreen": {
       "description" : "The more options / overflow panel. The set of items to show comes from the 'buttons' part of the schema.",
       "type": "object",
       "required" : ["iconSize", "color"], // TODO: anything else? Are there defaults in code for the opacities?
