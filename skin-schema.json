@@ -78,8 +78,9 @@
         },
         "watermark": {
           "type": "object",
+          "additionalProperties" : false,
           "properties": {
-            "url" : {"type" : "string"},
+            "imageResource" : { "$ref" : "#/definitions/image" },
             "width": {"type" : "number"},
             "height": {"type" : "number"}
           }
@@ -90,9 +91,10 @@
       "type": "array",
       "items": {
         "type": "object",
+        "additionalProperties" : false,
         "properties": {
           "buttonName": { "type": "string" },
-          "imgUrl": { "type": "string" }
+          "imageResource" : { "$ref" : "#/definitions/image" }
         }
       }
     },
@@ -101,8 +103,9 @@
       "properties": {
         "watermark": {
           "type": "object",
+          "additionalProperties" : false,
           "properties" : {
-            "url" : {"type" : "string"}
+            "imageResource" : { "$ref" : "#/definitions/image" }
           }
         }
       }
@@ -142,9 +145,11 @@
       "properties" : {
         "panelTitle" : { 
           "type" : "object",
+          "additionalProperties" : false,
+          "required" : [ "text", "imageResource", "showImage" ],
           "properties" : {
             "text" : { "type": "string" },
-            "imageUri" : { "type" : "string" },
+            "imageResource" : { "$ref" : "#/definitions/image" },
             "showImage" : { "type" : "boolean" }
           }
         },
@@ -183,6 +188,17 @@
     }
   },
   "definitions": {
+    "image" : {
+      "description" : "Specify how to obtain an image's data. Desktop will use the url. Mobile will first lookup the native resource, with fall back to the url.",
+      "type" : "object",
+      "additionalProperties" : false,
+      "minProperties" : 1,
+      "properties" : {
+        "url" : { "type" : "string" },
+        "ios-resource" : { "type" : "string" },
+        "android-resource" : { "type" : "string" }
+      }
+    },
     "button" : {
       "description" : "Specify a button that appears in the user interface.",
       "type" : "object",
