@@ -104,7 +104,7 @@
     "desktop" : [
       { "name":"playPause", "appearance":"controlBar", "minWidth":25 },
       { "name":"volume", "appearance":"both", "minWidth":100 },
-      { "name":"timeDuration", "appearance":"both", "minWidth":140 },
+      { "name":"timeDuration", "appearance":"controlBar", "minWidth":140 },
       { "name":"flexibleSpace", "appearance":"controlBar", "minWidth":1 },
       { "name":"quality", "appearance":"both", "minWidth":25 },
       { "name":"share", "appearance":"both", "minWidth":25 },
@@ -116,7 +116,7 @@
     ],
     "mobile": [
       { "name":"volume", "appearance":"both", "minWidth":25 },
-      { "name":"timeDuration", "appearance":"both", "minWidth":140 },
+      { "name":"timeDuration", "appearance":"controlBar", "minWidth":140 },
       { "name":"flexibleSpace", "appearance":"controlBar", "minWidth":1 },
       { "name":"quality", "appearance":"moreOptions", "minWidth":25 },
       { "name":"share", "appearance":"moreOptions", "minWidth":25 },
