@@ -1,17 +1,34 @@
 {
-  "accentColor": "white",
   "startScreen": {
     "promoImageSize": "default",
     "showPlayButton": true,
     "playButtonPosition": "center",
+    "playIconStyle": {
+      "color": "white",
+      "opacity": 1
+    },
     "showTitle": true,
     "showDescription": true,
+    "titleFont": {
+      "fontSize": 20,
+      "fontFamily": "Arial-BoldMT",
+      "color": "white"
+    },
+    "descriptionFont" : {
+      "fontSize": 16,
+      "fontFamily": "ArialMT",
+      "color": "white"
+    },
     "infoPanelPosition": "topLeft",
     "showPromo": true
   },
   "pauseScreen": {
     "showPauseIcon" : true,
     "pauseIconPosition": "center",
+    "PauseIconStyle": {
+      "color": "white",
+      "opacity": 1
+    },
     "showTitle": true,
     "showDescription": true,
     "infoPanelPosition": "topLeft",
@@ -20,10 +37,18 @@
   "endScreen": {
     "screenToShowOnEnd": "discovery",
     "showReplayButton" : true,
+    "replayIconStyle": {
+      "color": "white",
+      "opacity": 1
+    },
     "showTitle" : true,
     "showDescription" : true
   },
   "controlBar": {
+    "iconStyle": {
+      "color": "#8E8E8E",
+      "opacity": 1
+    },
     "autoHide": true,
     "height": 60,
     "watermark": {
@@ -49,13 +74,22 @@
     "brightOpacity": 1.0,
     "darkOpacity": 0.4,
     "iconSize": 30,
-    "color": "white"
+    "color": "white",
+    "iconStyle": {
+      "color": "white",
+      "opacity": 1
+    }
   },
   "discoveryScreen" : {
     "panelTitle": {
       "text":"Recommended",
       "imageResource": { "ios-resource" : "ooyala-logo.png" },
       "showImage": true
+    },
+    "titleFont" : {
+      "fontSize": 20,
+      "fontFamily": "Arial-BoldMT",
+      "color": "white"
     },
     "showContentTitle" : true,
     "showContentDuration": false,
