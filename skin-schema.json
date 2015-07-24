@@ -3,10 +3,13 @@
   "additionalProperties" : false,
   "required": ["localizableStrings"],
   "properties" : {
-    "accentColor" : { "type" : "string" },
     "startScreen" : {
       "type" : "object",
       "properties" : {
+        "playIconStyle" : {
+          "description" : "Default color is white with an opacity of 1",
+          "$ref" : "#/definitions/iconStyle"
+        },
         "promoImageSize" : { "enum" : ["default", "small"] },
         "showPlayButton" : { "type" : "boolean" },
         "playButtonPosition" : {
@@ -14,6 +17,14 @@
         },
         "showTitle" : { "type" : "boolean" },
         "showDescription" : { "type" : "boolean" },
+        "titleFont" : {
+          "description" : "The font of the title",
+          "$ref" : "#/definitions/fontStyle"
+        },
+        "descriptionFont" : {
+          "description" : "The font of the description",
+          "$ref" : "#/definitions/fontStyle"
+        },
         "infoPanelPosition" : {
           "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
         },
@@ -23,6 +34,9 @@
     "pauseScreen" : {
       "type" : "object",
       "properties" : {
+        "pauseIconStyle" : {
+          "description" : "Default color is white with an opacity of 1",
+          "$ref" : "#/definitions/iconStyle" },
         "screenToShowOnPause" : { "enum" : ["default", "discovery"] },
         "showPauseIcon" : { "type" : "boolean" },
         "pauseIconPosition" : {
@@ -38,32 +52,43 @@
     "endScreen" : {
       "type" : "object",
       "properties" : {
+        "replayIconStyle" : {
+          "description" : "Default color is white with an opacity of 1",
+          "$ref" : "#/definitions/iconStyle"
+        },
         "screenToShowOnEnd" : { "enum" : ["default", "discovery"] },
         "showReplayButton" : { "type" : "boolean" },
         "showTitle" : { "type" : "boolean" },
         "showDescription" : { "type" : "boolean" }
       }
     },
-    "discoveryScreen" : {
+    "buttons" : {
+      "description" : "Defines the buttons that can appear on the controlBar and/or the moreOptions panel.",
       "type" : "object",
+      "additionalProperties" : false,
+      "required" : ["desktop", "mobile"],
       "properties" : {
-        "title" : { "type" : "string" }
+        "desktop" : { "$ref" : "#/definitions/buttonArray" },
+        "mobile" : { "$ref" : "#/definitions/buttonArray" }
       }
     },
     "controlBar" : {
-      "description" : "The playback control bar. Generally contains a play-pause button, scrubber control, etc.",
+      "description" : "The playback control bar. Generally contains a play-pause button, scrubber control, etc. The set of items to show comes from the 'buttons' part of the schema.",
       "type" : "object",
+      "additionalProperties" : false,
+      "required" : [ "height", "autoHide", "watermark" ],
       "properties" : {
-        "autoHide" : { "type" : "boolean" },
-        "items" : {
-          "description" : "The list of buttons to (maximally) show, in left-to-right order. For watermark, we recommend 30px height and less then 120px width for desktop, (??? for mobile), which is the default size for OOYALA logo.",
-          "type" : "array",
-          "items" : { "$ref" : "#/definitions/button" }
+        "iconStyle" : {
+          "description" : "Default color is #8E8E8E with an opacity of 1",
+          "$ref" : "#/definitions/iconStyle"
         },
+        "height" : { "type" : "number" },
+        "autoHide" : { "type" : "boolean" },
         "watermark": {
           "type": "object",
+          "additionalProperties" : false,
           "properties": {
-            "url" : {"type" : "string"},
+            "imageResource" : { "$ref" : "#/definitions/image" },
             "width": {"type" : "number"},
             "height": {"type" : "number"}
           }
@@ -74,9 +99,10 @@
       "type": "array",
       "items": {
         "type": "object",
+        "additionalProperties" : false,
         "properties": {
           "buttonName": { "type": "string" },
-          "imgUrl": { "type": "string" }
+          "imageResource" : { "$ref" : "#/definitions/image" }
         }
       }
     },
@@ -85,8 +111,9 @@
       "properties": {
         "watermark": {
           "type": "object",
+          "additionalProperties" : false,
           "properties" : {
-            "url" : {"type" : "string"}
+            "imageResource" : { "$ref" : "#/definitions/image" }
           }
         }
       }
@@ -102,31 +129,39 @@
       }
     },
     "moreOptions": {
+      "description" : "The more options / overflow panel. The set of items to show comes from the 'buttons' part of the schema.",
       "type": "object",
+      "required" : ["iconSize", "color"], // TODO: anything else? Are there defaults in code for the opacities?
+      "additionalProperties" : false,
+      "patternProperties" : {
+        "brightOpacity": {"type": "number"},
+        "darkOpacity": {"type": "number"}
+      },
       "properties": {
-        "brightOpacitiy": {"type": "number"},
-        "darkOpacity": {"type": "number"},
+        "iconStyle" : {
+          "description" : "Default color is white with an opacity of 1",
+          "$ref" : "#/definitions/iconStyle"
+        },
         "iconSize": {"type": "number"},
-        "color": {"type": "string"},
-        "buttons": {
-          "type": "array",
-          "items": {
-            // TODO: change to using the button schema, like the control bar items.
-            "enum" : ["discovery", "quality", "closedCaption", "share", "settings"]
-          }
-        }
-      }            
+        "color": {"type": "string"}
+      }
     },
     "discoveryScreen" : {
       "type" : "object",
       "properties" : {
         "panelTitle" : { 
           "type" : "object",
+          "additionalProperties" : false,
+          "required" : [ "text", "imageResource", "showImage" ],
           "properties" : {
             "text" : { "type": "string" },
-            "imageUri" : { "type" : "string" },
+            "imageResource" : { "$ref" : "#/definitions/image" },
             "showImage" : { "type" : "boolean" }
           }
+        },
+        "titleFont" : {
+          "description" : "The font of the title",
+          "$ref" : "#/definitions/fontStyle"
         },
         "showContentTitle" : {"type" : "boolean"},
         "showContentDuration": {"type" : "boolean"}
@@ -159,29 +194,37 @@
     }
   },
   "definitions": {
-    "button" : {
-      "description" : "Specify a button that appears in the user interface.",
+    "image" : {
+      "description" : "Specify how to obtain an image's data. Desktop will use the url. Mobile will first lookup the native resource, with fall back to the url.",
       "type" : "object",
-      "required" : ["name", "collapsable", "webMinWidth", "sdkMinWidth"],
       "additionalProperties" : false,
+      "minProperties" : 1,
+      "properties" : {
+        "url" : { "type" : "string" },
+        "ios-resource" : { "type" : "string" },
+        "android-resource" : { "type" : "string" }
+      }
+    },
+    "button" : {
+      "description" : "Specify a button that appears in the user interface. See the buttons, controlBar, and moreOptions part of the schema.",
+      "type" : "object",
       "properties" : {
         "name" : {
-          "description" : "These are the currently supported buttons. Each implementation in JavaScript knows how to render itself.",
+          "description" : "These are the only buttons currently supported by the UI SDK.",
           "enum" : ["playPause", "volume", "timeDuration", "flexibleSpace", "discovery", "fullscreen", "moreOptions", "watermark", "share", "closedCaption", "bitrateSelector", "quality"]
         },
-        "collapsable" : {
-          "description" : "True: the button can disappear when the screen real estate is too small.",
-          "type" : "boolean"
-        },
-        "webMinWidth" : {
-          "description" : "For Web (e.g. HTML5) players. If the button doesn't have this much room, and 'collapsable' is true then the button becomes hidden.",
-          "type" : "number"
-        },
-        "sdkMinWidth" : {
-          "description" : "For Mobile SDK App (i.e. Android, iOS) players. If the button doesn't have this much room, and 'collapsable' is true then the button becomes hidden.",
-          "type" : "number"
-        }          
+        "appearance" : { "$ref" : "#/definitions/buttonAppearance" },
+        "minWidth" : { "type" : "number" }
       }
+    },
+    "buttonAppearance" : {
+      "description" : "Specify where a button might appear in the UI. Both means it will collapse from the controlBar to the moreOptions panel. None means it is disabled entirely.",
+      "enum" : ["controlBar", "moreOptions", "both", "none"]
+    },
+    "buttonArray" : {
+      "description" : "Used to list the buttons for a single platform (desktop vs. mobile).",
+      "type" : "array",
+      "items" : { "$ref" : "#/definitions/button" }
     },
     "icon" : {
       "description" : "Icons are renderable from fonts. Bitmaps are not supported.",
@@ -197,6 +240,59 @@
           "description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
           "type" : "string"
         }
+      }
+    },
+    "iconStyle" : {
+      "description" : "A collection of styles that can be used by icon renderings throughout the UI. Any value placed in here gets directly parsed as a react stylesheet. Supported style customizations are color, opacity, shadowColor, shadowOffset, shadowOpacity, shadowRadius, borderColor, borderRadius, and borderStyle. See React stylesheets for more specifics on each field. All values are optional, and have defaults specified in the code depending on the section. See each section for default values.",
+      "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "color" : {
+          "type" : "string"
+        },
+        "opacity" : {
+          "type" : "number"
+        },
+        "shadowColor" : {
+          "type" : "string"
+        },
+        "shadowOffset" : {
+          "type" : "object",
+          "properties" : {
+            "width" : {"type" : "number"},
+            "height" : {"type" : "number"}
+          }
+        },
+        "shadowOpacity" : {
+          "type" : "number"
+        },
+        "shadowRadius" : {
+          "type" : "number"
+        },
+        "borderColor" : {
+          "type" : "string"
+        },
+        "borderRadius" : {
+          "type" : "number"
+        },
+        "borderWidth" : {
+          "type" : "number"
+        },
+        "borderStyle" : {
+          "type" : "string",
+          "enum" : ["solid", "dotted", "dashed"]
+        }
+      }
+    },
+    "fontStyle" : {
+      "description" : "A collection of styles that can be used by font renderings throughout the UI. Any value placed in here gets directly parsed as a react stylesheet. Supported style customizations are color, fontFamily, weight, fontSize. See React stylesheets for more specifics on each field. All values are optional, and have defaults specified in the code depending on the section. See each section for default values.",
+      "type": "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "fontFamily": {"type" : "string"},
+        "color": {"type" : "string"},
+        "weight": {"type" : "string"},
+        "fontSize": {"type" : "number"}
       }
     }
   }

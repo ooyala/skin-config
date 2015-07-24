@@ -1,17 +1,34 @@
 {
-  "accentColor": "white",
   "startScreen": {
     "promoImageSize": "default",
     "showPlayButton": true,
     "playButtonPosition": "center",
+    "playIconStyle": {
+      "color": "white",
+      "opacity": 1
+    },
     "showTitle": true,
     "showDescription": true,
+    "titleFont": {
+      "fontSize": 20,
+      "fontFamily": "Arial-BoldMT",
+      "color": "white"
+    },
+    "descriptionFont" : {
+      "fontSize": 16,
+      "fontFamily": "ArialMT",
+      "color": "white"
+    },
     "infoPanelPosition": "topLeft",
     "showPromo": true
   },
   "pauseScreen": {
     "showPauseIcon" : true,
     "pauseIconPosition": "center",
+    "PauseIconStyle": {
+      "color": "white",
+      "opacity": 1
+    },
     "showTitle": true,
     "showDescription": true,
     "infoPanelPosition": "topLeft",
@@ -20,27 +37,22 @@
   "endScreen": {
     "screenToShowOnEnd": "discovery",
     "showReplayButton" : true,
+    "replayIconStyle": {
+      "color": "white",
+      "opacity": 1
+    },
     "showTitle" : true,
     "showDescription" : true
   },
   "controlBar": {
+    "iconStyle": {
+      "color": "#8E8E8E",
+      "opacity": 1
+    },
     "autoHide": true,
     "height": 60,
-      "items": [
-          { "name" : "playPause", "collapsable" : false, "webMinWidth" : 25, "sdkMinWidth" : 25 },
-          { "name" : "volume", "collapsable" : true, "webMinWidth" : 100, "sdkMinWidth" : 25 },
-          { "name" : "timeDuration", "collapsable" : true, "webMinWidth" : 140, "sdkMinWidth" : 25 },
-          { "name" : "flexibleSpace", "collapsable" : false, "webMinWidth" : 1, "sdkMinWidth" : 1 },
-          { "name" : "quality", "collapsable" : true, "webMinWidth" : 25, "sdkMinWidth" : 25 },
-          { "name" : "share", "collapsable" : true, "webMinWidth" : 25, "sdkMinWidth" : 25 },
-          { "name" : "discovery", "collapsable" : true, "webMinWidth" : 25, "sdkMinWidth" : 25 },
-          { "name" : "closedCaption", "collapsable" : true, "webMinWidth" : 25, "sdkMinWidth" : 25 },
-          { "name" : "watermark", "collapsable" : false, "webMinWidth" : 120, "sdkMinWidth" : 120 },
-          { "name" : "fullscreen", "collapsable" : false, "webMinWidth" : 25, "sdkMinWidth" : 25 },
-          { "name" : "moreOptions", "collapsable" : false, "webMinWidth" : 25, "sdkMinWidth" : 25 }
-      ],
     "watermark": {
-      "url": "http://static1.squarespace.com/static/520df253e4b04f7fbda9c4d9/t/55084401e4b07c3c95d3882f/1426605058603/unnamed.png",
+      "imageResource": { "url" : "http://static1.squarespace.com/static/520df253e4b04f7fbda9c4d9/t/55084401e4b07c3c95d3882f/1426605058603/unnamed.png" },
       "width": 500,
       "height": 81
     }
@@ -50,26 +62,35 @@
     "timeToShow": "10"
   },
   "sharing": [
-    {"buttonName": "Facebook", "imgUrl": "http://static1.squarespace.com/static/54823afbe4b023af78555735/549860e4e4b03ff49a6f3da6/549860e5e4b01fe317edf760/1419276283280/facebook+logo+png+transparent+background.png"},
-    {"buttonName": "Twitter", "imgUrl": "https://g.twimg.com/ios_homescreen_icon.png"},
-    {"buttonName": "Pinterest", "imgUrl": "https://lh5.ggpht.com/xISNMehvByzh2OiqV4ozJl1mhoKy_3ngjLny6FXZzlVpzVSsmddw-OosOMEfoy_kSYj9=w300"},
-    {"buttonName": "GooglePlus", "imgUrl": "https://www.plusyourbusiness.com/wp-content/uploads/2013/11/GooglePlus-Logo-Official.png"}
+    {"buttonName": "Facebook", "imageResource" : { "url" : "http://static1.squarespace.com/static/54823afbe4b023af78555735/549860e4e4b03ff49a6f3da6/549860e5e4b01fe317edf760/1419276283280/facebook+logo+png+transparent+background.png" } },
+    {"buttonName": "Twitter", "imageResource": { "url" : "https://g.twimg.com/ios_homescreen_icon.png"} },
+    {"buttonName": "Pinterest", "imageResource": { "url" : "https://lh5.ggpht.com/xISNMehvByzh2OiqV4ozJl1mhoKy_3ngjLny6FXZzlVpzVSsmddw-OosOMEfoy_kSYj9=w300"} },
+    {"buttonName": "GooglePlus", "imageResource": { "url" : "https://www.plusyourbusiness.com/wp-content/uploads/2013/11/GooglePlus-Logo-Official.png"} }
   ],
   "general": {
-    "watermark": {"url": "http://www.palantir.net/presentations/dcamsterdam2014-decoupled-drupal-silex/assets/ooyala-logo.png"}
+    "watermark": { "imageResource": { "url" : "http://www.palantir.net/presentations/dcamsterdam2014-decoupled-drupal-silex/assets/ooyala-logo.png" } }
   },
   "moreOptions": {
     "brightOpacity": 1.0,
     "darkOpacity": 0.4,
     "iconSize": 30,
     "color": "white",
-    "buttons": ["discovery", "quality", "closedCaption", "share", "settings"]
+    "iconStyle": {
+      "color": "white",
+      "opacity": 1
+    }
   },
   "discoveryScreen" : {
     "panelTitle": {
       "text":"Discover",
       "imageUri": "ooyala-logo.png",
+      "imageResource": { "ios-resource" : "ooyala-logo.png" },
       "showImage": true
+    },
+    "titleFont" : {
+      "fontSize": 20,
+      "fontFamily": "Arial-BoldMT",
+      "color": "white"
     },
     "showContentTitle" : true,
     "showContentDuration": false,
@@ -79,6 +100,32 @@
   "ccOptions": {
     "defaultEnabled": true,
     "defaultLanguage": "en"
+  },
+  "buttons" : {
+    "desktop" : [
+      { "name":"playPause", "appearance":"controlBar", "minWidth":25 },
+      { "name":"volume", "appearance":"both", "minWidth":100 },
+      { "name":"timeDuration", "appearance":"controlBar", "minWidth":140 },
+      { "name":"flexibleSpace", "appearance":"controlBar", "minWidth":1 },
+      { "name":"quality", "appearance":"both", "minWidth":25 },
+      { "name":"share", "appearance":"both", "minWidth":25 },
+      { "name":"discovery", "appearance":"both", "minWidth":25 },
+      { "name":"closedCaption", "appearance":"both", "minWidth":25 },
+      { "name":"watermark", "appearance":"controlBar", "minWidth":120 },
+      { "name":"fullscreen", "appearance":"controlBar", "minWidth":25 },
+      { "name":"moreOptions", "appearance":"controlBar", "minWidth":25 }
+    ],
+    "mobile": [
+      { "name":"volume", "appearance":"both", "minWidth":25 },
+      { "name":"timeDuration", "appearance":"controlBar", "minWidth":140 },
+      { "name":"flexibleSpace", "appearance":"controlBar", "minWidth":1 },
+      { "name":"quality", "appearance":"moreOptions", "minWidth":25 },
+      { "name":"share", "appearance":"moreOptions", "minWidth":25 },
+      { "name":"discovery", "appearance":"moreOptions", "minWidth":25 },
+      { "name":"closedCaption", "appearance":"moreOptions", "minWidth":25 },
+      { "name":"fullscreen", "appearance":"controlBar", "minWidth":25 },
+      { "name":"moreOptions", "appearance":"controlBar", "minWidth":25 }
+    ]
   },
   "icons" : {
     "play" : { "fontFamilyName": "fontawesome", "fontString" : "\uf04b" },
