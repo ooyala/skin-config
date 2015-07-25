@@ -103,7 +103,7 @@
   "buttons" : {
     "desktop" : [
       { "name":"playPause", "appearance":"controlBar", "minWidth":25 },
-      { "name":"volume", "appearance":"both", "minWidth":100 },
+      { "name":"volume", "appearance":"controlBar", "minWidth":100 },
       { "name":"timeDuration", "appearance":"controlBar", "minWidth":140 },
       { "name":"flexibleSpace", "appearance":"controlBar", "minWidth":1 },
       { "name":"quality", "appearance":"both", "minWidth":25 },
@@ -115,7 +115,7 @@
       { "name":"moreOptions", "appearance":"controlBar", "minWidth":25 }
     ],
     "mobile": [
-      { "name":"volume", "appearance":"both", "minWidth":25 },
+      { "name":"volume", "appearance":"controlBar", "minWidth":25 },
       { "name":"timeDuration", "appearance":"controlBar", "minWidth":140 },
       { "name":"flexibleSpace", "appearance":"controlBar", "minWidth":1 },
       { "name":"quality", "appearance":"moreOptions", "minWidth":25 },
