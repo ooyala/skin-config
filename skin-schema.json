@@ -169,7 +169,7 @@
           "$ref" : "#/definitions/iconStyle"
         },
         "iconSize": {"type": "number"},
-        "color": {"type": "string"}
+        "color": {"$ref": "#/definitions/color"}
       }
     },
     "discoveryScreen" : {
@@ -241,6 +241,10 @@
     }
   },
   "definitions": {
+    "color" : {
+      "description" : "Any color string as supported by React / React Native.",
+      "type" : "string"
+    },
     "image" : {
       "description" : "Specify how to obtain an image's data. Desktop will use the url. Mobile will first lookup the native resource, with fall back to the url.",
       "type" : "object",
