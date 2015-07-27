@@ -1,4 +1,5 @@
 {
+  "description" : "Base UI Configuration for the Ooyala Player. See also: https://facebook.github.io/react and https://facebook.github.io/react-native.",
   "type" : "object",
   "additionalProperties" : false,
   "required": ["localizableStrings"], // TODO: update this to be right (requires discussion).
