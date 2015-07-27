@@ -115,15 +115,15 @@
       { "name":"moreOptions", "appearance":"controlBar", "minWidth":25 }
     ],
     "mobile": [
-      { "name":"volume", "appearance":"controlBar", "minWidth":25 },
-      { "name":"timeDuration", "appearance":"controlBar", "minWidth":140 },
+      { "name":"playPause", "appearance":"controlBar", "minWidth":40 },
+      { "name":"volume", "appearance":"both", "minWidth":40 },
+      { "name":"timeDuration", "appearance":"both", "minWidth":100 },
       { "name":"flexibleSpace", "appearance":"controlBar", "minWidth":1 },
-      { "name":"quality", "appearance":"moreOptions", "minWidth":25 },
-      { "name":"share", "appearance":"moreOptions", "minWidth":25 },
-      { "name":"discovery", "appearance":"moreOptions", "minWidth":25 },
-      { "name":"closedCaption", "appearance":"moreOptions", "minWidth":25 },
-      { "name":"fullscreen", "appearance":"controlBar", "minWidth":25 },
-      { "name":"moreOptions", "appearance":"controlBar", "minWidth":25 }
+      { "name":"share", "appearance":"both", "minWidth":40 },
+      { "name":"discovery", "appearance":"both", "minWidth":40 },
+      { "name":"closedCaption", "appearance":"both", "minWidth":40 },
+      { "name":"fullscreen", "appearance":"controlBar", "minWidth":40 },
+      { "name":"moreOptions", "appearance":"controlBar", "minWidth":40 }
     ]
   },
   "icons" : {
