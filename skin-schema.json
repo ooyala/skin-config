@@ -235,20 +235,39 @@
       }
     },
     "button" : {
-      "description" : "Specify a button that appears in the user interface. See the buttons, controlBar, and moreOptions part of the schema.",
       "type" : "object",
+      "oneOf" : [
+        {"$ref":"#/definitions/controlBarButton"},
+        {"$ref":"#/definitions/moreOptionsButton"}
+      ]
+    },
+    "controlBarButton" : {
+      "description" : "Buttons that start off in the control bar and thus need to say how they react when the control bar is too narrow for them to fit.",
+      "type" : "object",
+      "required" : ["name", "location", "whenDoesNotFit", "minWidth"],
       "properties" : {
-        "name" : {
-          "description" : "These are the only buttons currently supported by the UI SDK.",
-          "enum" : ["playPause", "volume", "timeDuration", "flexibleSpace", "discovery", "fullscreen", "moreOptions", "watermark", "share", "closedCaption", "bitrateSelector", "quality"]
+        "name" : { "$ref" : "#/definitions/buttonNames" },
+        "location" : { "enum" : ["controlBar"] },
+        "whenDoesNotFit" : {
+          "description" : "Sets how the button should be dealt with when it doesn't fit in the control bar. Keep: keep the button visible in the control bar. Drop: hide it from the UI. MoveToMoreOptions: show it in the more options / overflow UI.",
+          "enum" : ["keep", "drop", "moveToMoreOptions"]
         },
-        "appearance" : { "$ref" : "#/definitions/buttonAppearance" },
         "minWidth" : { "type" : "number" }
       }
     },
-    "buttonAppearance" : {
-      "description" : "Specify where a button might appear in the UI. Both means it will collapse from the controlBar to the moreOptions panel. None means it is disabled entirely.",
-      "enum" : ["controlBar", "moreOptions", "both", "none"]
+    "moreOptionsButton" : {
+      "description" : "Buttons that only appear in the more options UI, and never leave.",
+      "type" : "object",
+      "required" : ["name", "location"],
+      "properties" : {
+        "name" : { "$ref" : "#/definitions/buttonNames" },
+        "location" : { "enum" : ["moreOptions"] }
+      }
+    },
+    "buttonNames" : {
+      "description" : "These are the only buttons currently supported by the UI SDK.",
+      "additionalProperties" : false,
+      "enum" : ["playPause", "volume", "timeDuration", "flexibleSpace", "discovery", "fullscreen", "moreOptions", "watermark", "share", "closedCaption", "bitrateSelector", "quality"]
     },
     "buttonArray" : {
       "description" : "Used to list the buttons for a single platform (desktop vs. mobile).",

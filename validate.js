@@ -16,18 +16,7 @@ function validate_with_jsonschema( schema_object, json_object ) {
     var v = new Validator();
     var r = v.validate( json_object, schema_object );
     if( r.errors && r.errors.length ) {
-        var err = "VALIDATION FAILED: " + r.errors;
-        throw err;
-    }
-}
-
-function validate_with_jjv( schema_object, json_object ) {
-    var jjv = require( 'jjv' );
-    var env = jjv();
-    env.addSchema( 'fromfile', schema_object );
-    var validation_result = env.validate( 'fromfile', json_object );
-    if( validation_result ) {
-        var err = "VALIDATION FAILED: " + JSON.stringify( validation_result );
+        var err = "(jsonschema) VALIDATION FAILED: " + r.errors;
         throw err;
     }
 }
@@ -36,14 +25,13 @@ function validate_with_tv4( schema_object, json_object ) {
     var tv4 = require( 'tv4' );
     var validation_result = tv4.validate( json_object, schema_object );
     if( ! validation_result ) {
-        var err = "VALIDATION FAILED: " + JSON.stringify( tv4.error );
+        var err = "(tv4) VALIDATION FAILED: " + JSON.stringify( tv4.error );
         throw err;
     }
 }
 
 function validate( schema_object, json_object ) {
     validate_with_jsonschema( schema_object, json_object );
-    validate_with_jjv( schema_object, json_object );
     validate_with_tv4( schema_object, json_object );
     console.log( "Passed." );
 }
