@@ -190,8 +190,26 @@
           "description" : "The font of the title",
           "$ref" : "#/definitions/fontStyle"
         },
-        "showContentTitle" : {"type" : "boolean"},
-        "showContentDuration": {"type" : "boolean"}
+        "contentTitle" : {
+          "description" : "The setting for discovery content title",
+          "type" : "object",
+          "additionalProperties" : false,
+          "required" : [ "show", "font" ],
+          "properties" :  {
+            "show": {"type" : "boolean"},
+            "font" : {"$ref" : "#/definitions/fontStyle"}
+          }
+        },
+        "contentDuration": {
+          "description" : "The setting for discovery content duration",
+          "type" : "object",
+          "additionalProperties" : false,
+          "required" : [ "show", "font"],
+          "properties" : {
+            "show": {"type" : "boolean"},
+            "font" : {"$ref" : "#/definitions/fontStyle"}
+          }
+        }
       }
     },
     "ccOptions" : {
