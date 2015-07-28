@@ -2,7 +2,7 @@
   "description" : "Base UI Configuration for the Ooyala Player. See also: https://facebook.github.io/react and https://facebook.github.io/react-native.",
   "type" : "object",
   "additionalProperties" : false,
-  "required": ["localizableStrings"], // TODO: update this to be right (requires discussion).
+  "required": ["general", "startScreen", "pauseScreen", "endScreen", "upNextScreen", "moreOptionsScreen", "discoveryScreen", "ccOptions", "icons", "buttons", "controlBar", "sharing", "localizableStrings" ],
   "properties" : {
     "startScreen" : {
       "description" : "The screen displayed after an asset loads, but before playback begins.",
@@ -12,17 +12,13 @@
           "description" : "Default color is white with an opacity of 1",
           "$ref" : "#/definitions/iconStyle"
         },
-        // TODO: showPromo could be folded into promoImageSize as a 'none' enum value.
         "showPromo": { "type" : "boolean" },
         "promoImageSize" : {
-          // TODO: "deafult" could be called "fullscreen"?
           "description" : "Configure how large the promo image should be when displayed. The 'small' setting will use styling out of the style sheets.",
-          "enum" : ["default", "small"]
+          "enum" : ["fullscreen", "small"]
         },
-        // TODO: showPlayButton could be folded into playButtonPosition as a 'none' enum value.
-        "showPlayButton" : { "type" : "boolean" },
         "playButtonPosition" : {
-          "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ]
+          "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight", "hidden" ] // TODO: find any 'none's elsewhere that should be 'hidden's.
         },
         "showTitle" : { "type" : "boolean" },
         "showDescription" : { "type" : "boolean" },
@@ -34,13 +30,12 @@
           "description" : "The font of the description",
           "$ref" : "#/definitions/fontStyle"
         },
-        // TODO: could we support a 'none' enum?
         "infoPanelPosition" : {
-          "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
+          "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight", "hidden" ]
         }
       }
     },
-    "pauseScreen" : {
+    "pauseScreen" : { // TODO: support this in mobile.
       "description" : "The screen displayed when playback is paused.",
       "type" : "object",
       "properties" : {
@@ -48,18 +43,17 @@
           "description" : "Default color is white with an opacity of 1",
           "$ref" : "#/definitions/iconStyle"
         },
-        "screenToShowOnPause" : { // TODO: this is not used in the mobile code, that I could find with grep,
-          // TODO: what is "default"!? We could use more explicit naming.
-          "enum" : ["default", "discovery"]
-        },
-        // TODO: showPauseIcon could be folded into pauseIconPosition as a 'none' enum value.
         "showPauseIcon" : { "type" : "boolean" },
-        "pauseIconPosition" : {
-          "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ]
+        "showTitle" : {
+          "description" : "If showTitle and showDescription are false, the infoPanel will not appear.",
+          "type" : "boolean"
         },
-        "showTitle" : { "type" : "boolean" },
-        "showDescription" : { "type" : "boolean" },
+        "showDescription" : {
+          "description" : "If showTitle and showDescription are false, the infoPanel will not appear.",
+          "type" : "boolean"
+        },
         "infoPanelPosition" : {
+          "description" : "If showTitle and showDescription are false, the infoPanel will not appear.",
           "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
         }
       }
@@ -72,10 +66,6 @@
           "description" : "Default color is white with an opacity of 1",
           "$ref" : "#/definitions/iconStyle"
         },
-        "screenToShowOnEnd" : {
-          // TODO: what is "default"!? We could use more explicit naming.
-          "enum" : ["default", "discovery"]
-        },
         "showReplayButton" : { "type" : "boolean" },
         "showTitle" : { "type" : "boolean" },
         "showDescription" : { "type" : "boolean" }
@@ -85,10 +75,8 @@
       "description" : "Defines the buttons that can appear on the controlBar and/or the moreOptions panel. Desktop and Mobile platforms can be configured individually.",
       "type" : "object",
       "additionalProperties" : false,
-      // TODO: should we really require both? For our own UX yes, but what about for 3rd parties who only care about 1 platform?
       "required" : ["desktop", "mobile"],
       "properties" : {
-        // TODO: should these have any requirements about their length?
         "desktop" : { "$ref" : "#/definitions/buttonArray" },
         "mobile" : { "$ref" : "#/definitions/buttonArray" }
       }
@@ -97,7 +85,7 @@
       "description" : "The playback control bar. Generally contains a play-pause button, scrubber control, etc. The set of items to show comes from the 'buttons' part of the schema.",
       "type" : "object",
       "additionalProperties" : false,
-      "required" : [ "height", "autoHide", "watermark" ],
+      "required" : [ "height", "autoHide", "brandingLogo" ],
       "properties" : {
         "iconStyle" : {
           "description" : "Default color is #8E8E8E with an opacity of 1",
@@ -105,9 +93,7 @@
         },
         "height" : { "type" : "number" },
         "autoHide" : { "type" : "boolean" },
-        // TODO: how is this different than general.watermark?
-        // And it really isn't a watermark, as it doesn't alpha-overlay anything else.
-        "watermark": {
+        "brandingLogo": {
           "type": "object",
           "additionalProperties" : false,
           "properties": {
@@ -130,10 +116,17 @@
         }
       }
     },
-    "general": { // TODO: I'd like to get rid of this. There's only the watermark in here.
-      "description" : "Configuration of things that do not appear in only one part of the UI.",
+    "general": {
+      "description" : "Miscellaneous configuration.",
       "type": "object",
+      "required" : ["screenToShowOnPauseClicked", "screenToShowOnComplete"],
       "properties": {
+        "screenToShowOnPauseClicked" : { // TODO: support this in mobile.
+          "enum" : ["pauseScreen", "discoveryScreen"]
+        },
+        "screenToShowOnComplete" : {
+          "enum" : ["endScreen", "discoveryScreen"]
+        },
         "watermark": {
           "type": "object",
           "additionalProperties" : false,
@@ -147,7 +140,6 @@
       "description" : "The screen to show as an asset is ending, indicating what assets can follow.",
       "type" : "object",
       "properties" : {
-        // TODO: showUpNext could be folded into timeToShow using "oneOf".
         "showUpNext" : { "type" : "boolean" },
         "timeToShow": {
           "type" : "string",
@@ -155,7 +147,7 @@
         }
       }
     },
-    "moreOptions": {
+    "moreOptionsScreen": {
       "description" : "The more options / overflow panel. The set of items to show comes from the 'buttons' part of the schema.",
       "type": "object",
       "required" : ["iconSize", "color"], // TODO: anything else? Are there defaults in code for the opacities?

@@ -1,6 +1,6 @@
 {
   "startScreen": {
-    "promoImageSize": "default",
+    "promoImageSize": "fullscreen",
     "showPlayButton": true,
     "playButtonPosition": "center",
     "playIconStyle": {
@@ -31,11 +31,9 @@
     },
     "showTitle": true,
     "showDescription": true,
-    "infoPanelPosition": "topLeft",
-    "screenToShowOnPause": "default"
+    "infoPanelPosition": "topLeft"
   },
   "endScreen": {
-    "screenToShowOnEnd": "discovery",
     "showReplayButton" : true,
     "replayIconStyle": {
       "color": "white",
@@ -51,7 +49,7 @@
     },
     "autoHide": true,
     "height": 60,
-    "watermark": {
+    "brandingLogo": {
       "imageResource": { "url" : "http://static1.squarespace.com/static/520df253e4b04f7fbda9c4d9/t/55084401e4b07c3c95d3882f/1426605058603/unnamed.png" },
       "width": 500,
       "height": 81
@@ -68,9 +66,11 @@
     {"buttonName": "GooglePlus", "imageResource": { "url" : "https://www.plusyourbusiness.com/wp-content/uploads/2013/11/GooglePlus-Logo-Official.png"} }
   ],
   "general": {
+    "screenToShowOnPauseClicked": "pauseScreen",
+    "screenToShowOnComplete": "discoveryScreen",
     "watermark": { "imageResource": { "url" : "http://www.palantir.net/presentations/dcamsterdam2014-decoupled-drupal-silex/assets/ooyala-logo.png" } }
   },
-  "moreOptions": {
+  "moreOptionsScreen": {
     "brightOpacity": 1.0,
     "darkOpacity": 0.4,
     "iconSize": 30,
