@@ -82,7 +82,7 @@
   },
   "discoveryScreen" : {
     "panelTitle": {
-      "text":"Recommended",
+      "text":"Discover",
       "imageResource": { "ios-resource" : "ooyala-logo.png" },
       "showImage": true
     },
@@ -91,8 +91,22 @@
       "fontFamily": "Arial-BoldMT",
       "color": "white"
     },
-    "showContentTitle" : true,
-    "showContentDuration": false,
+    "contentTitle" : {
+      "show": true,
+      "font" : {
+        "fontSize": 16,
+        "fontFamily": "Arial-BoldMT",
+        "color": "white"
+      }
+    },
+    "contentDuration": {
+      "show": true,
+      "font" : {
+        "fontSize": 12,
+        "fontFamily": "Arial-BoldMT",
+        "color": "white"
+      }
+    },
     "showCountDownTimerOnEndScreen": true,
     "countDownTime" : "10"
   },
@@ -102,28 +116,29 @@
   },
   "buttons" : {
     "desktop" : [
-      { "name":"playPause", "appearance":"controlBar", "minWidth":25 },
-      { "name":"volume", "appearance":"both", "minWidth":100 },
-      { "name":"timeDuration", "appearance":"controlBar", "minWidth":140 },
-      { "name":"flexibleSpace", "appearance":"controlBar", "minWidth":1 },
-      { "name":"quality", "appearance":"both", "minWidth":25 },
-      { "name":"share", "appearance":"both", "minWidth":25 },
-      { "name":"discovery", "appearance":"both", "minWidth":25 },
-      { "name":"closedCaption", "appearance":"both", "minWidth":25 },
-      { "name":"watermark", "appearance":"controlBar", "minWidth":120 },
-      { "name":"fullscreen", "appearance":"controlBar", "minWidth":25 },
-      { "name":"moreOptions", "appearance":"controlBar", "minWidth":25 }
+      { "name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 },
+      { "name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":100 },
+      { "name":"timeDuration", "location":"controlBar", "whenDoesNotFit":"drop", "minWidth":140 },
+      { "name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
+      { "name":"quality", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":25 },
+      { "name":"share", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":25 },
+      { "name":"discovery", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":25 },
+      { "name":"closedCaption", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":25 },
+      { "name":"watermark", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":120 },
+      { "name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 },
+      { "name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 }
     ],
     "mobile": [
-      { "name":"volume", "appearance":"both", "minWidth":25 },
-      { "name":"timeDuration", "appearance":"controlBar", "minWidth":140 },
-      { "name":"flexibleSpace", "appearance":"controlBar", "minWidth":1 },
-      { "name":"quality", "appearance":"moreOptions", "minWidth":25 },
-      { "name":"share", "appearance":"moreOptions", "minWidth":25 },
-      { "name":"discovery", "appearance":"moreOptions", "minWidth":25 },
-      { "name":"closedCaption", "appearance":"moreOptions", "minWidth":25 },
-      { "name":"fullscreen", "appearance":"controlBar", "minWidth":25 },
-      { "name":"moreOptions", "appearance":"controlBar", "minWidth":25 }
+      { "name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
+      { "name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
+      { "name":"timeDuration", "location":"controlBar", "whenDoesNotFit":"drop", "minWidth":100 },
+      { "name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
+      { "name":"quality", "location":"moreOptions" },
+      { "name":"share", "location":"moreOptions" },
+      { "name":"discovery", "location":"moreOptions" },
+      { "name":"closedCaption", "location":"moreOptions" },
+      { "name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
+      { "name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 }
     ]
   },
   "icons" : {
