@@ -67,7 +67,7 @@
   ],
   "general": {
     "screenToShowOnPauseClicked": "pauseScreen",
-    "screenToShowOnEnd": "discoveryScreen",
+    "screenToShowOnComplete": "discoveryScreen",
     "watermark": { "imageResource": { "url" : "http://www.palantir.net/presentations/dcamsterdam2014-decoupled-drupal-silex/assets/ooyala-logo.png" } }
   },
   "moreOptionsScreen": {

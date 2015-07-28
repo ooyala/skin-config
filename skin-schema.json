@@ -117,14 +117,14 @@
       }
     },
     "general": {
-      "description" : "Configuration of things that do not appear in only one part of the UI.",
+      "description" : "Miscellaneous configuration.",
       "type": "object",
-      "required" : ["screenToShowOnPauseClicked", "screenToShowOnEnd"],
+      "required" : ["screenToShowOnPauseClicked", "screenToShowOnComplete"],
       "properties": {
         "screenToShowOnPauseClicked" : { // TODO: support this in mobile.
           "enum" : ["pauseScreen", "discoveryScreen"]
         },
-        "screenToShowOnEnd" : {
+        "screenToShowOnComplete" : {
           "enum" : ["endScreen", "discoveryScreen"]
         },
         "watermark": {
