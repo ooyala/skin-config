@@ -37,7 +37,6 @@
   "endScreen": {
     "screenToShowOnEnd": "discovery",
     "showReplayButton" : true,
-    "replayButtonPosition" : "center",
     "replayIconStyle": {
       "color": "white",
       "opacity": 1
