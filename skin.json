@@ -115,7 +115,7 @@
     "defaultLanguage": "en"
   },
   "buttons" : {
-    "desktop" : [
+    "desktopContent" : [
       { "name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 },
       { "name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":100 },
       { "name":"timeDuration", "location":"controlBar", "whenDoesNotFit":"drop", "minWidth":140 },
@@ -128,7 +128,16 @@
       { "name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 },
       { "name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 }
     ],
-    "mobile": [
+    "desktopAd" : [
+      { "name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 },
+      { "name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":100 },
+      { "name":"timeDuration", "location":"controlBar", "whenDoesNotFit":"drop", "minWidth":140 },
+      { "name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
+      { "name":"watermark", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":120 },
+      { "name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 },
+      { "name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 }
+    ],
+    "mobileContent": [
       { "name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
       { "name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
       { "name":"timeDuration", "location":"controlBar", "whenDoesNotFit":"drop", "minWidth":100 },
@@ -137,6 +146,13 @@
       { "name":"share", "location":"moreOptions" },
       { "name":"discovery", "location":"moreOptions" },
       { "name":"closedCaption", "location":"moreOptions" },
+      { "name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
+      { "name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 }
+    ],
+    "mobileAd": [
+      { "name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
+      { "name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
+      { "name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
       { "name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
       { "name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 }
     ]

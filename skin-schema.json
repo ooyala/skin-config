@@ -89,8 +89,10 @@
       "required" : ["desktop", "mobile"],
       "properties" : {
         // TODO: should these have any requirements about their length?
-        "desktop" : { "$ref" : "#/definitions/buttonArray" },
-        "mobile" : { "$ref" : "#/definitions/buttonArray" }
+        "desktopContent" : { "$ref" : "#/definitions/buttonArray" },
+        "desktopAd" : { "$ref" : "#/definitions/buttonArray" },
+        "mobileContent" : { "$ref" : "#/definitions/buttonArray" },
+        "mobileAd" : { "$ref" : "#/definitions/buttonArray" }
       }
     },
     "controlBar" : {
