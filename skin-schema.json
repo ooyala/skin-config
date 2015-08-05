@@ -157,6 +157,13 @@
         }
       }
     },
+    "adScreen" : {
+      "description" : "The screen to show during ads playback",
+      "type" : "object",
+      "properties" : {
+        "showAdMarquee" : { "type" : "boolean" }
+      }
+    },
     "moreOptions": {
       "description" : "The more options / overflow panel. The set of items to show comes from the 'buttons' part of the schema.",
       "type": "object",
