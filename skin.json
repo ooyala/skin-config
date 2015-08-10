@@ -40,9 +40,7 @@
     "replayIconStyle": {
       "color": "white",
       "opacity": 1
-    },
-    "showTitle" : true,
-    "showDescription" : true
+    }
   },
   "controlBar": {
     "iconStyle": {
