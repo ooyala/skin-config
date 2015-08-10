@@ -161,7 +161,8 @@
       "description" : "The screen to show during ads playback",
       "type" : "object",
       "properties" : {
-        "showAdMarquee" : { "type" : "boolean" }
+        "showAdMarquee" : { "type" : "boolean" },
+        "showControlBar" : { "type" : "boolean"}
       }
     },
     "moreOptions": {
