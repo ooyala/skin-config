@@ -129,7 +129,6 @@
       { "name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 }
     ],
     "mobile": [
-      { "name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
       { "name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
       { "name":"timeDuration", "location":"controlBar", "whenDoesNotFit":"drop", "minWidth":100 },
       { "name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
