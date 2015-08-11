@@ -40,9 +40,7 @@
     "replayIconStyle": {
       "color": "white",
       "opacity": 1
-    },
-    "showTitle" : true,
-    "showDescription" : true
+    }
   },
   "controlBar": {
     "iconStyle": {
@@ -60,6 +58,10 @@
   "upNextScreen": {
     "showUpNext": true,
     "timeToShow": "10"
+  },
+  "adScreen": {
+    "showAdMarquee": true,
+    "showControlBar": true
   },
   "sharing": [
     {
@@ -125,7 +127,7 @@
     "defaultLanguage": "en"
   },
   "buttons" : {
-    "desktop" : [
+    "desktopContent" : [
       { "name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 },
       { "name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":100 },
       { "name":"timeDuration", "location":"controlBar", "whenDoesNotFit":"drop", "minWidth":140 },
@@ -138,8 +140,15 @@
       { "name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 },
       { "name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 }
     ],
-    "mobile": [
-      { "name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
+    "desktopAd" : [
+      { "name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 },
+      { "name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":100 },
+      { "name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
+      { "name":"watermark", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":120 },
+      { "name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 },
+      { "name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 }
+    ],
+    "mobileContent": [
       { "name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
       { "name":"timeDuration", "location":"controlBar", "whenDoesNotFit":"drop", "minWidth":100 },
       { "name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
@@ -147,6 +156,12 @@
       { "name":"share", "location":"moreOptions" },
       { "name":"discovery", "location":"moreOptions" },
       { "name":"closedCaption", "location":"moreOptions" },
+      { "name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
+      { "name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 }
+    ],
+    "mobileAd": [
+      { "name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
+      { "name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
       { "name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
       { "name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 }
     ]
