@@ -126,7 +126,7 @@
         "additionalProperties" : false,
         "properties": {
           "buttonName": { "type": "string" },
-          "imageResource" : { "$ref" : "#/definitions/image" }
+          "icon" : {"$ref" : "#/definitions/icon"}
         }
       }
     },
