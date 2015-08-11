@@ -177,6 +177,20 @@
     "toggleOn" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf205" },
     "toggleOff" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf204" }
   },
+  "desktopIcons" : {
+    "play" : "icon icon-play",
+    "pause" : "icon icon-pause",
+    "volume" : "icon icon-volume-desktop",
+    "volumeMute" : "icon icon-volume-desktop",
+    "expand" : "icon icon-resize-large",
+    "compress" : "icon icon-resize-small", 
+    "replay" : "icon icon-upnext-replay", 
+    "share" : "icon icon-topmenu-share",
+    "cc" : "icon icon-topmenu-cc",
+    "discovery" : "icon icon-topmenu-discovery",
+    "quality" : "icon icon-topmenu-quality",
+    "moreOptions" : "icon icon-menu"
+  },
   "localizableStrings" : {
     "default" : "en",
     "languages" : ["en", "es", "zh"]
