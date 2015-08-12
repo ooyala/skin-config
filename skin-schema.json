@@ -233,10 +233,16 @@
       }
     },
     "icons" : {
-      "description" : "The set of all required icons, for rendering all the various buttons' states. Note that this is the superset of all icons needed by versions of the player (Desktop vs. Mobile)",
+      "description" : "The set of all required icons, for rendering all the various buttons' states for Mobile",
       "type" : "object",
       "patternProperties" : { "" : { "$ref" : "#/definitions/icon" } },
       "required" : ["play", "pause", "volumeDown", "volumeUp", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn" ]
+    },
+    "desktopIcons" : {
+      "description" : "The set of all required icons, for rendering all the various buttons' states for Desktop",
+      "type" : "object",
+      "properties" : { "string" : "string"},
+      "required" : ["play", "pause", "volume", "volumeMute", "expand", "compress", "replay", "share", "cc", "discovery", "quality", "settings", "dismiss", "left", "right"]
     },
     "localizableStrings" : {
       "description": "Defines the string values used in the player. Languages listed in the array require a separate json file included in the bundle, named '<language>.json' e.g. 'en.json'.",
