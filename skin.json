@@ -189,7 +189,10 @@
     "cc" : "icon icon-topmenu-cc",
     "discovery" : "icon icon-topmenu-discovery",
     "quality" : "icon icon-topmenu-quality",
-    "moreOptions" : "icon icon-menu"
+    "settings" : "icon icon-menu",
+    "dismiss" : "icon icon-close",
+    "left" : "icon icon-left",
+    "right" : "icon icon-right"
   },
   "localizableStrings" : {
     "default" : "en",
