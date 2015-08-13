@@ -322,7 +322,7 @@
           "type" : "string"
         },
         "fontStyleClass" : {
-          "description" : "The CSS class string for displaying the icon.",
+          "description" : "The CSS class string for displaying the icon, which oly applies to HTML5 player",
           "type"  : "string"
         }
       }
