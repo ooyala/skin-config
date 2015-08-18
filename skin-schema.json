@@ -233,10 +233,10 @@
       }
     },
     "icons" : {
-      "description" : "The set of all required icons, for rendering all the various buttons' states. Note that this is the superset of all icons needed by versions of the player (Desktop vs. Mobile)",
+      "description" : "The set of all required icons, for rendering all the various buttons' states for Mobile",
       "type" : "object",
       "patternProperties" : { "" : { "$ref" : "#/definitions/icon" } },
-      "required" : ["play", "pause", "volumeDown", "volumeUp", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn" ]
+      "required" : ["play", "pause", "volume", "volumeDown", "volumeUp", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn", "left", "right"]
     },
     "localizableStrings" : {
       "description": "Defines the string values used in the player. Languages listed in the array require a separate json file included in the bundle, named '<language>.json' e.g. 'en.json'.",
@@ -310,7 +310,7 @@
     "icon" : {
       "description" : "Icons are renderable from fonts. Bitmaps are not supported.",
       "type" : "object",
-      "required" : ["fontFamilyName", "fontString"],
+      "required" : ["fontFamilyName", "fontString", "fontStyleClass"],
       "additionalProperties" : false,
       "properties" : {
         "fontFamilyName" : {
@@ -320,6 +320,10 @@
         "fontString" : {
           "description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
           "type" : "string"
+        },
+        "fontStyleClass" : {
+          "description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+          "type"  : "string"
         }
       }
     },
