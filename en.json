@@ -1,12 +1,15 @@
 {
   "Learn More" : "Learn More",
-  "CLOSE CAPTION PREVIEW": "CLOSE CAPTION PREVIEW",
+  "CLOSED CAPTION PREVIEW": "CLOSED CAPTION PREVIEW",
   "Sample Text": "Sample Text",
-  "Ad Playing": "Ad Playing",
+  "Ad": "Ad",
+  "Skip Ad": "Skip Ad",
   "LIVE": "LIVE",
   "GO LIVE": "GO LIVE",
   "CC Options": "CC Options",
   "On": "On",
   "Off": "Off",
-  "Discovery": "Discovery"
+  "Discover": "Discover",
+  "Up next": "Up next",
+  "Invest In Social Change": "Invest In Social Change"
 }
