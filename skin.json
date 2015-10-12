@@ -50,7 +50,7 @@
     "autoHide": true,
     "height": 60,
     "watermark": {
-      "imageResource": { "url" : "http://static1.squarespace.com/static/520df253e4b04f7fbda9c4d9/t/55084401e4b07c3c95d3882f/1426605058603/unnamed.png" },
+      "imageResource": { "url" : "/assets/images/ooyala.png" },
       "width": 500,
       "height": 81
     }
@@ -80,7 +80,7 @@
     }
   ],
   "general": {
-    "watermark": { "imageResource": { "url" : "http://www.palantir.net/presentations/dcamsterdam2014-decoupled-drupal-silex/assets/ooyala-logo.png" } }
+    "watermark": { "imageResource": { "url" : "/assets/images/ooyala-watermark.png" } }
   },
   "moreOptions": {
     "brightOpacity": 1.0,
