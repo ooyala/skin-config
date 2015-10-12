@@ -8,5 +8,11 @@
   "CC Options": "CC Options",
   "On": "On",
   "Off": "Off",
-  "Discovery": "Discovery"
+  "Discovery": "Discovery",
+  "Facebook Unavailable": "Facebook Unavailable",
+  "Facebook Success": "Check out this video on Facebook",
+  "Twitter Unavailable": "Twitter Unavailable",
+  "Twitter Success": "Check out this video on Twitter",
+  "Post Title": "Post Successfully",
+  "Account Configure": "Please set up your account on device"
 }
