@@ -187,8 +187,12 @@
     "learn" : { "fontFamilyName" : "alice", "fontString" : "\u0074", "fontStyleClass" : "icon icon-learn"},
     "skip" : { "fontFamilyName" : "alice", "fontString" : "\u0075", "fontStyleClass" : "icon icon-skip"}
   },
-  "localizableStrings" : {
-    "default" : "en",
-    "languages" : ["en", "es", "zh"]
+  "localization" : {
+    "defaultLanguage" : "en",
+    "availableLanguageFile" : [
+      {"language": "en", "languageFile": "config/en.json"},
+      {"language": "es", "languageFile": "config/es.json"},
+      {"language": "zh", "languageFile": "config/zh.json"}
+    ]
   }
 }
