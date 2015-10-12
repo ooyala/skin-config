@@ -94,7 +94,6 @@
   },
   "discoveryScreen" : {
     "panelTitle": {
-      "text":"Discover",
       "imageResource": { "ios-resource" : "ooyala-logo.png" },
       "showImage": true
     },
@@ -128,17 +127,17 @@
   },
   "buttons" : {
     "desktopContent" : [
-      { "name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 },
-      { "name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":100 },
-      { "name":"timeDuration", "location":"controlBar", "whenDoesNotFit":"drop", "minWidth":140 },
+      { "name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":35 },
+      { "name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":105 },
+      { "name":"timeDuration", "location":"controlBar", "whenDoesNotFit":"drop", "minWidth":145 },
       { "name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
-      { "name":"quality", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":25 },
-      { "name":"share", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":25 },
-      { "name":"discovery", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":25 },
-      { "name":"closedCaption", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":25 },
-      { "name":"watermark", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":120 },
-      { "name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 },
-      { "name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 }
+      { "name":"quality", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":35 },
+      { "name":"share", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":35 },
+      { "name":"discovery", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":35 },
+      { "name":"closedCaption", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":35 },
+      { "name":"watermark", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":130 },
+      { "name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":35 },
+      { "name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":35 }
     ],
     "desktopAd" : [
       { "name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 },
@@ -184,7 +183,9 @@
     "toggleOn" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf205", "fontStyleClass" : ""},
     "toggleOff" : { "fontFamilyName" : "fontawesome", "fontString" : "\uf204", "fontStyleClass" : ""},
     "left" : { "fontFamilyName" : "alice", "fontString" : "\u0072", "fontStyleClass" : "icon icon-left"},
-    "right" : { "fontFamilyName" : "alice", "fontString" : "\u0073", "fontStyleClass" : "icon icon-right"}
+    "right" : { "fontFamilyName" : "alice", "fontString" : "\u0073", "fontStyleClass" : "icon icon-right"},
+    "learn" : { "fontFamilyName" : "alice", "fontString" : "\u0074", "fontStyleClass" : "icon icon-learn"},
+    "skip" : { "fontFamilyName" : "alice", "fontString" : "\u0075", "fontStyleClass" : "icon icon-skip"}
   },
   "localizableStrings" : {
     "default" : "en",

@@ -242,6 +242,7 @@
       "description": "Defines the string values used in the player. Languages listed in the array require a separate json file included in the bundle, named '<language>.json' e.g. 'en.json'.",
       "type" : "object",
       "properties": {
+        "language" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
         "default" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
         "languages" : {
           "type": "array",
