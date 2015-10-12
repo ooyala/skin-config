@@ -61,7 +61,7 @@
   },
   "adScreen": {
     "showAdMarquee": true,
-    "showControlBar": true
+    "showControlBar": false
   },
   "sharing": [
     {
