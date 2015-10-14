@@ -94,6 +94,7 @@
   },
   "discoveryScreen" : {
     "panelTitle": {
+      "text": "Discover",
       "imageResource": { "ios-resource" : "ooyala-logo.png" },
       "showImage": true
     },
