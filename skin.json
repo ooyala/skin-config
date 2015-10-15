@@ -96,7 +96,6 @@
   },
   "discoveryScreen" : {
     "panelTitle": {
-      "text":"Discover",
       "titleFont": {
         "fontSize": 20,
         "fontFamily": "Arial-BoldMT",

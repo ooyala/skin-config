@@ -190,9 +190,8 @@
         "panelTitle" : { 
           "type" : "object",
           "additionalProperties" : false,
-          "required" : [ "text", "titleFont" ],
+          "required" : [ "titleFont" ],
           "properties" : {
-            "text" : { "type": "string" },
             "titleFont" : {
               "type": "object",
               "description" : "The font of the title",
