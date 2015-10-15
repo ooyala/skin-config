@@ -68,14 +68,16 @@
       "buttonName": "Facebook",
       "icon" : {
         "fontFamilyName" : "fontawesome",
-        "fontString" : "\uf230"
+        "fontString" : "\uf230",
+        "fontStyleClass" : "icon icon-facebook"
       }
     },
     {
       "buttonName": "Twitter",
       "icon": {
         "fontFamilyName" : "fontawesome",
-        "fontString" : "\uf099"
+        "fontString" : "\uf099",
+        "fontStyleClass" : "icon icon-twitter"
       }
     }
   ],
@@ -94,13 +96,12 @@
   },
   "discoveryScreen" : {
     "panelTitle": {
-      "imageResource": { "ios-resource" : "ooyala-logo.png" },
-      "showImage": true
-    },
-    "titleFont" : {
-      "fontSize": 20,
-      "fontFamily": "Arial-BoldMT",
-      "color": "white"
+      "text":"Discover",
+      "titleFont": {
+        "fontSize": 20,
+        "fontFamily": "Arial-BoldMT",
+        "color": "white"
+      }
     },
     "contentTitle" : {
       "show": true,

@@ -2,7 +2,7 @@
   "description" : "Base UI Configuration for the Ooyala Player. See also: https://facebook.github.io/react and https://facebook.github.io/react-native.",
   "type" : "object",
   "additionalProperties" : false,
-  "required": ["localizableStrings"], // TODO: update this to be right (requires discussion).
+  "required": ["localization"], // TODO: update this to be right (requires discussion).
   "properties" : {
     "startScreen" : {
       "description" : "The screen displayed after an asset loads, but before playback begins.",
@@ -86,7 +86,7 @@
       "type" : "object",
       "additionalProperties" : false,
       // TODO: should we really require both? For our own UX yes, but what about for 3rd parties who only care about 1 platform?
-      "required" : ["desktop", "mobile"],
+      "required" : ["desktopContent", "mobileContent"],
       "properties" : {
         // TODO: should these have any requirements about their length?
         "desktopContent" : { "$ref" : "#/definitions/buttonArray" },
@@ -190,16 +190,15 @@
         "panelTitle" : { 
           "type" : "object",
           "additionalProperties" : false,
-          "required" : [ "text", "imageResource", "showImage" ],
+          "required" : [ "text", "titleFont" ],
           "properties" : {
             "text" : { "type": "string" },
-            "imageResource" : { "$ref" : "#/definitions/image" },
-            "showImage" : { "type" : "boolean" }
+            "titleFont" : {
+              "type": "object",
+              "description" : "The font of the title",
+              "$ref" : "#/definitions/fontStyle"
+            }
           }
-        },
-        "titleFont" : {
-          "description" : "The font of the title",
-          "$ref" : "#/definitions/fontStyle"
         },
         "contentTitle" : {
           "description" : "The setting for discovery content title",
@@ -236,20 +235,19 @@
       "description" : "The set of all required icons, for rendering all the various buttons' states for Mobile",
       "type" : "object",
       "patternProperties" : { "" : { "$ref" : "#/definitions/icon" } },
-      "required" : ["play", "pause", "volume", "volumeDown", "volumeUp", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn", "left", "right"]
+      "required" : ["play", "pause", "volume", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn", "left", "right"]
     },
-    "localizableStrings" : {
+    "localization" : {
       "description": "Defines the string values used in the player. Languages listed in the array require a separate json file included in the bundle, named '<language>.json' e.g. 'en.json'.",
       "type" : "object",
       "properties": {
-        "language" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
-        "default" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
-        "languages" : {
+        "defaultLanguage" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
+        "availableLanguageFile" : {
           "type": "array",
-          "items": {"type": "string", "pattern": "^[a-z]{2}$"}
+          "items": {"type": "object", "pattern": "^[a-z]{2}$"}
         }
       },
-      "required" : ["default"] 
+      "required" : ["defaultLanguage"]
     }
   },
   "definitions": {
