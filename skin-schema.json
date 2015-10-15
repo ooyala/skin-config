@@ -2,7 +2,7 @@
   "description" : "Base UI Configuration for the Ooyala Player. See also: https://facebook.github.io/react and https://facebook.github.io/react-native.",
   "type" : "object",
   "additionalProperties" : false,
-  "required": ["localization"], // TODO: update this to be right (requires discussion).
+  "required": ["localization"],
   "properties" : {
     "startScreen" : {
       "description" : "The screen displayed after an asset loads, but before playback begins.",
