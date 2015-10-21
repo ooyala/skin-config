@@ -4,6 +4,31 @@
   "additionalProperties" : false,
   "required": ["localization"],
   "properties" : {
+    "general": { // TODO: I'd like to get rid of this. There's only the watermark in here.
+      "description" : "Configuration of things that do not appear in only one part of the UI.",
+      "type": "object",
+      "properties": {
+        "watermark": {
+          "type": "object",
+          "additionalProperties" : false,
+          "properties" : {
+            "imageResource" : { "$ref" : "#/definitions/image" }
+          }
+        }
+      }
+    },
+    "localization" : {
+      "description": "Defines the string values used in the player. Languages listed in the array require a separate json file included in the bundle, named '<language>.json' e.g. 'en.json'.",
+      "type" : "object",
+      "properties": {
+        "defaultLanguage" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
+        "availableLanguageFile" : {
+          "type": "array",
+          "items": {"type": "object", "pattern": "^[a-z]{2}$"}
+        }
+      },
+      "required" : ["defaultLanguage"]
+    },
     "startScreen" : {
       "description" : "The screen displayed after an asset loads, but before playback begins.",
       "type" : "object",
@@ -81,82 +106,6 @@
         "showDescription" : { "type" : "boolean" }
       }
     },
-    "buttons" : {
-      "description" : "Defines the buttons that can appear on the controlBar and/or the moreOptions panel. Desktop and Mobile platforms can be configured individually.",
-      "type" : "object",
-      "additionalProperties" : false,
-      // TODO: should we really require both? For our own UX yes, but what about for 3rd parties who only care about 1 platform?
-      "required" : ["desktopContent", "mobileContent"],
-      "properties" : {
-        // TODO: should these have any requirements about their length?
-        "desktopContent" : { "$ref" : "#/definitions/buttonArray" },
-        "desktopAd" : { "$ref" : "#/definitions/buttonArray" },
-        "mobileContent" : { "$ref" : "#/definitions/buttonArray" },
-        "mobileAd" : { "$ref" : "#/definitions/buttonArray" }
-      }
-    },
-    "controlBar" : {
-      "description" : "The playback control bar. Generally contains a play-pause button, scrubber control, etc. The set of items to show comes from the 'buttons' part of the schema.",
-      "type" : "object",
-      "additionalProperties" : false,
-      "required" : [ "height", "autoHide", "watermark" ],
-      "properties" : {
-        "iconStyle" : {
-          "description" : "Default color is #8E8E8E with an opacity of 1",
-          "$ref" : "#/definitions/iconStyle"
-        },
-        "height" : { "type" : "number" },
-        "autoHide" : { "type" : "boolean" },
-        // TODO: how is this different than general.watermark?
-        // And it really isn't a watermark, as it doesn't alpha-overlay anything else.
-        "watermark": {
-          "type": "object",
-          "additionalProperties" : false,
-          "properties": {
-            "imageResource" : { "$ref" : "#/definitions/image" },
-            "width": {"type" : "number"},
-            "height": {"type" : "number"}
-          }
-        }
-      }
-    },
-    "sharing": {
-      "description" : "The list of sharing buttons (e.g. Twitter, Facebook, etc.).",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties" : false,
-        "properties": {
-          "buttonName": { "type": "string" },
-          "icon" : {"$ref" : "#/definitions/icon"}
-        }
-      }
-    },
-    "general": { // TODO: I'd like to get rid of this. There's only the watermark in here.
-      "description" : "Configuration of things that do not appear in only one part of the UI.",
-      "type": "object",
-      "properties": {
-        "watermark": {
-          "type": "object",
-          "additionalProperties" : false,
-          "properties" : {
-            "imageResource" : { "$ref" : "#/definitions/image" }
-          }
-        }
-      }
-    },
-    "upNextScreen" : {
-      "description" : "The screen to show as an asset is ending, indicating what assets can follow.",
-      "type" : "object",
-      "properties" : {
-        // TODO: showUpNext could be folded into timeToShow using "oneOf".
-        "showUpNext" : { "type" : "boolean" },
-        "timeToShow": {
-          "type" : "string",
-          "pattern": "^[0-9]+$|^[0-9]{1,2}%$"
-        }
-      }
-    },
     "adScreen" : {
       "description" : "The screen to show during ads playback",
       "type" : "object",
@@ -165,29 +114,11 @@
         "showControlBar" : { "type" : "boolean"}
       }
     },
-    "moreOptions": {
-      "description" : "The more options / overflow panel. The set of items to show comes from the 'buttons' part of the schema.",
-      "type": "object",
-      "required" : ["iconSize", "color"], // TODO: anything else? Are there defaults in code for the opacities?
-      "additionalProperties" : false,
-      "patternProperties" : {
-        "brightOpacity": {"type": "number"},
-        "darkOpacity": {"type": "number"}
-      },
-      "properties": {
-        "iconStyle" : {
-          "description" : "Default color is white with an opacity of 1",
-          "$ref" : "#/definitions/iconStyle"
-        },
-        "iconSize": {"type": "number"},
-        "color": {"$ref": "#/definitions/color"}
-      }
-    },
     "discoveryScreen" : {
       "description" : "The screen showing other recommended content.",
       "type" : "object",
       "properties" : {
-        "panelTitle" : { 
+        "panelTitle" : {
           "type" : "object",
           "additionalProperties" : false,
           "required" : [ "titleFont" ],
@@ -221,7 +152,37 @@
         }
       }
     },
-    "ccOptions" : {
+    "shareScreen": {
+      "description" : "The list of sharing buttons (e.g. Twitter, Facebook, etc.).",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties" : false,
+        "properties": {
+          "buttonName": { "type": "string" },
+          "icon" : {"$ref" : "#/definitions/icon"}
+        }
+      }
+    },
+    "moreOptionsScreen": {
+      "description" : "The more options / overflow panel. The set of items to show comes from the 'buttons' part of the schema.",
+      "type": "object",
+      "required" : ["iconSize", "color"], // TODO: anything else? Are there defaults in code for the opacities?
+      "additionalProperties" : false,
+      "patternProperties" : {
+        "brightOpacity": {"type": "number"},
+        "darkOpacity": {"type": "number"}
+      },
+      "properties": {
+        "iconStyle" : {
+          "description" : "Default color is white with an opacity of 1",
+          "$ref" : "#/definitions/iconStyle"
+        },
+        "iconSize": {"type": "number"},
+        "color": {"$ref": "#/definitions/color"}
+      }
+    },
+    "closedCaptionOptions" : {
       "description" : "Settings regarding closed captioning.",
       "type" : "object",
       "properties" : {
@@ -230,23 +191,62 @@
         "defaultLanguage" : { "type" : "string" }
       }
     },
+    "upNext" : {
+      "description" : "The screen to show as an asset is ending, indicating what assets can follow.",
+      "type" : "object",
+      "properties" : {
+        // TODO: showUpNext could be folded into timeToShow using "oneOf".
+        "showUpNext" : { "type" : "boolean" },
+        "timeToShow": {
+          "type" : "string",
+          "pattern": "^[0-9]+$|^[0-9]{1,2}%$"
+        }
+      }
+    },
+    "controlBar" : {
+      "description" : "The playback control bar. Generally contains a play-pause button, scrubber control, etc. The set of items to show comes from the 'buttons' part of the schema.",
+      "type" : "object",
+      "additionalProperties" : false,
+      "required" : [ "height", "autoHide", "watermark" ],
+      "properties" : {
+        "iconStyle" : {
+          "description" : "Default color is #8E8E8E with an opacity of 1",
+          "$ref" : "#/definitions/iconStyle"
+        },
+        "height" : { "type" : "number" },
+        "autoHide" : { "type" : "boolean" },
+        // TODO: how is this different than general.watermark?
+        // And it really isn't a watermark, as it doesn't alpha-overlay anything else.
+        "watermark": {
+          "type": "object",
+          "additionalProperties" : false,
+          "properties": {
+            "imageResource" : { "$ref" : "#/definitions/image" },
+            "width": {"type" : "number"},
+            "height": {"type" : "number"}
+          }
+        }
+      }
+    },
+    "buttons" : {
+      "description" : "Defines the buttons that can appear on the controlBar and/or the moreOptions panel. Desktop and Mobile platforms can be configured individually.",
+      "type" : "object",
+      "additionalProperties" : false,
+      // TODO: should we really require both? For our own UX yes, but what about for 3rd parties who only care about 1 platform?
+      "required" : ["desktopContent", "mobileContent"],
+      "properties" : {
+        // TODO: should these have any requirements about their length?
+        "desktopContent" : { "$ref" : "#/definitions/buttonArray" },
+        "desktopAd" : { "$ref" : "#/definitions/buttonArray" },
+        "mobileContent" : { "$ref" : "#/definitions/buttonArray" },
+        "mobileAd" : { "$ref" : "#/definitions/buttonArray" }
+      }
+    },
     "icons" : {
       "description" : "The set of all required icons, for rendering all the various buttons' states for Mobile",
       "type" : "object",
       "patternProperties" : { "" : { "$ref" : "#/definitions/icon" } },
       "required" : ["play", "pause", "volume", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn", "left", "right"]
-    },
-    "localization" : {
-      "description": "Defines the string values used in the player. Languages listed in the array require a separate json file included in the bundle, named '<language>.json' e.g. 'en.json'.",
-      "type" : "object",
-      "properties": {
-        "defaultLanguage" : {"type" : "string", "pattern" : "^[a-z]{2}$"},
-        "availableLanguageFile" : {
-          "type": "array",
-          "items": {"type": "object", "pattern": "^[a-z]{2}$"}
-        }
-      },
-      "required" : ["defaultLanguage"]
     }
   },
   "definitions": {
