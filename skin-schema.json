@@ -231,7 +231,7 @@
       }
     },
     "icons" : {
-      "description" : "The set of all required icons, for rendering all the various buttons' states for Mobile",
+      "description" : "The set of all required icons, for rendering all the various buttons' states.",
       "type" : "object",
       "patternProperties" : { "" : { "$ref" : "#/definitions/icon" } },
       "required" : ["play", "pause", "volume", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn", "left", "right"]
