@@ -174,12 +174,12 @@
         "darkOpacity": {"type": "number"}
       },
       "properties": {
+        "iconSize": {"type": "number"},
+        "color": {"$ref": "#/definitions/color"},
         "iconStyle" : {
           "description" : "Default color is white with an opacity of 1",
           "$ref" : "#/definitions/iconStyle"
-        },
-        "iconSize": {"type": "number"},
-        "color": {"$ref": "#/definitions/color"}
+        }
       }
     },
     "closedCaptionOptions" : {
@@ -335,6 +335,22 @@
         },
         "opacity" : {
           "type" : "number"
+        },
+        "active": {
+          "color" : {
+            "type" : "string"
+          },
+          "opacity" : {
+            "type" : "number"
+          }
+        },
+        "inactive": {
+          "color" : {
+            "type" : "string"
+          },
+          "opacity" : {
+            "type" : "number"
+          }
         },
         "shadowColor" : {
           "type" : "string"
