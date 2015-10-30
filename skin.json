@@ -108,8 +108,14 @@
     "iconSize": 30,
     "color": "white",
     "iconStyle": {
-      "color": "white",
-      "opacity": 1
+      "active": {
+        "color": "#FFFFFF",
+        "opacity": 1
+      },
+      "inactive": {
+        "color": "#FFFFFF",
+        "opacity": 0.6
+      }
     }
   },
   "closedCaptionOptions": {
@@ -123,8 +129,14 @@
   },
   "controlBar": {
     "iconStyle": {
-      "color": "#8E8E8E",
-      "opacity": 1
+      "active": {
+        "color": "#FFFFFF",
+        "opacity": 1
+      },
+      "inactive": {
+        "color": "#8E8E8E",
+        "opacity": 0.6
+      }
     },
     "autoHide": true,
     "height": 60,
