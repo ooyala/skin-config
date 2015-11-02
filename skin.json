@@ -21,13 +21,13 @@
     "showTitle": true,
     "showDescription": true,
     "titleFont": {
-      "fontSize": 20,
-      "fontFamily": "Arial-BoldMT",
+      "fontSize": 30,
+      "fontFamily": "'Roboto Condensed', sans-serif",
       "color": "white"
     },
     "descriptionFont": {
-      "fontSize": 16,
-      "fontFamily": "ArialMT",
+      "fontSize": 17,
+      "fontFamily": "'Roboto', sans-serif",
       "color": "white"
     },
     "infoPanelPosition": "topLeft",
@@ -60,16 +60,16 @@
   "discoveryScreen": {
     "panelTitle": {
       "titleFont": {
-        "fontSize": 20,
-        "fontFamily": "Arial-BoldMT",
+        "fontSize": 32,
+        "fontFamily": "'Roboto Condensed', sans-serif",
         "color": "white"
       }
     },
     "contentTitle": {
       "show": true,
       "font": {
-        "fontSize": 16,
-        "fontFamily": "Arial-BoldMT",
+        "fontSize": 22,
+        "fontFamily": "'Roboto Condensed', sans-serif",
         "color": "white"
       }
     },
@@ -134,7 +134,7 @@
         "opacity": 1
       },
       "inactive": {
-        "color": "#8E8E8E",
+        "color": "#FFFFFF",
         "opacity": 0.6
       }
     },
@@ -161,12 +161,12 @@
       {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":35 }
     ],
     "desktopAd": [
-      {"name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 },
-      {"name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":100 },
+      {"name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":35 },
+      {"name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":105 },
       {"name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
-      {"name":"watermark", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":120 },
-      {"name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 },
-      {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":25 }
+      {"name":"watermark", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":130 },
+      {"name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":35 },
+      {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":35 }
     ],
     "mobileContent": [
       {"name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":40 },
