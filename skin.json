@@ -60,7 +60,7 @@
   "discoveryScreen": {
     "panelTitle": {
       "titleFont": {
-        "fontSize": 32,
+        "fontSize": 28,
         "fontFamily": "'Roboto Condensed', sans-serif",
         "color": "white"
       }
