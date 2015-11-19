@@ -21,12 +21,12 @@
     "showTitle": true,
     "showDescription": true,
     "titleFont": {
-      "fontSize": 30,
+      "fontSize": 25,
       "fontFamily": "'Roboto Condensed', sans-serif",
       "color": "white"
     },
     "descriptionFont": {
-      "fontSize": 17,
+      "fontSize": 14,
       "fontFamily": "'Roboto', sans-serif",
       "color": "white"
     },
@@ -60,7 +60,7 @@
   "discoveryScreen": {
     "panelTitle": {
       "titleFont": {
-        "fontSize": 32,
+        "fontSize": 28,
         "fontFamily": "'Roboto Condensed', sans-serif",
         "color": "white"
       }
