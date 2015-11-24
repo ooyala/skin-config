@@ -34,34 +34,54 @@
       "type" : "object",
       "properties" : {
         "playIconStyle" : {
-          "description" : "Default color is white with an opacity of 1",
+          "description" : "Defines the style of the play button icon. The default color is white with an opacity of 1.",
           "$ref" : "#/definitions/iconStyle"
         },
         // TODO: showPromo could be folded into promoImageSize as a 'none' enum value.
-        "showPromo": { "type" : "boolean" },
+        "showPromo": {
+        "description" : "Show the promo image on the start screen if set to true.  Hide it if set to false.",
+        "type" : "boolean",
+        "default" : true
+        },
         "promoImageSize" : {
           // TODO: "deafult" could be called "fullscreen"?
           "description" : "Configure how large the promo image should be when displayed. The 'small' setting will use styling out of the style sheets.",
-          "enum" : ["default", "small"]
+          "enum" : ["default", "small"],
+          "default" : "default"
         },
         // TODO: showPlayButton could be folded into playButtonPosition as a 'none' enum value.
-        "showPlayButton" : { "type" : "boolean" },
-        "playButtonPosition" : {
-          "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ]
+        "showPlayButton" : {
+          "description" : "Show the play button on the start screen if set to true.  Hide it if set to false.",
+          "type" : "boolean",
+          "default" : true
         },
-        "showTitle" : { "type" : "boolean" },
-        "showDescription" : { "type" : "boolean" },
+        "playButtonPosition" : {
+          "description" : "Defines the position of the play button on the start screen.",
+          "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ],
+          "default" : "center"
+        },
+        "showTitle" : { "description" : "Show the video title on the start screen if set to true.  Hide it if set to false.", "type" : "boolean", "default" : true },
+        "showDescription" :
+        { 
+        "description" : "Show the video description on the start screen if set to true.  Hide it if set to false.",
+        "type" : "boolean",
+        "default" : true
+        },
         "titleFont" : {
-          "description" : "The font of the title",
+          "description" : "Defines the font of the video title on the start screen.",
+          "type" : "object",
           "$ref" : "#/definitions/fontStyle"
         },
         "descriptionFont" : {
-          "description" : "The font of the description",
+          "description" : "Defines the font of the video description on the start screen.",
+          "type" : "object",
           "$ref" : "#/definitions/fontStyle"
         },
         // TODO: could we support a 'none' enum?
         "infoPanelPosition" : {
-          "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
+          "description" : "Defines the position of the information panel on the start screen.",
+          "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ],
+          "default" : "topLeft"
         }
       }
     },
@@ -326,29 +346,35 @@
       }
     },
     "iconStyle" : {
-      "description" : "A collection of styles that can be used by icon renderings throughout the UI. Any value placed in here gets directly parsed as a react stylesheet. Supported style customizations are color, opacity, shadowColor, shadowOffset, shadowOpacity, shadowRadius, borderColor, borderRadius, and borderStyle. See React stylesheets for more specifics on each field. All values are optional, and have defaults specified in the code depending on the section. See each section for default values.",
+      "description" : "A collection of styles that can be used by icon renderings throughout the UI. Any value placed in here gets directly parsed as a React stylesheet. Supported style customizations are color, opacity, shadowColor, shadowOffset, shadowOpacity, shadowRadius, borderColor, borderRadius, and borderStyle. See React stylesheets for more specifics on each field. All values are optional, and have defaults specified in the code depending on the section. See each section for default values.",
       "type" : "object",
       "additionalProperties" : false,
       "properties" : {
         "color" : {
+          "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
           "type" : "string"
         },
         "opacity" : {
+          "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
           "type" : "number"
         },
         "active": {
           "color" : {
+            "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
             "type" : "string"
           },
           "opacity" : {
+            "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
             "type" : "number"
           }
         },
         "inactive": {
           "color" : {
+            "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
             "type" : "string"
           },
           "opacity" : {
+            "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
             "type" : "number"
           }
         },
@@ -389,7 +415,11 @@
       "additionalProperties" : false,
       "properties" : {
         "fontFamily": {"type" : "string"},
-        "color": {"type" : "string"},
+        "color":
+        {
+        "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+        "type" : "string"
+        },
         "weight": {"type" : "string"},
         "fontSize": {"type" : "number"}
       }
