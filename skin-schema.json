@@ -68,14 +68,36 @@
         "default" : true
         },
         "titleFont" : {
-          "description" : "Defines the font of the video title on the start screen.",
+          "description" : "Defines the font of the video title on the start screen.  The default font family is Arial-Bold MT, the default size is 20, and the default color is white.",
           "type" : "object",
-          "$ref" : "#/definitions/fontStyle"
+          "additionalProperties" : false,
+      "properties" : {
+        "fontFamily": {"type" : "string"},
+        "color":
+        {
+        "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+        "type" : "string"
+        },
+        "weight": {"type" : "string"},
+        "fontSize": {"type" : "number"}
+      }
+          /*"$ref" : "#/definitions/fontStyle"*/
         },
         "descriptionFont" : {
-          "description" : "Defines the font of the video description on the start screen.",
+          "description" : "Defines the font of the video description on the start screen.  The default font family is ArialMT, the default size is 16, and the default color is white.",
           "type" : "object",
-          "$ref" : "#/definitions/fontStyle"
+          "additionalProperties" : false,
+      "properties" : {
+        "fontFamily": {"type" : "string"},
+        "color":
+        {
+        "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+        "type" : "string"
+        },
+        "weight": {"type" : "string"},
+        "fontSize": {"type" : "number"}
+      }
+          /*"$ref" : "#/definitions/fontStyle"*/
         },
         // TODO: could we support a 'none' enum?
         "infoPanelPosition" : {
@@ -410,7 +432,7 @@
       }
     },
     "fontStyle" : {
-      "description" : "A collection of styles that can be used by font renderings throughout the UI. Any value placed in here gets directly parsed as a react stylesheet. Supported style customizations are color, fontFamily, weight, fontSize. See React stylesheets for more specifics on each field. All values are optional, and have defaults specified in the code depending on the section. See each section for default values.",
+      "description" : "A collection of styles that can be used by font renderings throughout the UI. Any value placed in here gets directly parsed as a React stylesheet. Supported style customizations are color, fontFamily, weight, fontSize. See React stylesheets for more specifics on each field. All values are optional, and have defaults specified in the code depending on the section. See each section for default values.",
       "type": "object",
       "additionalProperties" : false,
       "properties" : {
