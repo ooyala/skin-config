@@ -112,22 +112,37 @@
       "type" : "object",
       "properties" : {
         "pauseIconStyle" : {
-          "description" : "Default color is white with an opacity of 1",
+          "description" : "Default color is white with an opacity of 1.",
           "$ref" : "#/definitions/iconStyle"
         },
         "screenToShowOnPause" : { // TODO: this is not used in the mobile code, that I could find with grep,
           // TODO: what is "default"!? We could use more explicit naming.
-          "enum" : ["default", "discovery"]
+          "description" : "Defines the screen to show when the player is paused.",
+          "enum" : ["default", "discovery"],
+          "default" : "default"
         },
         // TODO: showPauseIcon could be folded into pauseIconPosition as a 'none' enum value.
-        "showPauseIcon" : { "type" : "boolean" },
-        "pauseIconPosition" : {
-          "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ]
+        "showPauseIcon" :
+        {
+          "description" : "Show the pause icon on the pause screen if set to true.  Hide it if set to false.",
+          "type" : "boolean",
+          "default" : true
         },
-        "showTitle" : { "type" : "boolean" },
-        "showDescription" : { "type" : "boolean" },
+        "pauseIconPosition" : {
+          "description" : "Defines the position of the pause icon on the pause screen.",
+          "enum" : [ "center", "topLeft", "topRight", "bottomLeft", "bottomRight" ],
+          "default" : "center"
+        },
+        "showTitle" : { "description" : "Show the video title on the pause screen if set to true.  Hide it if set to false.",
+          "type" : "boolean",
+          "default" : true },
+        "showDescription" : { "description" : "Show the video description on the pause screen if set to true.  Hide it if set to false.",
+          "type" : "boolean",
+          "default" : true },
         "infoPanelPosition" : {
-          "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ]
+          "description" : "Defines the position of the information panel on the pause screen.",
+          "enum" : [ "topLeft", "topRight", "bottomLeft", "bottomRight" ],
+          "default" : "topLeft"
         }
       }
     },
