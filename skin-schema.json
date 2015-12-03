@@ -1,5 +1,5 @@
 {
-  "description" : "Base UI Configuration for the Ooyala Player. See also: https://facebook.github.io/react and https://facebook.github.io/react-native.",
+  "description" : "This JSON schema describes the base UI configuration for the Ooyala Player, which can be configured in the <a href=\"file://____described___\">skin.json</a> file. Also see <a href=\"https://facebook.github.io/react\">https://facebook.github.io/react</a> and https://facebook.github.io/react-native.",
   "type" : "object",
   "additionalProperties" : false,
   "required": ["localization"],
