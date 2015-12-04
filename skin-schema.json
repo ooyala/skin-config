@@ -290,7 +290,7 @@
       }
     },
     "shareScreen": {
-      "description" : "The list of sharing buttons (e.g. Twitter, Facebook, etc.).",
+      "description" : "The list of social sharing buttons (e.g. Twitter, Facebook, etc.) to display on the screen.",
       "type": "array",
       "items": {
         "type": "object",
@@ -299,7 +299,12 @@
           "buttonName": { "type": "string" },
           "icon" : {"$ref" : "#/definitions/icon"}
         }
-      }
+	},
+		"example" : "[{\"buttonName\": \"Facebook\", \"icon\" : {\"fontFamilyName\" : \"fontawesome\", \"fontString\" : \"\\uf230\", \"fontStyleClass\"  : \"icon
+        icon-facebook\" } },
+    {\"buttonName\": \"Twitter\", \"icon\": {\"fontFamilyName\" : \"fontawesome\", \"fontString\" : \"\\uf099\", \"fontStyleClass\"  : \"icon
+        icon-twitter\" } }
+  ]"
     },
     "moreOptionsScreen": {
       "description" : "The more options / overflow panel. The set of items to show comes from the 'buttons' part of the schema.",
