@@ -237,8 +237,18 @@
       "description" : "The screen to show during ads playback",
       "type" : "object",
       "properties" : {
-        "showAdMarquee" : { "type" : "boolean" },
-        "showControlBar" : { "type" : "boolean"}
+        "showAdMarquee" :
+		{
+			"description" : "Show the ad marquee during ad playback is set to true, hide it if set to false.",
+			"type" : "boolean",
+			"default" : "true"
+		},
+        "showControlBar" :
+		{
+			"description" : "Show the player control bar during ad playback if set to true.  Hide the control bar when a video ad is playing by setting showControlBar to false. If showControlBar is missing or set to true, the control bar will appear while an ad is playing on your player.",
+			"type" : "boolean",
+			"default" : "false"
+		}
       }
     },
     "discoveryScreen" : {
@@ -323,10 +333,17 @@
       "type" : "object",
       "properties" : {
         // TODO: showUpNext could be folded into timeToShow using "oneOf".
-        "showUpNext" : { "type" : "boolean" },
+        "showUpNext" :
+		{ 
+			"description" : "Optional parameter used to show the Up Next screen if set to true, or hide the screen if set to false.",
+			"type" : "boolean",
+			"default" : "If no value is provided for showUpNext and timeToShow, showUpNext will default to false."
+		},
         "timeToShow": {
+			"description" : "Optional floating-point parameter used to set the time relative to the video length to show the Up Next screen. When timeToShow is set to a value greater than 1.0, the player interprets that number as the number of seconds before the end of the video to show the Up Next screen. However, when timeToShow is less than 1.0, the player treats the decimal value as a percentage of the video length and shows the Up Next screen at that point in the video. For example, if timeToShow is set to 0.9 in a 60-second video, the Up Next screen will show at 54 seconds. If timeToShow is set to 5.0 in a 60-second video, the Up Next screen will show at 55 seconds.",
           "type" : "string",
-          "pattern": "^[0-9]+$|^[0-9]{1,2}%$"
+          "pattern": "^[0-9]+$|^[0-9]{1,2}%$",
+		  "default" : "If showUpNext is set to true and no value is given for timeToShow, the Up Next dialog will default to showing 10 seconds prior to the end of the video. If no value is given for showUpNext, or it is set to false, the value set in timeToShow has no effect because the Up Next screen is never shown."
         }
       }
     },
