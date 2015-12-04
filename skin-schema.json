@@ -1,5 +1,5 @@
 {
-  "description" : "This JSON schema describes the base UI configuration for the Ooyala Player, which can be configured in the <a href=\"file://____described___\">skin.json</a> file. Also see <a href=\"https://facebook.github.io/react\">https://facebook.github.io/react</a> and https://facebook.github.io/react-native.",
+  "description" : "This JSON schema describes the base UI configuration for the Ooyala Player, which can be customized in the <a href=\"https://github.com/ooyala/skin-config.git\">skin.json</a> file. Also see <a href=\"https://facebook.github.io/react\">https://facebook.github.io/react</a> and <a href=\"https://facebook.github.io/react-native\">https://facebook.github.io/react-native</a>.",
   "type" : "object",
   "additionalProperties" : false,
   "required": ["localization"],
@@ -151,14 +151,84 @@
       "type" : "object",
       "properties" : {
         "replayIconStyle" : {
-          "description" : "Default color is white with an opacity of 1",
-          "$ref" : "#/definitions/iconStyle"
+          "description" : "The default color is white with an opacity of 1.",
+		  /**/
+	      "type" : "object",
+	        "additionalProperties" : false,
+	        "properties" : {
+	          "color" : {
+	            "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+	            "type" : "string"
+	          },
+	          "opacity" : {
+	            "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
+	            "type" : "number"
+	          },
+	          "active": {
+	            "color" : {
+	              "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+	              "type" : "string"
+	            },
+	            "opacity" : {
+	              "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
+	              "type" : "number"
+	            }
+	          },
+	          "inactive": {
+	            "color" : {
+	              "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+	              "type" : "string"
+	            },
+	            "opacity" : {
+	              "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
+	              "type" : "number"
+	            }
+	          },
+	          "shadowColor" : {
+	            "type" : "string"
+	          },
+	          "shadowOffset" : {
+	            "type" : "object",
+	            "properties" : {
+	              "width" : {"type" : "number"},
+	              "height" : {"type" : "number"}
+	            }
+	          },
+	          "shadowOpacity" : {
+	            "type" : "number"
+	          },
+	          "shadowRadius" : {
+	            "type" : "number"
+	          },
+	          "borderColor" : {
+	            "type" : "string"
+	          },
+	          "borderRadius" : {
+	            "type" : "number"
+	          },
+	          "borderWidth" : {
+	            "type" : "number"
+	          },
+	          "borderStyle" : {
+	            "type" : "string",
+	            "enum" : ["solid", "dotted", "dashed"]
+	          }
+	        }
+          /*"$ref" : "#/definitions/iconStyle"*/
         },
         "screenToShowOnEnd" : {
+			"description" : "Defines the screen to show when the video playback has ended.",
+			"type" : "string",
           // TODO: what is "default"!? We could use more explicit naming.
-          "enum" : ["default", "discovery"]
+          "enum" : ["default", "discovery"],
+		  "default" : "discovery"
         },
-        "showReplayButton" : { "type" : "boolean" },
+        "showReplayButton" :
+		{ 
+			"description" : "Set to true to show the replay button on the end screen.  Set to false otherwise.",
+			"type" : "boolean",
+			"default" : "true"
+		},
         "showTitle" : { "type" : "boolean" },
         "showDescription" : { "type" : "boolean" }
       }
@@ -267,14 +337,87 @@
       "required" : [ "height", "autoHide", "watermark" ],
       "properties" : {
         "iconStyle" : {
-          "description" : "Default color is #8E8E8E with an opacity of 1",
-          "$ref" : "#/definitions/iconStyle"
+          "description" : "The default color is #8E8E8E with an opacity of 1.",
+          /**/
+          "type" : "object",
+      "additionalProperties" : false,
+      "properties" : {
+        "color" : {
+          "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+          "type" : "string"
         },
-        "height" : { "type" : "number" },
-        "autoHide" : { "type" : "boolean" },
+        "opacity" : {
+          "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
+          "type" : "number"
+        },
+        "active": {
+          "color" : {
+            "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type" : "string"
+          },
+          "opacity" : {
+            "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
+            "type" : "number"
+          }
+        },
+        "inactive": {
+          "color" : {
+            "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type" : "string"
+          },
+          "opacity" : {
+            "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
+            "type" : "number"
+          }
+        },
+        "shadowColor" : {
+          "type" : "string"
+        },
+        "shadowOffset" : {
+          "type" : "object",
+          "properties" : {
+            "width" : {"type" : "number"},
+            "height" : {"type" : "number"}
+          }
+        },
+        "shadowOpacity" : {
+          "type" : "number"
+        },
+        "shadowRadius" : {
+          "type" : "number"
+        },
+        "borderColor" : {
+          "type" : "string"
+        },
+        "borderRadius" : {
+          "type" : "number"
+        },
+        "borderWidth" : {
+          "type" : "number"
+        },
+        "borderStyle" : {
+          "type" : "string",
+          "enum" : ["solid", "dotted", "dashed"]
+        }
+      }
+          /*"$ref" : "#/definitions/iconStyle"*/
+        },
+        "height" :
+        {
+            "height" : "Height of the control bar.",
+            "type" : "number",
+            "default" : 60
+         },
+        "autoHide" :
+        {
+            "description" : "The control bar is automatically hidden during video playback when the mouse is not in the control bar area if and only if this parameter is set to true.",
+            "type" : "boolean",
+            "default" : true
+        },
         // TODO: how is this different than general.watermark?
         // And it really isn't a watermark, as it doesn't alpha-overlay anything else.
         "watermark": {
+			"description" : "An object that defines the content and position of the watermark image on the control bar.",
           "type": "object",
           "additionalProperties" : false,
           "properties": {
