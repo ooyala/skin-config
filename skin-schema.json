@@ -9,11 +9,13 @@
       "type": "object",
       "properties": {
         "watermark": {
+		  "description" : "An object that defines the URL of a watermark on the player screen.",
           "type": "object",
           "additionalProperties" : false,
           "properties" : {
             "imageResource" : { "$ref" : "#/definitions/image" }
-          }
+          },
+		  "example" : "\"watermark\" : {\"imageResource\" : {\"url\" : \"assets/images/ooyala-watermark.png\"} }"
         }
       }
     },
@@ -256,6 +258,7 @@
       "type" : "object",
       "properties" : {
         "panelTitle" : {
+			"description" : "Defines properties of the title panel in the Discovery screen.",
           "type" : "object",
           "additionalProperties" : false,
           "required" : [ "titleFont" ],
@@ -268,22 +271,32 @@
           }
         },
         "contentTitle" : {
-          "description" : "The setting for discovery content title",
+          "description" : "The setting for Discovery content title.",
           "type" : "object",
           "additionalProperties" : false,
           "required" : [ "show", "font" ],
           "properties" :  {
-            "show": {"type" : "boolean"},
+            "show":
+			{
+				"description" : "Set to true to display the video duration on the Discovery screen, set to false otherwise.",
+				"type" : "boolean",
+				"default" : true
+			},
             "font" : {"$ref" : "#/definitions/fontStyle"}
           }
         },
         "contentDuration": {
-          "description" : "The setting for discovery content duration",
+          "description" : "The setting for Discovery content duration.",
           "type" : "object",
           "additionalProperties" : false,
           "required" : [ "show", "font"],
           "properties" : {
-            "show": {"type" : "boolean"},
+            "show":
+			{
+				"description" : "Set to true to display the video duration on the Discovery screen, set to false otherwise.",
+				"type" : "boolean",
+				"default" : true
+			},
             "font" : {"$ref" : "#/definitions/fontStyle"}
           }
         }
@@ -329,8 +342,18 @@
       "type" : "object",
       "properties" : {
         // TODO: What is "defaultEnabled"? Mobile doesn't use it anywhere.
-        "defaultEnabled" : { "type" : "boolean" },
-        "defaultLanguage" : { "type" : "string" }
+        "defaultEnabled" :
+		{
+			"description" : "Enabled closed captions by default if set to true, disable otherwise.",
+			"type" : "boolean",
+			"default" : true
+		},
+        "defaultLanguage" :
+		{
+			"description" : "Set the default closed-caption language.  This is a string of the form \"en\" for English, \"fr\" for French, etc.",
+			"type" : "string",
+			"default" : "en"
+		}
       }
     },
     "upNext" : {
@@ -468,9 +491,157 @@
       "description" : "The set of all required icons, for rendering all the various buttons' states.",
       "type" : "object",
       "patternProperties" : { "" : { "$ref" : "#/definitions/icon" } },
-      "required" : ["play", "pause", "volume", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn", "left", "right"]
-    }
-  },
+      "required" : ["play", "pause", "volume", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn", "left", "right"],
+	  "example" : "\"icons\" : {
+    \"play\" : { \"fontFamilyName\": \"alice\", \"fontString\" : \"\\u0068\", \"fontStyleClass\" : \"icon icon-play\"},
+    \"pause\" : { \"fontFamilyName\": \"alice\", \"fontString\" : \"\\u0067\", \"fontStyleClass\" : \"icon icon-pause\"},
+    \"volume\" : { \"fontFamilyName\": \"alice\", \"fontString\" : \"\\u0061\", \"fontStyleClass\" : \"icon icon-volume-desktop\"},
+    \"volumeOff\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0070\", \"fontStyleClass\" : \"icon icon-volume-desktop\"},
+    \"expand\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0069\", \"fontStyleClass\" : \"icon icon-resize-large\"},
+    \"compress\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006a\", \"fontStyleClass\" : \"icon icon-resize-small\"},
+    \"ellipsis\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0066\", \"fontStyleClass\" : \"icon icon-menu\"},
+    \"replay\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0063\", \"fontStyleClass\" : \"icon icon-upnext-replay\"},
+    \"share\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006f\", \"fontStyleClass\" : \"icon icon-topmenu-share\"},
+    \"cc\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006B\", \"fontStyleClass\" : \"icon icon-topmenu-cc\"},
+    \"discovery\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006C\", \"fontStyleClass\" : \"icon icon-topmenu-discovery\"},
+    \"quality\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006D\", \"fontStyleClass\" : \"icon icon-topmenu-quality\"},
+    \"setting\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006E\", \"fontStyleClass\" : \"icon icon-topmenu-settings\"},
+    \"dismiss\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0065\", \"fontStyleClass\" : \"icon icon-close\"},
+    \"toggleOn\" : { \"fontFamilyName\" : \"fontawesome\", \"fontString\" : \"\\uf205\", \"fontStyleClass\" : \"\"},
+    \"toggleOff\" : { \"fontFamilyName\" : \"fontawesome\", \"fontString\" : \"\\uf204\", \"fontStyleClass\" : \"\"},
+    \"left\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0072\", \"fontStyleClass\" : \"icon icon-left\"},
+    \"right\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0073\", \"fontStyleClass\" : \"icon icon-right\"},
+    \"learn\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0074\", \"fontStyleClass\" : \"icon icon-learn\"},
+    \"skip\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0075\", \"fontStyleClass\" : \"icon icon-skip\"}
+}",
+	"play" :
+		{
+			"description" : "Set the styling for the play icon on mobile devices.",
+			"type" : "object",
+	        "required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+	        "fontFamilyName" : {
+	          "description" : "The name of the font family to use.",
+	          "type" : "string",
+			  "default" : "alice"
+	        },
+	          "fontString" : {
+	            "description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+	            "type" : "string",
+			  "default" : "\\u0068"
+	          },
+	          "fontStyleClass" : {
+	            "description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+	            "type"  : "string",
+				"default" : "icon icon-play"
+	          }
+		},
+				"pause" :
+					{
+						"description" : "Set the styling for the pause icon on mobile devices.",
+						"type" : "object",
+				        "required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+				        "fontFamilyName" : {
+				          "description" : "The name of the font family to use.",
+				          "type" : "string",
+						  "default" : "alice"
+				        },
+				          "fontString" : {
+				            "description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+				            "type" : "string",
+						  "default" : "\\u0067"
+				          },
+				          "fontStyleClass" : {
+				            "description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+				            "type"  : "string",
+							"default" : "icon icon-pause"
+				          }
+					},
+					"volume" :
+						{
+							"description" : "Set the styling for the volume icon on mobile devices.",
+							"type" : "object",
+					        "required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+					        "fontFamilyName" : {
+					          "description" : "The name of the font family to use.",
+					          "type" : "string",
+							  "default" : "alice"
+					        },
+					          "fontString" : {
+					            "description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+					            "type" : "string",
+							  "default" : "\\u0061"
+					          },
+					          "fontStyleClass" : {
+					            "description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+					            "type"  : "string",
+								"default" : "icon icon-volume-desktop"
+					          }
+						},
+						"volumeOff" :
+							{
+								"description" : "Set the styling for the icon that appears when the volume is set to \"off\".",
+								"type" : "object",
+						        "required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+						        "fontFamilyName" : {
+						          "description" : "The name of the font family to use.",
+						          "type" : "string",
+								  "default" : "alice"
+						        },
+						          "fontString" : {
+						            "description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+						            "type" : "string",
+								  "default" : "\\u0070"
+						          },
+						          "fontStyleClass" : {
+						            "description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+						            "type"  : "string",
+									"default" : "icon icon-volume-desktop"
+						          }
+							},
+							"expand" :
+								{
+									"description" : "Set the styling for the expand player icon.",
+									"type" : "object",
+							        "required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+							        "fontFamilyName" : {
+							          "description" : "The name of the font family to use.",
+							          "type" : "string",
+									  "default" : "alice"
+							        },
+							          "fontString" : {
+							            "description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+							            "type" : "string",
+									  "default" : "\\u0069"
+							          },
+							          "fontStyleClass" : {
+							            "description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+							            "type"  : "string",
+										"default" : "icon icon-resize-large"
+							          }
+								},
+								"compress" :
+									{
+										"description" : "Set the styling for the compress player icon.",
+										"type" : "object",
+								        "required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+								        "fontFamilyName" : {
+								          "description" : "The name of the font family to use.",
+								          "type" : "string",
+										  "default" : "alice"
+								        },
+								          "fontString" : {
+								            "description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+								            "type" : "string",
+										  "default" : "\\u006a"
+								          },
+								          "fontStyleClass" : {
+								            "description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+								            "type"  : "string",
+											"default" : "icon icon-resize-small"
+								          }
+									}
+	}
+},
   "definitions": {
     "color" : {
       "description" : "Any color string as supported by React / React Native.",
