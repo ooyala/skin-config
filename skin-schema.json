@@ -619,27 +619,69 @@
 										"default" : "icon icon-resize-large"
 							          }
 								},
-								"compress" :
-									{
-										"description" : "Set the styling for the compress player icon.",
-										"type" : "object",
-								        "required" : ["fontFamilyName", "fontString", "fontStyleClass"],
-								        "fontFamilyName" : {
-								          "description" : "The name of the font family to use.",
-								          "type" : "string",
-										  "default" : "alice"
-								        },
-								          "fontString" : {
-								            "description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
-								            "type" : "string",
-										  "default" : "\\u006a"
-								          },
-								          "fontStyleClass" : {
-								            "description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
-								            "type"  : "string",
-											"default" : "icon icon-resize-small"
-								          }
-									}
+				"compress" :
+				{
+								"description" : "Set the styling for the compress player icon.",
+								"type" : "object",
+						        "required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+						        "fontFamilyName" : {
+						          "description" : "The name of the font family to use.",
+						          "type" : "string",
+								  "default" : "alice"
+						        },
+						       "fontString" : {
+				    	           "description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+						           "type" : "string",
+					 	   		   "default" : "\\u006a"
+							    },
+					          "fontStyleClass" : {
+							      "description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+						          "type"  : "string",
+							      "default" : "icon icon-resize-small"
+							   }
+				},
+				"ellipsis" :
+				{
+				    "description" : "Set the styling for the ellipsis icon that appears when there is not enough room on the control bar to display all player buttons.",
+					"type" : "object",
+					"required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+					"fontFamilyName" : {
+						"description" : "The name of the font family to use.",
+						"type" : "string",
+						"default" : "alice"
+					},
+					"fontString" : {
+				    	"description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+						"type" : "string",
+					 	"default" : "\\u0066"
+					},
+					"fontStyleClass" : {
+						"description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+						"type"  : "string",
+						"default" : "icon icon-menu"
+					}
+				},
+				"replay" :
+				{
+				    "description" : "Set the styling for the replay icon.",
+					"type" : "object",
+					"required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+					"fontFamilyName" : {
+						"description" : "The name of the font family to use.",
+						"type" : "string",
+						"default" : "alice"
+					},
+					"fontString" : {
+				    	"description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+						"type" : "string",
+					 	"default" : "\\u0063"
+					},
+					"fontStyleClass" : {
+						"description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+						"type"  : "string",
+						"default" : "icon icon-upnext-replay"
+					}
+				}
 	}
 },
   "definitions": {
