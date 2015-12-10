@@ -807,6 +807,90 @@
 						"type"  : "string",
 						"default" : "icon icon-close"
 					}
+				},
+				"toggleOn" :
+				{
+				    "description" : "Set the styling for the toggle-on icon.",
+					"type" : "object",
+					"required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+					"fontFamilyName" : {
+						"description" : "The name of the font family to use.",
+						"type" : "string",
+						"default" : "fontawesome"
+					},
+					"fontString" : {
+				    	"description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+						"type" : "string",
+					 	"default" : "\\uf205"
+					},
+					"fontStyleClass" : {
+						"description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+						"type"  : "string",
+						"default" : ""
+					}
+				},
+				"toggleOff" :
+				{
+				    "description" : "Set the styling for the toggle-off icon.",
+					"type" : "object",
+					"required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+					"fontFamilyName" : {
+						"description" : "The name of the font family to use.",
+						"type" : "string",
+						"default" : "fontawesome"
+					},
+					"fontString" : {
+				    	"description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+						"type" : "string",
+					 	"default" : "\\uf204"
+					},
+					"fontStyleClass" : {
+						"description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+						"type"  : "string",
+						"default" : ""
+					}
+				},
+				"left" :
+				{
+				    "description" : "Set the styling for the left scroll icon.",
+					"type" : "object",
+					"required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+					"fontFamilyName" : {
+						"description" : "The name of the font family to use.",
+						"type" : "string",
+						"default" : "alice"
+					},
+					"fontString" : {
+				    	"description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+						"type" : "string",
+					 	"default" : "\\u0072"
+					},
+					"fontStyleClass" : {
+						"description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+						"type"  : "string",
+						"default" : "icon icon-left"
+					}
+				},
+				"right" :
+				{
+				    "description" : "Set the styling for the right scroll icon.",
+					"type" : "object",
+					"required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+					"fontFamilyName" : {
+						"description" : "The name of the font family to use.",
+						"type" : "string",
+						"default" : "alice"
+					},
+					"fontString" : {
+				    	"description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+						"type" : "string",
+					 	"default" : "\\u0073"
+					},
+					"fontStyleClass" : {
+						"description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+						"type"  : "string",
+						"default" : "icon icon-right"
+					}
 				}
 	}
 },
