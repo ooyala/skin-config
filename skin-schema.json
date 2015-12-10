@@ -681,6 +681,132 @@
 						"type"  : "string",
 						"default" : "icon icon-upnext-replay"
 					}
+				},
+				"share" :
+				{
+				    "description" : "Set the styling for the share icon.",
+					"type" : "object",
+					"required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+					"fontFamilyName" : {
+						"description" : "The name of the font family to use.",
+						"type" : "string",
+						"default" : "alice"
+					},
+					"fontString" : {
+				    	"description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+						"type" : "string",
+					 	"default" : "\\u006f"
+					},
+					"fontStyleClass" : {
+						"description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+						"type"  : "string",
+						"default" : "icon icon-topmenu-share"
+					}
+				},
+				"cc" :
+				{
+				    "description" : "Set the styling for the closed captions icon.",
+					"type" : "object",
+					"required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+					"fontFamilyName" : {
+						"description" : "The name of the font family to use.",
+						"type" : "string",
+						"default" : "alice"
+					},
+					"fontString" : {
+				    	"description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+						"type" : "string",
+					 	"default" : "\\u006B"
+					},
+					"fontStyleClass" : {
+						"description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+						"type"  : "string",
+						"default" : "icon icon-topmenu-cc"
+					}
+				},
+				"discovery" :
+				{
+				    "description" : "Set the styling for the Ooyala Discovery icon.",
+					"type" : "object",
+					"required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+					"fontFamilyName" : {
+						"description" : "The name of the font family to use.",
+						"type" : "string",
+						"default" : "alice"
+					},
+					"fontString" : {
+				    	"description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+						"type" : "string",
+					 	"default" : "\\u006C"
+					},
+					"fontStyleClass" : {
+						"description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+						"type"  : "string",
+						"default" : "icon icon-topmenu-discovery"
+					}
+				},
+				"quality" :
+				{
+				    "description" : "Set the styling for the video quality icon.",
+					"type" : "object",
+					"required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+					"fontFamilyName" : {
+						"description" : "The name of the font family to use.",
+						"type" : "string",
+						"default" : "alice"
+					},
+					"fontString" : {
+				    	"description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+						"type" : "string",
+					 	"default" : "\\u006D"
+					},
+					"fontStyleClass" : {
+						"description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+						"type"  : "string",
+						"default" : "icon icon-topmenu-quality"
+					}
+				},
+				"setting" :
+				{
+				    "description" : "Set the styling for the settings icon.",
+					"type" : "object",
+					"required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+					"fontFamilyName" : {
+						"description" : "The name of the font family to use.",
+						"type" : "string",
+						"default" : "alice"
+					},
+					"fontString" : {
+				    	"description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+						"type" : "string",
+					 	"default" : "\\u006E"
+					},
+					"fontStyleClass" : {
+						"description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+						"type"  : "string",
+						"default" : "icon icon-topmenu-settings"
+					}
+				},
+				"dismiss" :
+				{
+				    "description" : "Set the styling for the dismiss button.",
+					"type" : "object",
+					"required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+					"fontFamilyName" : {
+						"description" : "The name of the font family to use.",
+						"type" : "string",
+						"default" : "alice"
+					},
+					"fontString" : {
+				    	"description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+						"type" : "string",
+					 	"default" : "\\u0065"
+					},
+					"fontStyleClass" : {
+						"description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+						"type"  : "string",
+						"default" : "icon icon-close"
+					}
 				}
 	}
 },
