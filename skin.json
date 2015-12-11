@@ -82,7 +82,12 @@
       }
     },
     "showCountDownTimerOnEndScreen": true,
-    "countDownTime": "10"
+    "countDownTime": 10,
+    "videosPerPage": {
+      "sm": 2,
+      "md": 6,
+      "lg": 10
+    }
   },
   "shareScreen": [
     {
