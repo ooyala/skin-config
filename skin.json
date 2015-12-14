@@ -146,6 +146,9 @@
       "height": 81
     }
   },
+  "live": {
+    "dvrEnabled": false,
+  },
   "buttons": {
     "desktopContent": [
       {"name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":35 },
