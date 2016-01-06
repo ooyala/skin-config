@@ -147,7 +147,7 @@
     }
   },
   "live": {
-    "dvrEnabled": false,
+    "dvrEnabled": false
   },
   "buttons": {
     "desktopContent": [

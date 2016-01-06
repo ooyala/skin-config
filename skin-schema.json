@@ -228,6 +228,15 @@
         }
       }
     },
+    "live": {
+      "description": "Configuration for UI when it playbacks live assets.",
+      "type": "object",
+      "additionalProperties" : false,
+      "required" : [ "dvrEnabled" ],
+      "properties" : {
+        "dvrEnabled" : { "type" : "boolean" }
+      }
+    },
     "buttons" : {
       "description" : "Defines the buttons that can appear on the controlBar and/or the moreOptions panel. Desktop and Mobile platforms can be configured individually.",
       "type" : "object",
