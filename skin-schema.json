@@ -321,22 +321,30 @@
         }
       }
     },
-    "shareScreen": {
-      "description" : "The list of social sharing buttons (e.g. Twitter, Facebook, etc.) to display on the screen.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties" : false,
-        "properties": {
-          "buttonName": { "type": "string" },
-          "icon" : {"$ref" : "#/definitions/icon"}
+    "shareScreen" : {
+      "description" : "The social share panel setting",
+      "type" : "object",
+      "properties" : {
+        "share" : {
+          "description" : "The list of sharing buttons for share tab (e.g. Twitter, Facebook, etc.).",
+          "type" : "array",
+          "items" : {
+            "type" : "object",
+            "additionalProperties" : false,
+            "properties" : {
+              "buttonName" : { "type" : "string" },
+              "icon" : {"$ref" : "#/definitions/icon"}
+            }
+          }
+        },
+        "embed" : {
+          "description" : "The setting for embed tabs in social share screen",
+          "type" : "object",
+          "properties" :  {
+            "source": {"type" : "string"}
+          }
         }
-	},
-		"example" : "[{\"buttonName\": \"Facebook\", \"icon\" : {\"fontFamilyName\" : \"fontawesome\", \"fontString\" : \"\\uf230\", \"fontStyleClass\"  : \"icon
-        icon-facebook\" } },
-    {\"buttonName\": \"Twitter\", \"icon\": {\"fontFamilyName\" : \"fontawesome\", \"fontString\" : \"\\uf099\", \"fontStyleClass\"  : \"icon
-        icon-twitter\" } }
-  ]"
+      }
     },
     "moreOptionsScreen": {
       "description" : "The more options / overflow panel. The set of items to show comes from the 'buttons' part of the schema.",
