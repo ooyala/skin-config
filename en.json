@@ -85,5 +85,7 @@
   "EMPTY CHANNEL SET ERROR": "EMPTY CHANNEL SET ERROR",
   "This channel set is empty": "This channel set is empty",
   "CHANNEL CONTENT ERROR": "CHANNEL CONTENT ERROR",
-  "This channel is not playable at this time": "This channel is not playable at this time"
+  "This channel is not playable at this time": "This channel is not playable at this time",
+  "SOMETHING NOT RIGHT! THERE SHOULD BE VIDEOS HERE.": "SOMETHING NOT RIGHT! THERE SHOULD BE VIDEOS HERE.",
+  "(Try Clicking The Discover Button Again On Reload Your Page)": "(Try Clicking The Discover Button Again On Reload Your Page)"
 }
