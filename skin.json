@@ -114,11 +114,9 @@
     "color": "white",
     "iconStyle": {
       "active": {
-        "color": "#FFFFFF",
         "opacity": 1
       },
       "inactive": {
-        "color": "#FFFFFF",
         "opacity": 0.6
       }
     }
