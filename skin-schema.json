@@ -83,7 +83,7 @@
         },
         "showTitle" : { "description" : "Show the video title on the start screen if set to true.  Hide it if set to false.", "type" : "boolean", "default" : true },
         "showDescription" :
-        { 
+        {
         "description" : "Show the video description on the start screen if set to true.  Hide it if set to false.",
         "type" : "boolean",
         "default" : true
@@ -410,38 +410,29 @@
       "properties" : {
         "iconStyle" : {
           "description" : "The default color is #8E8E8E with an opacity of 1.",
-          /**/
           "type" : "object",
-      "additionalProperties" : false,
-      "properties" : {
-        "color" : {
-          "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-          "type" : "string"
-        },
-        "opacity" : {
-          "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
-          "type" : "number"
-        },
-        "active": {
-          "color" : {
-            "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-            "type" : "string"
-          },
-          "opacity" : {
-            "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
-            "type" : "number"
-          }
-        },
-        "inactive": {
-          "color" : {
-            "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-            "type" : "string"
-          },
-          "opacity" : {
-            "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
-            "type" : "number"
-          }
-        },
+          "additionalProperties" : false,
+          "properties" : {
+            "active": {
+              "color" : {
+                "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+                "type" : "string"
+              },
+              "opacity" : {
+                "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
+                "type" : "number"
+              }
+            },
+            "inactive": {
+              "color" : {
+                "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+                "type" : "string"
+              },
+              "opacity" : {
+                "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
+                "type" : "number"
+              }
+            },
         "shadowColor" : {
           "type" : "string"
         },
@@ -496,6 +487,34 @@
             "imageResource" : { "$ref" : "#/definitions/image" },
             "width": {"type" : "number"},
             "height": {"type" : "number"}
+          }
+        },
+        "scrubberBar" : {
+          "backgroundColor" : {
+            "description" : "The color of the scrubber bar background. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type": "string"
+          },
+          "bufferedColor" : {
+            "description" : "The color to indicate buffered content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type": "string"
+          },
+          "playedColor" : {
+            "description" : "The color to indicate played content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type": "string"
+          }
+        },
+        "adScrubberBar" : {
+          "backgroundColor" : {
+            "description" : "The color of the scrubber bar background. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type": "string"
+          },
+          "bufferedColor" : {
+            "description" : "The color to indicate buffered content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type": "string"
+          },
+          "playedColor" : {
+            "description" : "The color to indicate played content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type": "string"
           }
         }
       }
@@ -1078,3 +1097,4 @@
     }
   }
 }
+
