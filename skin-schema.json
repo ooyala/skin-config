@@ -83,7 +83,7 @@
         },
         "showTitle" : { "description" : "Show the video title on the start screen if set to true.  Hide it if set to false.", "type" : "boolean", "default" : true },
         "showDescription" :
-        { 
+        {
         "description" : "Show the video description on the start screen if set to true.  Hide it if set to false.",
         "type" : "boolean",
         "default" : true
@@ -410,38 +410,29 @@
       "properties" : {
         "iconStyle" : {
           "description" : "The default color is #8E8E8E with an opacity of 1.",
-          /**/
           "type" : "object",
-      "additionalProperties" : false,
-      "properties" : {
-        "color" : {
-          "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-          "type" : "string"
-        },
-        "opacity" : {
-          "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
-          "type" : "number"
-        },
-        "active": {
-          "color" : {
-            "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-            "type" : "string"
-          },
-          "opacity" : {
-            "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
-            "type" : "number"
-          }
-        },
-        "inactive": {
-          "color" : {
-            "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-            "type" : "string"
-          },
-          "opacity" : {
-            "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
-            "type" : "number"
-          }
-        },
+          "additionalProperties" : false,
+          "properties" : {
+            "active": {
+              "color" : {
+                "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+                "type" : "string"
+              },
+              "opacity" : {
+                "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
+                "type" : "number"
+              }
+            },
+            "inactive": {
+              "color" : {
+                "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+                "type" : "string"
+              },
+              "opacity" : {
+                "description" : "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
+                "type" : "number"
+              }
+            },
         "shadowColor" : {
           "type" : "string"
         },
@@ -497,6 +488,34 @@
             "width": {"type" : "number"},
             "height": {"type" : "number"}
           }
+        },
+        "scrubberBar" : {
+          "backgroundColor" : {
+            "description" : "The color of the scrubber bar background. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type": "string"
+          },
+          "bufferedColor" : {
+            "description" : "The color to indicate buffered content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type": "string"
+          },
+          "playedColor" : {
+            "description" : "The color to indicate played content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type": "string"
+          }
+        },
+        "adScrubberBar" : {
+          "backgroundColor" : {
+            "description" : "The color of the scrubber bar background. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type": "string"
+          },
+          "bufferedColor" : {
+            "description" : "The color to indicate buffered content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type": "string"
+          },
+          "playedColor" : {
+            "description" : "The color to indicate played content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type": "string"
+          }
         }
       }
     },
@@ -519,28 +538,28 @@
       "type" : "object",
       "patternProperties" : { "" : { "$ref" : "#/definitions/icon" } },
       "required" : ["play", "pause", "volume", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn", "left", "right"],
-	  "example" : "\"icons\" : {
-    \"play\" : { \"fontFamilyName\": \"alice\", \"fontString\" : \"\\u0068\", \"fontStyleClass\" : \"icon icon-play\"},
-    \"pause\" : { \"fontFamilyName\": \"alice\", \"fontString\" : \"\\u0067\", \"fontStyleClass\" : \"icon icon-pause\"},
-    \"volume\" : { \"fontFamilyName\": \"alice\", \"fontString\" : \"\\u0061\", \"fontStyleClass\" : \"icon icon-volume-desktop\"},
-    \"volumeOff\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0070\", \"fontStyleClass\" : \"icon icon-volume-desktop\"},
-    \"expand\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0069\", \"fontStyleClass\" : \"icon icon-resize-large\"},
-    \"compress\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006a\", \"fontStyleClass\" : \"icon icon-resize-small\"},
-    \"ellipsis\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0066\", \"fontStyleClass\" : \"icon icon-menu\"},
-    \"replay\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0063\", \"fontStyleClass\" : \"icon icon-upnext-replay\"},
-    \"share\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006f\", \"fontStyleClass\" : \"icon icon-topmenu-share\"},
-    \"cc\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006B\", \"fontStyleClass\" : \"icon icon-topmenu-cc\"},
-    \"discovery\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006C\", \"fontStyleClass\" : \"icon icon-topmenu-discovery\"},
-    \"quality\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006D\", \"fontStyleClass\" : \"icon icon-topmenu-quality\"},
-    \"setting\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006E\", \"fontStyleClass\" : \"icon icon-topmenu-settings\"},
-    \"dismiss\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0065\", \"fontStyleClass\" : \"icon icon-close\"},
-    \"toggleOn\" : { \"fontFamilyName\" : \"fontawesome\", \"fontString\" : \"\\uf205\", \"fontStyleClass\" : \"\"},
-    \"toggleOff\" : { \"fontFamilyName\" : \"fontawesome\", \"fontString\" : \"\\uf204\", \"fontStyleClass\" : \"\"},
-    \"left\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0072\", \"fontStyleClass\" : \"icon icon-left\"},
-    \"right\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0073\", \"fontStyleClass\" : \"icon icon-right\"},
-    \"learn\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0074\", \"fontStyleClass\" : \"icon icon-learn\"},
-    \"skip\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0075\", \"fontStyleClass\" : \"icon icon-skip\"}
-}",
+  	  "example" : ["\"icons\" : {",
+        "\"play\" : { \"fontFamilyName\": \"alice\", \"fontString\" : \"\\u0068\", \"fontStyleClass\" : \"icon icon-play\"},",
+        "\"pause\" : { \"fontFamilyName\": \"alice\", \"fontString\" : \"\\u0067\", \"fontStyleClass\" : \"icon icon-pause\"},",
+        "\"volume\" : { \"fontFamilyName\": \"alice\", \"fontString\" : \"\\u0061\", \"fontStyleClass\" : \"icon icon-volume-desktop\"},",
+        "\"volumeOff\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0070\", \"fontStyleClass\" : \"icon icon-volume-desktop\"},",
+        "\"expand\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0069\", \"fontStyleClass\" : \"icon icon-resize-large\"},",
+        "\"compress\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006a\", \"fontStyleClass\" : \"icon icon-resize-small\"},",
+        "\"ellipsis\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0066\", \"fontStyleClass\" : \"icon icon-menu\"},",
+        "\"replay\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0063\", \"fontStyleClass\" : \"icon icon-upnext-replay\"},",
+        "\"share\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006f\", \"fontStyleClass\" : \"icon icon-topmenu-share\"},",
+        "\"cc\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006B\", \"fontStyleClass\" : \"icon icon-topmenu-cc\"},",
+        "\"discovery\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006C\", \"fontStyleClass\" : \"icon icon-topmenu-discovery\"},",
+        "\"quality\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006D\", \"fontStyleClass\" : \"icon icon-topmenu-quality\"},",
+        "\"setting\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u006E\", \"fontStyleClass\" : \"icon icon-topmenu-settings\"},",
+        "\"dismiss\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0065\", \"fontStyleClass\" : \"icon icon-close\"},",
+        "\"toggleOn\" : { \"fontFamilyName\" : \"fontawesome\", \"fontString\" : \"\\uf205\", \"fontStyleClass\" : \"\"},",
+        "\"toggleOff\" : { \"fontFamilyName\" : \"fontawesome\", \"fontString\" : \"\\uf204\", \"fontStyleClass\" : \"\"},",
+        "\"left\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0072\", \"fontStyleClass\" : \"icon icon-left\"},",
+        "\"right\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0073\", \"fontStyleClass\" : \"icon icon-right\"},",
+        "\"learn\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0074\", \"fontStyleClass\" : \"icon icon-learn\"},",
+        "\"skip\" : { \"fontFamilyName\" : \"alice\", \"fontString\" : \"\\u0075\", \"fontStyleClass\" : \"icon icon-skip\"}",
+        "}"],
 	"play" :
 		{
 			"description" : "Set the styling for the play icon on mobile devices.",
@@ -1078,3 +1097,4 @@
     }
   }
 }
+
