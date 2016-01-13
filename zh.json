@@ -79,5 +79,6 @@
   "EMPTY CHANNEL SET ERROR": "空频道设置错误",
   "This channel set is empty": "此频道设置为空",
   "CHANNEL CONTENT ERROR": "频道内容错误",
-  "This channel is not playable at this time": "此频道现在无法播放"
+  "This channel is not playable at this time": "此频道现在无法播放",
+  "Something happened while we were trying to play your video! Click replay or simply reload your page.": "当我们尝试播放您的视频时出现错误！单击“重新播放”或重新载入页面。"
 }
