@@ -79,5 +79,6 @@
   "EMPTY CHANNEL SET ERROR": "SE PRODUJO UN ERROR, EL CONJUNTO DE CANALES ESTÁ VACÍO",
   "This channel set is empty": "Este conjunto de canales está vacío",
   "CHANNEL CONTENT ERROR": "SE PRODUJO UN ERROR CON EL CONTENIDO DEL CANAL",
-  "This channel is not playable at this time": "Este canal no se puede reproducir en este momento"
+  "This channel is not playable at this time": "Este canal no se puede reproducir en este momento",
+  "Something happened while we were trying to play your video! Click replay or simply reload your page.": "Se produjo un error cuando intentamos reproducir tu video. Selecciona la opción para repetir el video o vuelve a cargar la página."
 }
