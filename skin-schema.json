@@ -89,18 +89,15 @@
         "default" : true
         },
         "titleFont" : {
-          "description" : "Defines the font of the video title on the start screen.  The default font family is Arial-Bold MT, the default size is 20, and the default color is white.",
+          "description" : "Defines the color of the font of the video title on the start screen.  The default color is white.",
           "type" : "object",
           "additionalProperties" : false,
       "properties" : {
-        "fontFamily": {"type" : "string"},
         "color":
         {
         "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
         "type" : "string"
-        },
-        "weight": {"type" : "string"},
-        "fontSize": {"type" : "number"}
+        }
       }
           /*"$ref" : "#/definitions/fontStyle"*/
         },
@@ -109,14 +106,11 @@
           "type" : "object",
           "additionalProperties" : false,
       "properties" : {
-        "fontFamily": {"type" : "string"},
         "color":
         {
         "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
         "type" : "string"
-        },
-        "weight": {"type" : "string"},
-        "fontSize": {"type" : "number"}
+        }
       }
           /*"$ref" : "#/definitions/fontStyle"*/
         },
