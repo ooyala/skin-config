@@ -50,6 +50,32 @@
       },
       "required" : ["defaultLanguage"]
     },
+    "responsive" : {
+      "description" : "Defines values needed for Responsive Design Rules",
+      "properties": {
+        "breakpoints": {
+          "description" : "Widths which video player responds to target style",
+          "type": "object",
+          "items": {"type": "object", "pattern": "^[a-z]{2}$"},
+          "size": {
+            "description" : "Label for breakpoint style. Used for CSS className. CSS selector for target style must match this value.",
+            "type": "string"
+          },
+          "minWidth": {
+            "description" : "Minimum breakpoint width",
+            "type": "number"
+          },
+          "maxWidth": {
+            "description" : "Maximum breakpoint width",
+            "type": "number"
+          },
+          "multiplier": {
+            "description" : "Calculates responsive values as - value * multiplier. Native apps (iOS, Android) only.",
+            "type": "number"
+          }
+        }
+      }
+    },
     "startScreen" : {
       "description" : "The screen displayed after an asset loads, but before playback begins.",
       "type" : "object",
