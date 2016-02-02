@@ -12,8 +12,8 @@
   },
   "responsive": {
     "breakpoints": {
-      "sm": {"name": "small", "maxWidth": 560, "multiplier": 0.7},
-      "md": {"name": "medium", "minWidth": 561, "maxWidth": 1280, "multiplier": 1},
+      "sm": {"name": "small", "maxWidth": 559, "multiplier": 0.7},
+      "md": {"name": "medium", "minWidth": 560, "maxWidth": 1280, "multiplier": 1},
       "lg": {"name": "large", "minWidth": 1281, "multiplier": 1.2}
     }
   },
