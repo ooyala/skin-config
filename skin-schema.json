@@ -70,9 +70,14 @@
             "type": "number"
           },
           "multiplier": {
-            "description" : "Calculates responsive values as - value * multiplier. Native apps (iOS, Android) only.",
+            "description" : "Calculates responsive values as - value * multiplier.",
             "type": "number"
           }
+        },
+        "aspectRatio": {
+          "description" : "Aspect ratio of video. Used to set dimensions of responsive player skin. (height/width) * 100. For example, 16:9 aspect ratio would be \"56.25\".",
+          "type": "string",
+          "default": "auto"
         }
       }
     },
