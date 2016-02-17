@@ -443,6 +443,14 @@
       "additionalProperties" : false,
       "required" : [ "height", "autoHide", "watermark" ],
       "properties" : {
+        "volumeControl" : {
+          "description" : "Defines color of volume control in control bar.",
+          "type" : "object"
+          "color" : {
+            "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type" : "string"
+          }
+        },
         "iconStyle" : {
           "description" : "The default color is #8E8E8E with an opacity of 1.",
           "type" : "object",
