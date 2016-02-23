@@ -137,6 +137,9 @@
     "timeToShow": "10"
   },
   "controlBar": {
+    "volumeControl": {
+      "color": "#FFFFFF"
+    },
     "iconStyle": {
       "active": {
         "color": "#FFFFFF",
