@@ -154,6 +154,7 @@
     "height": 60,
     "watermark": {
       "imageResource": {"url": "assets/images/ooyala.png" },
+      "clickUrl": "http://www.ooyala.com/",
       "width": 500,
       "height": 81
     },
