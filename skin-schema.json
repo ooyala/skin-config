@@ -528,6 +528,7 @@
           "additionalProperties" : false,
           "properties": {
             "imageResource" : { "$ref" : "#/definitions/image" },
+            "clickUrl": {"type" : "string"},
             "width": {"type" : "number"},
             "height": {"type" : "number"}
           }
