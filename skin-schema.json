@@ -16,6 +16,15 @@
             "imageResource" : { "$ref" : "#/definitions/image" }
           },
 		  "example" : "\"watermark\" : {\"imageResource\" : {\"url\" : \"assets/images/ooyala-watermark.png\"} }"
+        },
+        "loadingImage": {
+          "description" : "An object that defines the URL of a loading image on the player screen",
+          "type": "object",
+          "additionalProperties" : false,
+          "properties" : {
+            "imageResource" : { "$ref" : "#/definitions/image" }
+           },
+          "example" : "\"loadingImage\" : {\"imageResource\" : {\"url\" : \"assets/images/loading.png\"} }"
         }
       }
     },
