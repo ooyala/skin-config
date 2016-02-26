@@ -369,18 +369,6 @@
       "description" : "The social share panel setting",
       "type" : "object",
       "properties" : {
-        "share" : {
-          "description" : "The list of sharing buttons for share tab (e.g. Twitter, Facebook, etc.).",
-          "type" : "array",
-          "items" : {
-            "type" : "object",
-            "additionalProperties" : false,
-            "properties" : {
-              "buttonName" : { "type" : "string" },
-              "icon" : {"$ref" : "#/definitions/icon"}
-            }
-          }
-        },
         "embed" : {
           "description" : "The setting for embed tabs in social share screen",
           "type" : "object",
