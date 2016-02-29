@@ -1,7 +1,7 @@
 {
   "general": {
     "watermark": {"imageResource": {"url": "assets/images/ooyala-watermark.png" } },
-    "loadingImage": {"imageResource": {"url": "assets/images/loading.png" } }
+    "loadingImage": {"imageResource": {"url": "assets/images/loader_svg.svg" } }
   },
   "localization": {
     "defaultLanguage": "en",
