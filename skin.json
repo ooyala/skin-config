@@ -87,7 +87,7 @@
       }
     },
     "showCountDownTimerOnEndScreen": true,
-    "countDownTime": 10
+    "countDownTime": "10"
   },
   "shareScreen": {
     "embed": {
