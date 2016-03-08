@@ -289,7 +289,7 @@
 		  "default" : "discovery"
         },
         "showReplayButton" :
-		{ 
+		{
 			"description" : "Set to true to show the replay button on the end screen.  Set to false otherwise.",
 			"type" : "boolean",
 			"default" : "true"
@@ -321,7 +321,7 @@
       "type" : "object",
       "properties" : {
         "panelTitle" : {
-			"description" : "Defines properties of the title panel in the Discovery screen.",
+          "description" : "Defines properties of the title panel in the Discovery screen.",
           "type" : "object",
           "additionalProperties" : false,
           "required" : [ "titleFont" ],
@@ -340,11 +340,11 @@
           "required" : [ "show", "font" ],
           "properties" :  {
             "show":
-			{
-				"description" : "Set to true to display the video duration on the Discovery screen, set to false otherwise.",
-				"type" : "boolean",
-				"default" : true
-			},
+            {
+              "description" : "Set to true to display the video duration on the Discovery screen, set to false otherwise.",
+              "type" : "boolean",
+              "default" : true
+            },
             "font" : {"$ref" : "#/definitions/fontStyle"}
           }
         },
@@ -355,13 +355,23 @@
           "required" : [ "show", "font"],
           "properties" : {
             "show":
-			{
-				"description" : "Set to true to display the video duration on the Discovery screen, set to false otherwise.",
-				"type" : "boolean",
-				"default" : true
-			},
+          {
+            "description" : "Set to true to display the video duration on the Discovery screen, set to false otherwise.",
+            "type" : "boolean",
+            "default" : true
+          },
             "font" : {"$ref" : "#/definitions/fontStyle"}
           }
+        },
+        "showCountDownTimerOnEndScreen": {
+          "description" : "Whether or not to show the countdown timer for autoplay.",
+          "type" : "boolean",
+          "default" : false
+        },
+        "countDownTime": {
+          "description" : "How many seconds to wait before automatically playing the recommended video",
+          "type": "string",
+          "pattern": "^[0-9]+$"
         }
       }
     },
@@ -421,7 +431,7 @@
       "properties" : {
         // TODO: showUpNext could be folded into timeToShow using "oneOf".
         "showUpNext" :
-		{ 
+		{
 			"description" : "Optional parameter used to show the Up Next screen if set to true, or hide the screen if set to false.",
 			"type" : "boolean",
 			"default" : "If no value is provided for showUpNext and timeToShow, showUpNext will default to false."
@@ -442,7 +452,7 @@
       "properties" : {
         "volumeControl" : {
           "description" : "Defines color of volume control in control bar.",
-          "type" : "object"
+          "type" : "object",
           "color" : {
             "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
             "type" : "string"
@@ -978,7 +988,70 @@
 						"type"  : "string",
 						"default" : "icon icon-right"
 					}
-				}
+				},
+        "learn" :
+        {
+          "description" : "Set the styling for the learn more icon on the ad marquee.",
+          "type" : "object",
+          "required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+          "fontFamilyName" : {
+            "description" : "The name of the font family to use.",
+            "type" : "string",
+            "default" : "alice"
+          },
+          "fontString" : {
+              "description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+            "type" : "string",
+            "default" : "\\u0074"
+          },
+          "fontStyleClass" : {
+            "description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+            "type"  : "string",
+            "default" : "icon icon-learn"
+          }
+        },
+        "skip" :
+        {
+          "description" : "Set the styling for the skip ad icon on the ad marquee.",
+          "type" : "object",
+          "required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+          "fontFamilyName" : {
+            "description" : "The name of the font family to use.",
+            "type" : "string",
+            "default" : "alice"
+          },
+          "fontString" : {
+              "description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+            "type" : "string",
+            "default" : "\\u0075"
+          },
+          "fontStyleClass" : {
+            "description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+            "type"  : "string",
+            "default" : "icon icon-skip"
+          }
+        },
+        "auto" :
+        {
+          "description" : "Set the styling for the automatic bitrate icon.",
+          "type" : "object",
+          "required" : ["fontFamilyName", "fontString", "fontStyleClass"],
+          "fontFamilyName" : {
+            "description" : "The name of the font family to use.",
+            "type" : "string",
+            "default" : "alice"
+          },
+          "fontString" : {
+              "description" : "The string used for displaying the icon. (Usually a single Unicode code point.)",
+            "type" : "string",
+            "default" : "\\u0064"
+          },
+          "fontStyleClass" : {
+            "description" : "The CSS class string for displaying the icon, which only applies to HTML5 player",
+            "type"  : "string",
+            "default" : "icon icon-auto"
+          }
+        }
 	}
 },
   "definitions": {

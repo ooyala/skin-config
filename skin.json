@@ -196,7 +196,7 @@
   "icons": {
     "play": {"fontFamilyName": "alice", "fontString": "\u0068", "fontStyleClass": "icon icon-play"},
     "pause": {"fontFamilyName": "alice", "fontString": "\u0067", "fontStyleClass": "icon icon-pause"},
-    "volume": {"fontFamilyName": "alice", "fontString": "\u0062", "fontStyleClass": "icon icon-volume-desktop"},
+    "volume": {"fontFamilyName": "alice", "fontString": "\u0061", "fontStyleClass": "icon icon-volume-desktop"},
     "volumeOff": {"fontFamilyName": "alice", "fontString": "\u0070", "fontStyleClass": "icon icon-volume-desktop"},
     "expand": {"fontFamilyName": "alice", "fontString": "\u0069", "fontStyleClass": "icon icon-resize-large"},
     "compress": {"fontFamilyName": "alice", "fontString": "\u006a", "fontStyleClass": "icon icon-resize-small"},
@@ -214,6 +214,7 @@
     "right": {"fontFamilyName": "alice", "fontString": "\u0073", "fontStyleClass": "icon icon-right"},
     "learn": {"fontFamilyName": "alice", "fontString": "\u0074", "fontStyleClass": "icon icon-learn"},
     "skip": {"fontFamilyName": "alice", "fontString": "\u0075", "fontStyleClass": "icon icon-skip"},
-    "warning": {"fontFamilyName": "fontawesome", "fontString": "\uf06a", "fontStyleClass": ""}
+    "warning": {"fontFamilyName": "fontawesome", "fontString": "\uf06a", "fontStyleClass": ""},
+    "auto": {"fontFamilyName": "alice", "fontString": "\u0064", "fontStyleClass": "icon icon-auto"}
   }
 }
