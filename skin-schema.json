@@ -993,8 +993,8 @@
       "minProperties" : 1,
       "properties" : {
         "url" : { "type" : "string" },
-        "ios-resource" : { "type" : "string" },
-        "android-resource" : { "type" : "string" }
+        "iosResource" : { "type" : "string" },
+        "androidResource" : { "type" : "string" }
       }
     },
     "button" : {

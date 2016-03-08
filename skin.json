@@ -1,6 +1,6 @@
 {
   "general": {
-    "watermark": {"imageResource": {"url": "//player.ooyala.com/static/v4/stable/4.1.4/skin-plugin/assets/images/ooyala-watermark.png" } },
+    "watermark": {"imageResource": {"url": "//player.ooyala.com/static/v4/stable/4.1.4/skin-plugin/assets/images/ooyala-watermark.png","androidResource" : "logo","iosResource" : "logo"  } },
     "loadingImage": {"imageResource": {"url": "//player.ooyala.com/static/v4/candidate/latest/skin-plugin/assets/images/loader_svg.svg" } }
   },
   "localization": {
@@ -136,7 +136,7 @@
     "autoHide": true,
     "height": 60,
     "watermark": {
-      "imageResource": {"url": "//player.ooyala.com/static/v4/stable/4.1.4/skin-plugin/assets/images/ooyala.png" },
+      "imageResource": {"url": "//player.ooyala.com/static/v4/stable/4.1.4/skin-plugin/assets/images/ooyala.png","androidResource" : "logo","iosResource" : "logo"},
       "clickUrl": "http://www.ooyala.com/",
       "width": 500,
       "height": 81
