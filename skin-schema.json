@@ -442,7 +442,7 @@
       "properties" : {
         "volumeControl" : {
           "description" : "Defines color of volume control in control bar.",
-          "type" : "object"
+          "type" : "object",
           "color" : {
             "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
             "type" : "string"
@@ -1138,4 +1138,3 @@
     }
   }
 }
-

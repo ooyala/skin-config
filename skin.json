@@ -13,9 +13,10 @@
   },
   "responsive": {
     "breakpoints": {
-      "sm": {"name": "ooyala-small", "maxWidth": 559, "multiplier": 0.7},
-      "md": {"name": "ooyala-medium", "minWidth": 560, "maxWidth": 1280, "multiplier": 1},
-      "lg": {"name": "ooyala-large", "minWidth": 1281, "multiplier": 1.2}
+      "xs": {"id": "xs", "name": "ooyala-xsmall", "maxWidth": 559, "multiplier": 0.7},
+      "sm": {"id": "sm", "name": "ooyala-small", "minWidth": 560, "maxWidth": 839, "multiplier": 1},
+      "md": {"id": "md", "name": "ooyala-medium", "minWidth": 840, "maxWidth": 1279, "multiplier": 1},
+      "lg": {"id": "lg", "name": "ooyala-large", "minWidth": 1280, "multiplier": 1.2}
     },
     "aspectRatio": "auto"
   },
