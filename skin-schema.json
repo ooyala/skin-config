@@ -54,6 +54,16 @@
           {
               "description" : "Path to the localized language file.",
               "type" : "string"
+          },
+          "androidResource": 
+          {
+            "description" : "Path to the localized language file in android.",
+            "type" : "string"
+          },
+          "iosResource":
+           {
+            "description" : "Path to the localized language file in ios.",
+            "type" : "string"
           }
         }
       },
