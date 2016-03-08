@@ -6,9 +6,24 @@
   "localization": {
     "defaultLanguage": "en",
     "availableLanguageFile": [
-      {"language": "en", "languageFile": "//player.ooyala.com/static/v4/stable/4.1.4/skin-plugin/en.json"},
-      {"language": "es", "languageFile": "//player.ooyala.com/static/v4/stable/4.1.4/skin-plugin/es.json"},
-      {"language": "zh", "languageFile": "//player.ooyala.com/static/v4/stable/4.1.4/skin-plugin/zh.json"}
+      {
+        "language": "en",
+        "languageFile": "//player.ooyala.com/static/v4/stable/4.1.4/skin-plugin/en.json",
+        "androidResource": "skin-config/en.json",
+        "iosResource": "skin-config/en.json"
+      },
+      {
+        "language": "es",
+        "languageFile": "//player.ooyala.com/static/v4/stable/4.1.4/skin-plugin/es.json",
+        "androidResource": "skin-config/es.json",
+        "iosResource": "skin-config/es.json"
+      },
+      {
+        "language": "zh",
+        "languageFile": "//player.ooyala.com/static/v4/stable/4.1.4/skin-plugin/zh.json",
+        "androidResource": "skin-config/zh.json",
+        "iosResource": "skin-config/zh.json"
+      }
     ]
   },
   "responsive": {
