@@ -81,7 +81,7 @@
     "panelTitle": {
       "titleFont": {
         "fontSize": 28,
-        "fontFamily": "'Roboto Condensed', sans-serif",
+        "fontFamily": "Roboto Condensed",
         "color": "white"
       }
     },
@@ -89,7 +89,7 @@
       "show": true,
       "font": {
         "fontSize": 22,
-        "fontFamily": "'Roboto Condensed', sans-serif",
+        "fontFamily": "Roboto Condensed",
         "color": "white"
       }
     },
