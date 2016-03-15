@@ -1,7 +1,7 @@
 {
   "general": {
     "watermark": {"imageResource": {"url": "//player.ooyala.com/static/v4/stable/4.1.4/skin-plugin/assets/images/ooyala-watermark.png","androidResource" : "logo","iosResource" : "logo"  } },
-    "loadingImage": {"imageResource": {"url": "//player.ooyala.com/static/v4/candidate/latest/skin-plugin/assets/images/loader_svg.svg" } }
+    "loadingImage": {"imageResource": {"url": "//player.ooyala.com/static/v4/stable/4.1.4/skin-plugin/assets/images/loader_svg.svg" } }
   },
   "localization": {
     "defaultLanguage": "en",
