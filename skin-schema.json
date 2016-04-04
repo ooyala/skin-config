@@ -232,9 +232,11 @@
       "description": "Configuration for UI when it playbacks live assets.",
       "type": "object",
       "additionalProperties" : false,
-      "required" : [ "dvrEnabled" ],
+      "required" : [ "forceDvrDisabled" ],
       "properties" : {
-        "dvrEnabled" : { "type" : "boolean" }
+        "forceDvrDisabled" : { 
+          "descriptipon": "Force the Scrubber bar to be hidden during live streams, regardless of if DVR is available",
+          "type" : "boolean" }
       }
     },
     "buttons" : {
