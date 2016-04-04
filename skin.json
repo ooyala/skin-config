@@ -63,8 +63,7 @@
     },
     "showTitle": true,
     "showDescription": true,
-    "infoPanelPosition": "topLeft",
-    "screenToShowOnPause": "default"
+    "infoPanelPosition": "topLeft"
   },
   "endScreen": {
     "screenToShowOnEnd": "discovery",
