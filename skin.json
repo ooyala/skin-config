@@ -168,6 +168,9 @@
       "playedColor": "rgba(67,137,255,1)"
     }
   },
+  "live": {
+    "forceDvrDisabled": false
+  },
   "buttons": {
     "desktopContent": [
       {"name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":35 },
