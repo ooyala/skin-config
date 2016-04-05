@@ -190,6 +190,12 @@
           "description" : "Default color is white with an opacity of 1.",
           "$ref" : "#/definitions/iconStyle"
         },
+        "screenToShowOnPause" : { // TODO: this is not used in the mobile code, that I could find with grep,
+          // TODO: what is "default"!? We could use more explicit naming.
+          "description" : "Defines the screen to show when the player is paused.",
+          "enum" : ["default", "discovery"],
+          "default" : "default"
+        },
         // TODO: showPauseIcon could be folded into pauseIconPosition as a 'none' enum value.
         "showPauseIcon" :
         {
