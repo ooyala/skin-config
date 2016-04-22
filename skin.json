@@ -151,11 +151,12 @@
     },
     "autoHide": true,
     "height": 60,
-    "watermark": {
+    "logo": {
       "imageResource": {"url": "//player.ooyala.com/static/v4/stable/4.2.7/skin-plugin/assets/images/ooyala.png","androidResource" : "logo","iosResource" : "logo"},
-      "clickUrl": "http://www.ooyala.com/",
-      "width": 500,
-      "height": 81
+      "clickUrl": "http://www.ooyala.com",
+      "target": "_blank",
+      "width": 111,
+      "height": 18
     },
     "adScrubberBar": {
       "backgroundColor": "rgba(175,175,175,1)",
@@ -182,7 +183,7 @@
       {"name":"discovery", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":35 },
       {"name":"closedCaption", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":35 },
       {"name":"quality", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":35 },
-      {"name":"watermark", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":130 },
+      {"name":"logo", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":130 },
       {"name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":35 },
       {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":35 }
     ],
@@ -190,7 +191,7 @@
       {"name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":35 },
       {"name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":240 },
       {"name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
-      {"name":"watermark", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":130 },
+      {"name":"logo", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":130 },
       {"name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":35 },
       {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":35 }
     ],
