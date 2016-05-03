@@ -129,7 +129,16 @@
   "closedCaptionOptions": {
     "defaultEnabled": true,
     "defaultLanguage": "en",
-    "availableLanguages": []
+    "availableLanguages": [],
+    "defaultTextColor": "white",
+    "defaultWindowColor": "transparent",
+    "defaultBackgroundColor": "transparent",
+    "defaultTextOpacity": 1,
+    "defaultBackgroundOpacity": 0,
+    "defaultWindowOpacity": 0,
+    "defaultFontType": "helvetica",
+    "defaultFontSize": "medium",
+    "defaultTextEnhancement": "uniform"
   },
   "upNext": {
     "showUpNext": true,
