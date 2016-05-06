@@ -142,11 +142,11 @@
     "iconStyle": {
       "active": {
         "color": "#FFFFFF",
-        "opacity": 1
+        "opacity": 1.0
       },
       "inactive": {
         "color": "#FFFFFF",
-        "opacity": 0.6
+        "opacity": 0.95
       }
     },
     "autoHide": true,
