@@ -166,7 +166,8 @@
     "scrubberBar": {
       "backgroundColor": "rgba(175,175,175,0.5)",
       "bufferedColor": "rgba(175,175,175,0.7)",
-      "playedColor": "rgba(67,137,255,1)"
+      "playedColor": "rgba(67,137,255,1)",
+      "thumbnailPreview": true
     }
   },
   "live": {
