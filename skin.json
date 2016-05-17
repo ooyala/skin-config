@@ -152,7 +152,7 @@
     "autoHide": true,
     "height": 60,
     "logo": {
-      "imageResource": {"url": "//player.ooyala.com/static/v4/candidate/latest/assets/images/ooyala-logo.svg","androidResource" : "logo","iosResource" : "logo"},
+      "imageResource": {"url": "//player.ooyala.com/static/v4/candidate/latest/skin-plugin/assets/images/ooyala-logo.svg","androidResource" : "logo","iosResource" : "logo"},
       "clickUrl": "http://www.ooyala.com",
       "target": "_blank",
       "width": 111,
