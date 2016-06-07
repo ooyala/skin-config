@@ -129,7 +129,6 @@
   "closedCaptionOptions": {
     "defaultEnabled": true,
     "defaultLanguage": "en",
-    "availableLanguages": [],
     "defaultTextColor": "White",
     "defaultWindowColor": "Transparent",
     "defaultBackgroundColor": "Black",
