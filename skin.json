@@ -130,15 +130,15 @@
     "defaultEnabled": true,
     "defaultLanguage": "en",
     "availableLanguages": [],
-    "defaultTextColor": "white",
-    "defaultWindowColor": "transparent",
-    "defaultBackgroundColor": "transparent",
+    "defaultTextColor": "White",
+    "defaultWindowColor": "Transparent",
+    "defaultBackgroundColor": "Black",
     "defaultTextOpacity": 1,
-    "defaultBackgroundOpacity": 0,
+    "defaultBackgroundOpacity": 0.6,
     "defaultWindowOpacity": 0,
-    "defaultFontType": "helvetica",
-    "defaultFontSize": "medium",
-    "defaultTextEnhancement": "uniform"
+    "defaultFontType": "Helvetica",
+    "defaultFontSize": "Medium",
+    "defaultTextEnhancement": "Uniform"
   },
   "upNext": {
     "showUpNext": true,
