@@ -135,7 +135,7 @@
     "defaultTextOpacity": 1,
     "defaultBackgroundOpacity": 0.6,
     "defaultWindowOpacity": 0,
-    "defaultFontType": "Helvetica",
+    "defaultFontType": "Proportional Sans-Serif",
     "defaultFontSize": "Medium",
     "defaultTextEnhancement": "Uniform"
   },
