@@ -529,7 +529,7 @@
         {
             "height" : "Height of the control bar.",
             "type" : "number",
-            "default" : 60
+            "default" : 90 
          },
         "autoHide" :
         {
