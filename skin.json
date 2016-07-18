@@ -127,17 +127,17 @@
     }
   },
   "closedCaptionOptions": {
-    "defaultEnabled": true,
-    "defaultLanguage": "en",
-    "defaultTextColor": "White",
-    "defaultWindowColor": "Transparent",
-    "defaultBackgroundColor": "Black",
-    "defaultTextOpacity": 1,
-    "defaultBackgroundOpacity": 0.6,
-    "defaultWindowOpacity": 0,
-    "defaultFontType": "Proportional Sans-Serif",
-    "defaultFontSize": "Medium",
-    "defaultTextEnhancement": "Uniform"
+    "enabled": true,
+    "language": "en",
+    "textColor": "White",
+    "windowColor": "Transparent",
+    "backgroundColor": "Black",
+    "textOpacity": 1,
+    "backgroundOpacity": 0.6,
+    "windowOpacity": 0,
+    "fontType": "Proportional Sans-Serif",
+    "fontSize": "Medium",
+    "textEnhancement": "Uniform"
   },
   "upNext": {
     "showUpNext": true,
