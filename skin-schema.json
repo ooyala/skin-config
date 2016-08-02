@@ -33,10 +33,10 @@
       "type": "object",
       "properties": {
         "defaultLanguage": {
-            "description": "The default language of the localizable strings on the player.",
-            "type": "string", "pattern": "^[a-z]{2}$",
-            "valid values": "\"en\", \"es\", \"zh\"",
-            "default": "en"
+          "description": "The default language of the localizable strings on the player.",
+          "type": "string", "pattern": "^[a-z]{2}$",
+          "valid values": "\"en\", \"es\", \"zh\"",
+          "default": "en"
         },
         "availableLanguageFile": {
           "description": "An array of languages. Defines the string values used in the player. Languages listed in the array require a separate json file included in the bundle, named '<language>.json' e.g. 'en.json'.",
@@ -44,13 +44,13 @@
           "items": {"type": "object", "pattern": "^[a-z]{2}$"},
           "default": "{\"language\": \"en\", \"languageFile\": \"config/en.json\"}, {\"language\": \"es\", \"languageFile\": \"config/es.json\"}, {\"language\": \"zh\", \"languageFile\": \"config/zh.json\"}",
           "language": {
-              "description": "Defines the language. For this release, valid languages are English (en), Spanish (es), and Simplified Chinese (zh).",
-              "type": "string",
-              "valid values": "\"en\" | \"es\" | \"zh\""
+            "description": "Defines the language. For this release, valid languages are English (en), Spanish (es), and Simplified Chinese (zh).",
+            "type": "string",
+            "valid values": "\"en\" | \"es\" | \"zh\""
           },
           "languageFile": {
-              "description": "Path to the localized language file.",
-              "type": "string"
+            "description": "Path to the localized language file.",
+            "type": "string"
           },
           "androidResource": {
             "description": "Path to the localized language file in android.",
@@ -513,10 +513,10 @@
           /*"$ref": "#/definitions/iconStyle"*/
         },
         "height": {
-            "height": "Height of the control bar.",
-            "type": "number",
-            "default": 90
-         },
+          "height": "Height of the control bar.",
+          "type": "number",
+          "default": 90
+        },
         "autoHide": {
             "description": "The control bar is automatically hidden during video playback when the mouse is not in the control bar area if and only if this parameter is set to true.",
             "type": "boolean",
