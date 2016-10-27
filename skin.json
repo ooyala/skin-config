@@ -8,19 +8,19 @@
     "availableLanguageFile": [
       {
         "language": "en",
-        "languageFile": "//player.ooyala.com/static/v4/candidate/latest/skin-plugin/en.json",
+        "languageFile": "",
         "androidResource": "skin-config/en.json",
         "iosResource": "en"
       },
       {
         "language": "es",
-        "languageFile": "//player.ooyala.com/static/v4/candidate/latest/skin-plugin/es.json",
+        "languageFile": "",
         "androidResource": "skin-config/es.json",
         "iosResource": "es"
       },
       {
         "language": "zh",
-        "languageFile": "//player.ooyala.com/static/v4/candidate/latest/skin-plugin/zh.json",
+        "languageFile": "",
         "androidResource": "skin-config/zh.json",
         "iosResource": "zh"
       }
