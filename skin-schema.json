@@ -13,7 +13,37 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "imageResource": { "$ref": "#/definitions/image" }
+            "imageResource": { "$ref": "#/definitions/image" },
+            "position": {
+              "description": "Defines the position of watermark image on the video screen",
+              "enum": ["topLeft", "topRight", "bottomLeft", "bottomRight", "centerBottom", "centerTop", "rightCenter", "leftCenter"],
+              "default": "bottomRight"
+            },
+            "clickUrl": {
+              "description": "Defines the url to open when watermark is clicked",
+              "type": "string",
+              "default":""
+            },
+            "target": {
+              "description": "Defines the target for the watermark url to open",
+              "type": "string",
+              "default":"_blank"
+            },
+            "transparency": {
+              "description": "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
+              "type": "number",
+              "default": "1"
+            },
+            "scalingOption": {
+              "description": "Defines watermark scaling option. If 'default' is chosen, watermark is scaled to 10% of player width",
+              "enum": ["none", "width", "height", "default"],
+              "default": "none"
+            },
+            "scalingPercentage": {
+              "description": "An integer number ranging from 0 to 100, scales watermark according to scalintOption parameter",
+              "type": "number",
+              "default": "0"
+            }
           },
           "example": "\"watermark\": {\"imageResource\": {\"url\": \"assets/images/ooyala-watermark.png\"} }"
         },

@@ -1,6 +1,13 @@
 {
   "general": {
-    "watermark": {"imageResource": {"url": "//player.ooyala.com/static/v4/candidate/latest/skin-plugin/assets/images/ooyala-watermark.png","androidResource" : "logo","iosResource" : "logo"  } },
+    "watermark": {"imageResource": {"url": "http://www.chazdavis.com/wp-content/themes/neoclassical/images/ooyala_logo.png","androidResource" : "logo","iosResource" : "logo"  }, 
+                  "position": "bottomRight",
+                  "clickUrl": "http://www.freebsd.org",
+                  "target": "_blank",
+                  "transparency": 0.5,
+                  "scalingOption": "default",
+                  "scalingPercentage": 77
+    },
     "loadingImage": {"imageResource": {"url": "//player.ooyala.com/static/v4/candidate/latest/skin-plugin/assets/images/loader_svg.svg" } }
   },
   "localization": {
