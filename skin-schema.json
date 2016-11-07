@@ -349,20 +349,6 @@
             "font": {"$ref": "#/definitions/fontStyle"}
           }
         },
-        "contentDuration": {
-          "description": "The setting for Discovery content duration.",
-          "type": "object",
-          "additionalProperties": false,
-          "required": [ "show", "font"],
-          "properties": {
-            "show": {
-              "description": "Set to true to display the video duration on the Discovery screen, set to false otherwise.",
-              "type": "boolean",
-              "default": true
-            },
-            "font": {"$ref": "#/definitions/fontStyle"}
-          }
-        },
         "showCountDownTimerOnEndScreen": {
           "description": "Whether or not to show the countdown timer for autoplay.",
           "type": "boolean",
@@ -1187,8 +1173,7 @@
           "description": "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
           "type": "string"
         },
-        "weight": {"type": "string"},
-        "fontSize": {"type": "number"}
+        "weight": {"type": "string"}
       }
     }
   }
