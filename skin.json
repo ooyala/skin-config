@@ -1,6 +1,13 @@
 {
   "general": {
-    "watermark": {"imageResource": {"url": "//player.ooyala.com/static/v4/candidate/latest/skin-plugin/assets/images/ooyala-watermark.png","androidResource" : "logo","iosResource" : "logo"  } },
+    "watermark": {"imageResource": {"url": "","androidResource" : "logo","iosResource" : "logo"  }, 
+                  "position": "bottomRight",
+                  "clickUrl": "",
+                  "target": "_blank",
+                  "transparency": 1,
+                  "scalingOption": "default",
+                  "scalingPercentage": 20
+    },
     "loadingImage": {"imageResource": {"url": "//player.ooyala.com/static/v4/candidate/latest/skin-plugin/assets/images/loader_svg.svg" } }
   },
   "localization": {
@@ -82,7 +89,6 @@
   "discoveryScreen": {
     "panelTitle": {
       "titleFont": {
-        "fontSize": 28,
         "fontFamily": "Roboto Condensed",
         "color": "white"
       }
@@ -90,16 +96,7 @@
     "contentTitle": {
       "show": true,
       "font": {
-        "fontSize": 22,
         "fontFamily": "Roboto Condensed",
-        "color": "white"
-      }
-    },
-    "contentDuration": {
-      "show": true,
-      "font": {
-        "fontSize": 12,
-        "fontFamily": "Arial-BoldMT",
         "color": "white"
       }
     },
