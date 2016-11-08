@@ -337,10 +337,15 @@
       "type": "object",
       "properties": {
         "showAdMarquee": {
-          "description": "Show the ad marquee during ad playback is set to true, hide it if set to false.",
+          "description": "Show the ad marquee during ad playback if set to true, hide it if set to false.",
           "type": "boolean",
           "default": "true"
         },
+        "showAdCountDown": {
+          "description": "Show the ad count down during ad playback if set to true, hide it if set to false.",
+          "type": "boolean",
+          "default": "true"
+          },
         "showControlBar": {
           "description": "Show the player control bar during ad playback if set to true.  Hide the control bar when a video ad is playing by setting showControlBar to false. If showControlBar is missing or set to true, the control bar will appear while an ad is playing on your player.",
           "type": "boolean",
