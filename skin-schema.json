@@ -549,8 +549,12 @@
               "description": "The color to indicate played content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
               "type": "string"
             },
-            "thumbColor": {
+            "scrubberHandleColor": {
               "description": "The color of the draggable scrubber object in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+              "type": "string"
+            },
+            "scrubberHandleBorderColor": {
+              "description": "The color of the border around the scrubber handle. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
               "type": "string"
             },
             "thumbnailPreview": {
@@ -574,8 +578,12 @@
               "description": "The color to indicate played content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
               "type": "string"
             },
-            "thumbColor": {
+            "scrubberHandleColor": {
               "description": "The color to the draggable scrubber object in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+              "type": "string"
+            },
+            "scrubberHandleBorderColor": {
+              "description": "The color of the border around the scrubber handle. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
               "type": "string"
             }
           }
