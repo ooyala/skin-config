@@ -169,12 +169,16 @@
     "adScrubberBar": {
       "backgroundColor": "rgba(175,175,175,1)",
       "bufferedColor": "rgba(127,127,127,1)",
-      "playedColor": "rgba(255,63,128,1)"
+      "playedColor": "rgba(255,63,128,1)",
+      "scrubberHandleColor": "rgba(67,137,255,1)",
+      "scrubberHandleBorderColor": "rgba(255,255,255,1)"
     },
     "scrubberBar": {
       "backgroundColor": "rgba(175,175,175,0.5)",
       "bufferedColor": "rgba(175,175,175,0.7)",
       "playedColor": "rgba(67,137,255,1)",
+      "scrubberHandleColor": "rgba(67,137,255,1)",
+      "scrubberHandleBorderColor": "rgba(255,255,255,1)",
       "thumbnailPreview": true
     }
   },
