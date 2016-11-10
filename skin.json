@@ -80,9 +80,9 @@
       "color": "white",
       "opacity": 1
     },
-    "showTitle": true,
-    "showDescription": true,
-    "infoPanelPosition": "bottomRight"
+    "showTitle": false,
+    "showDescription": false,
+    "infoPanelPosition": "topLeft"
   },
   "adScreen": {
     "showAdMarquee": true,

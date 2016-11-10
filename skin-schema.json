@@ -253,12 +253,12 @@
         "showTitle": {
           "description": "Show the video title on the end screen if set to true.  Hide it if set to false.",
           "type": "boolean",
-          "default": true
+          "default": false
         },
         "showDescription": {
           "description": "Show the video description on the end screen if set to true.  Hide it if set to false.",
           "type": "boolean",
-          "default": true
+          "default": false
         },
         "infoPanelPosition": {
           "description": "Defines the position of the information panel on the end screen.",
