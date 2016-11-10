@@ -79,7 +79,10 @@
     "replayIconStyle": {
       "color": "white",
       "opacity": 1
-    }
+    },
+    "showTitle": true,
+    "showDescription": true,
+    "infoPanelPosition": "bottomRight"
   },
   "adScreen": {
     "showAdMarquee": true,
