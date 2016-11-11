@@ -250,21 +250,6 @@
       "description": "The screen displayed after an asset has completed playing.",
       "type": "object",
       "properties": {
-        "showTitle": {
-          "description": "Show the video title on the end screen if set to true.  Hide it if set to false.",
-          "type": "boolean",
-          "default": false
-        },
-        "showDescription": {
-          "description": "Show the video description on the end screen if set to true.  Hide it if set to false.",
-          "type": "boolean",
-          "default": false
-        },
-        "infoPanelPosition": {
-          "description": "Defines the position of the information panel on the end screen.",
-          "enum": [ "topLeft", "topRight", "bottomLeft", "bottomRight" ],
-          "default": "topLeft"
-        },
         "replayIconStyle": {
           "description": "The default color is white with an opacity of 1.",
           /**/
@@ -343,8 +328,21 @@
           "type": "boolean",
           "default": "true"
         },
-        "showTitle": { "type": "boolean" },
-        "showDescription": { "type": "boolean" }
+        "showTitle": {
+          "description": "Show the video title on the end screen if set to true.  Hide it if set to false.",
+          "type": "boolean",
+          "default": false
+        },
+        "showDescription": {
+          "description": "Show the video description on the end screen if set to true.  Hide it if set to false.",
+          "type": "boolean",
+          "default": false
+        },
+        "infoPanelPosition": {
+          "description": "Defines the position of the information panel on the end screen.",
+          "enum": [ "topLeft", "topRight", "bottomLeft", "bottomRight" ],
+          "default": "topLeft"
+        }
       }
     },
     "adScreen": {
