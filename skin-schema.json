@@ -400,6 +400,11 @@
       "description": "The social share panel setting",
       "type": "object",
       "properties": {
+        "showEmbedTab":{
+          "description": "If true, show the embed tabs in social share screen",
+          "type": "boolean",
+          "default": true
+        },
         "embed": {
           "description": "The setting for embed tabs in social share screen",
           "type": "object",
