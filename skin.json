@@ -152,7 +152,7 @@
     },
     "iconStyle": {
       "active": {
-        "color": "",
+        "color": "#FFFFFF",
         "opacity": 1.0
       },
       "inactive": {
