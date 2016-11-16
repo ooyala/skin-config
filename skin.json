@@ -8,7 +8,8 @@
                   "scalingOption": "default",
                   "scalingPercentage": 20
     },
-    "loadingImage": {"imageResource": {"url": "//player.ooyala.com/static/v4/candidate/latest/skin-plugin/assets/images/loader_svg.svg" } }
+    "loadingImage": {"imageResource": {"url": "//player.ooyala.com/static/v4/candidate/latest/skin-plugin/assets/images/loader_svg.svg" } },
+    "accentColor":"#448aff"
   },
   "localization": {
     "defaultLanguage": "en",
@@ -147,7 +148,7 @@
   },
   "controlBar": {
     "volumeControl": {
-      "color": "rgba(67,137,255,1)"
+      "color": ""
     },
     "iconStyle": {
       "active": {
@@ -178,7 +179,7 @@
     "scrubberBar": {
       "backgroundColor": "rgba(175,175,175,0.5)",
       "bufferedColor": "rgba(175,175,175,0.7)",
-      "playedColor": "rgba(67,137,255,1)",
+      "playedColor": "",
       "scrubberHandleColor": "rgba(67,137,255,1)",
       "scrubberHandleBorderColor": "rgba(255,255,255,1)",
       "thumbnailPreview": true
