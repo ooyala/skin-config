@@ -55,6 +55,10 @@
             "imageResource": { "$ref": "#/definitions/image" }
            },
           "example": "\"loadingImage\": {\"imageResource\": {\"url\": \"assets/images/loading.png\"} }"
+        },
+        "accentColor": {
+          "description": "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+          "type": "string"
         }
       }
     },
