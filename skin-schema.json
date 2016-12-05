@@ -416,10 +416,15 @@
       "description": "The social share panel setting",
       "type": "object",
       "properties": {
-        "shareContent":{
+        "shareContent": {
           "description": "Describes which tabs should be shown on social screen (social, embed)",
           "type": "array",
           "default": ["social", "embed"]
+        },
+        "socialContent": {
+          "description": "Describes which buttons should be shown on the social share tab of the share panel",
+          "type": "array",
+          "default": ["twitter", "facebook", "google+", "email"]
         },
         "embed": {
           "description": "The setting for embed tabs in social share screen",
