@@ -572,11 +572,19 @@
             },
             "scrubberHandleColor": {
               "description": "The color of the draggable scrubber object in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-              "type": "string"
+              "type": "string",
+			  "platform support": {
+				  "iOS SDK": "v4.21.0+",
+				  "Android SDK": "v4.21.0+"
+			  }
             },
             "scrubberHandleBorderColor": {
               "description": "The color of the border around the scrubber handle. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-              "type": "string"
+              "type": "string",
+			  "platform support": {
+				  "iOS SDK": "v4.21.0+",
+				  "Android SDK": "v4.21.0+"
+			  }
             },
             "thumbnailPreview": {
               "description": "The color to the draggable scrubber object in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
@@ -601,11 +609,19 @@
             },
             "scrubberHandleColor": {
               "description": "The color to the draggable scrubber object in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-              "type": "string"
+              "type": "string",
+			  "platform support": {
+				  "iOS SDK": "v4.21.0+",
+				  "Android SDK": "v4.21.0+"
+			  }
             },
             "scrubberHandleBorderColor": {
               "description": "The color of the border around the scrubber handle. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-              "type": "string"
+              "type": "string",
+			  "platform support": {
+				  "iOS SDK": "v4.21.0+",
+				  "Android SDK": "v4.21.0+"
+			  }
             }
           }
         }
