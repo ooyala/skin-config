@@ -13,7 +13,37 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "imageResource": { "$ref": "#/definitions/image" }
+            "imageResource": { "$ref": "#/definitions/image" },
+            "position": {
+              "description": "Defines the position of watermark image on the video screen",
+              "enum": ["topLeft", "topRight", "bottomLeft", "bottomRight", "centerBottom", "centerTop", "rightCenter", "leftCenter"],
+              "default": "bottomRight"
+            },
+            "clickUrl": {
+              "description": "Defines the url to open when watermark is clicked",
+              "type": "string",
+              "default":""
+            },
+            "target": {
+              "description": "Defines the target for the watermark url to open",
+              "type": "string",
+              "default":"_blank"
+            },
+            "transparency": {
+              "description": "A floating-point number ranging from 0.0 (fully transparent) to 1.0 (fully opaque).",
+              "type": "number",
+              "default": "1"
+            },
+            "scalingOption": {
+              "description": "Defines watermark scaling option. If 'default' is chosen, watermark is scaled to 10% of player width",
+              "enum": ["none", "width", "height", "default"],
+              "default": "none"
+            },
+            "scalingPercentage": {
+              "description": "An integer number ranging from 0 to 100, scales watermark according to scalintOption parameter",
+              "type": "number",
+              "default": "0"
+            }
           },
           "example": "\"watermark\": {\"imageResource\": {\"url\": \"assets/images/ooyala-watermark.png\"} }"
         },
@@ -25,6 +55,10 @@
             "imageResource": { "$ref": "#/definitions/image" }
            },
           "example": "\"loadingImage\": {\"imageResource\": {\"url\": \"assets/images/loading.png\"} }"
+        },
+        "accentColor": {
+          "description": "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+          "type": "string"
         }
       }
     },
@@ -298,8 +332,21 @@
           "type": "boolean",
           "default": "true"
         },
-        "showTitle": { "type": "boolean" },
-        "showDescription": { "type": "boolean" }
+        "showTitle": {
+          "description": "Show the video title on the end screen if set to true.  Hide it if set to false.",
+          "type": "boolean",
+          "default": false
+        },
+        "showDescription": {
+          "description": "Show the video description on the end screen if set to true.  Hide it if set to false.",
+          "type": "boolean",
+          "default": false
+        },
+        "infoPanelPosition": {
+          "description": "Defines the position of the information panel on the end screen.",
+          "enum": [ "topLeft", "topRight", "bottomLeft", "bottomRight" ],
+          "default": "topLeft"
+        }
       }
     },
     "adScreen": {
@@ -307,10 +354,15 @@
       "type": "object",
       "properties": {
         "showAdMarquee": {
-          "description": "Show the ad marquee during ad playback is set to true, hide it if set to false.",
+          "description": "Show the ad marquee during ad playback if set to true, hide it if set to false.",
           "type": "boolean",
           "default": "true"
         },
+        "showAdCountDown": {
+          "description": "Show the ad count down during ad playback if set to true, hide it if set to false.",
+          "type": "boolean",
+          "default": "true"
+          },
         "showControlBar": {
           "description": "Show the player control bar during ad playback if set to true.  Hide the control bar when a video ad is playing by setting showControlBar to false. If showControlBar is missing or set to true, the control bar will appear while an ad is playing on your player.",
           "type": "boolean",
@@ -349,20 +401,6 @@
             "font": {"$ref": "#/definitions/fontStyle"}
           }
         },
-        "contentDuration": {
-          "description": "The setting for Discovery content duration.",
-          "type": "object",
-          "additionalProperties": false,
-          "required": [ "show", "font"],
-          "properties": {
-            "show": {
-              "description": "Set to true to display the video duration on the Discovery screen, set to false otherwise.",
-              "type": "boolean",
-              "default": true
-            },
-            "font": {"$ref": "#/definitions/fontStyle"}
-          }
-        },
         "showCountDownTimerOnEndScreen": {
           "description": "Whether or not to show the countdown timer for autoplay.",
           "type": "boolean",
@@ -370,8 +408,7 @@
         },
         "countDownTime": {
           "description": "How many seconds to wait before automatically playing the recommended video",
-          "type": "string",
-          "pattern": "^[0-9]+$"
+          "type": "number"
         }
       }
     },
@@ -379,6 +416,16 @@
       "description": "The social share panel setting",
       "type": "object",
       "properties": {
+        "shareContent": {
+          "description": "Describes which tabs should be shown on social screen (social, embed)",
+          "type": "array",
+          "default": ["social", "embed"]
+        },
+        "socialContent": {
+          "description": "Describes which buttons should be shown on the social share tab of the share panel",
+          "type": "array",
+          "default": ["twitter", "facebook", "google+", "email"]
+        },
         "embed": {
           "description": "The setting for embed tabs in social share screen",
           "type": "object",
@@ -435,8 +482,7 @@
         },
         "timeToShow": {
           "description": "Optional floating-point parameter used to set the time relative to the video length to show the Up Next screen. When timeToShow is set to a value greater than 1.0, the player interprets that number as the number of seconds before the end of the video to show the Up Next screen. However, when timeToShow is less than 1.0, the player treats the decimal value as a percentage of the video length and shows the Up Next screen at that point in the video. For example, if timeToShow is set to 0.9 in a 60-second video, the Up Next screen will show at 54 seconds. If timeToShow is set to 5.0 in a 60-second video, the Up Next screen will show at 55 seconds.",
-          "type": "string",
-          "pattern": "^[0-9]+$|^[0-9]{1,2}%$",
+          "type": "number",
           "default": "If showUpNext is set to true and no value is given for timeToShow, the Up Next dialog will default to showing 10 seconds prior to the end of the video. If no value is given for showUpNext, or it is set to false, the value set in timeToShow has no effect because the Up Next screen is never shown."
         }
       }
@@ -535,31 +581,73 @@
           }
         },
         "scrubberBar": {
-          "backgroundColor": {
-            "description": "The color of the scrubber bar background. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-            "type": "string"
-          },
-          "bufferedColor": {
-            "description": "The color to indicate buffered content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-            "type": "string"
-          },
-          "playedColor": {
-            "description": "The color to indicate played content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-            "type": "string"
+          "additionalProperties": false,
+          "properties": {
+            "backgroundColor": {
+              "description": "The color of the scrubber bar background. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+              "type": "string"
+            },
+            "bufferedColor": {
+              "description": "The color to indicate buffered content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+              "type": "string"
+            },
+            "playedColor": {
+              "description": "The color to indicate played content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+              "type": "string"
+            },
+            "scrubberHandleColor": {
+              "description": "The color of the draggable scrubber object in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+              "type": "string",
+              "platform support": {
+                "iOS SDK": "v4.21.0+",
+                "Android SDK": "v4.21.0+"
+              }
+            },
+            "scrubberHandleBorderColor": {
+              "description": "The color of the border around the scrubber handle. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+              "type": "string",
+              "platform support": {
+                "iOS SDK": "v4.21.0+",
+                "Android SDK": "v4.21.0+"
+              }
+            },
+            "thumbnailPreview": {
+              "description": "The color to the draggable scrubber object in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+              "type": "boolean"
+            }
           }
         },
         "adScrubberBar": {
-          "backgroundColor": {
-            "description": "The color of the scrubber bar background. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-            "type": "string"
-          },
-          "bufferedColor": {
-            "description": "The color to indicate buffered content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-            "type": "string"
-          },
-          "playedColor": {
-            "description": "The color to indicate played content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-            "type": "string"
+          "additionalProperties": false,
+          "properties": {
+            "backgroundColor": {
+              "description": "The color of the scrubber bar background. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+              "type": "string"
+            },
+            "bufferedColor": {
+              "description": "The color to indicate buffered content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+              "type": "string"
+            },
+            "playedColor": {
+              "description": "The color to indicate played content in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+              "type": "string"
+            },
+            "scrubberHandleColor": {
+              "description": "The color to the draggable scrubber object in the scrubber bar. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+              "type": "string",
+              "platform support": {
+                "iOS SDK": "v4.21.0+",
+                "Android SDK": "v4.21.0+"
+              }
+            },
+            "scrubberHandleBorderColor": {
+              "description": "The color of the border around the scrubber handle. Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+              "type": "string",
+              "platform support": {
+                "iOS SDK": "v4.21.0+",
+                "Android SDK": "v4.21.0+"
+              }
+            }
           }
         }
       }
@@ -1187,8 +1275,7 @@
           "description": "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
           "type": "string"
         },
-        "weight": {"type": "string"},
-        "fontSize": {"type": "number"}
+        "weight": {"type": "string"}
       }
     }
   }
