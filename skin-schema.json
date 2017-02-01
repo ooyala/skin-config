@@ -58,7 +58,11 @@
         },
         "accentColor": {
           "description": "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
-          "type": "string"
+          "type": "string",
+	      "platform support": {
+	          "iOS SDK": "v4.21.0+",
+	          "Android SDK": "v4.21.0+ Note: the toggle switch color cannot be customized"
+	      }
         }
       }
     },
