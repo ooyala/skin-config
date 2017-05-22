@@ -1,5 +1,5 @@
 {
-  "description": "This JSON schema describes the base UI configuration for the Ooyala Player, which can be customized in the <a href=\"https://github.com/ooyala/skin-config.git\">skin.json</a> file. Also see <a href=\"https://facebook.github.io/react\">https://facebook.github.io/react</a> and <a href=\"https://facebook.github.io/react-native\">https://facebook.github.io/react-native</a>.",
+  "description": "This JSON schema describes the base UI configuration for the Ooyala Player, which can be customized in the <a href=\"https://github.com/ooyala/skin-config.git\">skin.json</a> file.  For an overview, see the <a href=\"http://help.ooyala.com/video-platform/concepts/pbv4_about.html\">Ooyala Player</a> documentation.  For background information, see <a href=\"https://facebook.github.io/react\">https://facebook.github.io/react</a> and <a href=\"https://facebook.github.io/react-native\">https://facebook.github.io/react-native</a>.",
   "type": "object",
   "additionalProperties": false,
   "required": ["general", "startScreen", "pauseScreen", "endScreen", "upNext", "moreOptionsScreen", "discoveryScreen", "closedCaptionOptions", "icons", "buttons", "controlBar", "shareScreen", "localization"],
@@ -73,18 +73,18 @@
         "defaultLanguage": {
           "description": "The default language of the localizable strings on the player.",
           "type": "string", "pattern": "^[a-z]{2}$",
-          "valid values": "\"en\", \"es\", \"zh\"",
+          "valid values": "\"en\", \"es\", \"jp\", \"zh\"",
           "default": "en"
         },
         "availableLanguageFile": {
           "description": "An array of languages. Defines the string values used in the player. Languages listed in the array require a separate json file included in the bundle, named '<language>.json' e.g. 'en.json'.",
           "type": "array",
           "items": {"type": "object", "pattern": "^[a-z]{2}$"},
-          "default": "{\"language\": \"en\", \"languageFile\": \"config/en.json\"}, {\"language\": \"es\", \"languageFile\": \"config/es.json\"}, {\"language\": \"zh\", \"languageFile\": \"config/zh.json\"}",
+          "default": "{\"language\": \"en\", \"languageFile\": \"config/en.json\"}, {\"language\": \"es\", \"languageFile\": \"config/es.json\"}, {\"language\": \"jp\", \"languageFile\": \"config/jp.json\"}, {\"language\": \"zh\", \"languageFile\": \"config/zh.json\"}",
           "language": {
-            "description": "Defines the language. For this release, valid languages are English (en), Spanish (es), and Simplified Chinese (zh).",
+            "description": "Defines the language. For this release, valid languages are English (en), Spanish (es), Japanese (jp), and Simplified Chinese (zh).",
             "type": "string",
-            "valid values": "\"en\" | \"es\" | \"zh\""
+            "valid values": "\"en\" | \"es\" | \"zh\" | \"jp\""
           },
           "languageFile": {
             "description": "Path to the localized language file.",
