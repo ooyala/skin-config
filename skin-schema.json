@@ -657,6 +657,17 @@
               }
             }
           }
+        },
+        "tooltips":{
+          "description": "Configuration for the control bar items tooltips.",
+          "type": "object",
+          "properties":{
+            "enabled": {
+              "description": "Show the control bar items tooltips if set to true.  Hide the control bar items tooltips if set to false. Default is false.",
+              "type": "boolean",
+              "default": "false"
+            }    
+          }
         }
       }
     },

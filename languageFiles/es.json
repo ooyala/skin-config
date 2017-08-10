@@ -9,7 +9,7 @@
   "CC Options": "Opciones de subtitulado",
   "On": "Sí",
   "Off": "No",
-  "Discover": "Descubrir",
+  "Discovery": "Descubrir",
   "Up next": "Siguiente",
   "Video Quality": "Calidad de video",
   "Invest In Social Change": "Invertir en el cambio social",
@@ -112,5 +112,13 @@
   "Uniform": "Uniforme",
   "Depressed": "En relieve",
   "Raised": "Elevado",
-  "Shadow": "Sombra"
+  "Shadow": "Sombra",
+  "Play": "Reproducir",
+  "Replay": "Volver a reproducir",
+  "Pause": "Pausa",
+  "Mute": "Silenciar",
+  "Unmute": "Activar audio",
+  "Closed Captions": "Subtitulos",
+  "Full Screen": "Pantalla completa",
+  "Exit Full Screen": "Salir pantalla completa"
 }
