@@ -263,9 +263,5 @@
     "auto": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u0064", "fontStyleClass": "oo-icon oo-icon-system-auto"},
     "stereoOn": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u0062", "fontStyleClass": "oo-icon oo-icon-system-auto"},
     "stereoOff": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u0070", "fontStyleClass": "oo-icon oo-icon-system-auto"}
-//    "directionControlLeft": {"fontFamilyName": "fontawesome", "fontString": "\u0070", "fontStyleClass": "fa fa-arrow-left"},
-//    "directionControlRight": {"fontFamilyName": "fontawesome", "fontString": "\u0070", "fontStyleClass": "fa fa-arrow-right"},
-//    "directionControlUp": {"fontFamilyName": "fontawesome", "fontString": "\u0070", "fontStyleClass": "fa fa-arrow-up"},
-//    "directionControlDown": {"fontFamilyName": "fontawesome", "fontString": "\u0070", "fontStyleClass": "fa fa-arrow-down"}
   }
 }
