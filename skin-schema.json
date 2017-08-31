@@ -507,6 +507,14 @@
               "iOS SDK": "Unsupported",
               "Android SDK": "v4.21.0+"
             }
+          },
+          "inactiveColor" : {
+            "description" : "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+            "type" : "string",
+            "platform support": {
+              "iOS SDK": "Unsupported",
+              "Android SDK": "v4.21.0+"
+            }
           }
         },
         "iconStyle": {
