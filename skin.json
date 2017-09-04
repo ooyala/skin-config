@@ -9,7 +9,8 @@
                   "scalingPercentage": 20
     },
     "loadingImage": {"imageResource": {"url": "//player.ooyala.com/static/v4/candidate/latest/skin-plugin/assets/images/loader_svg.svg" } },
-    "accentColor":"#448aff"
+    "accentColor":"#448aff",
+    "inactiveAccentColor":"rgba(175,175,175,0.5)"
   },
   "localization": {
     "defaultLanguage": "en",
