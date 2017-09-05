@@ -190,6 +190,9 @@
       "scrubberHandleColor": "rgba(67,137,255,1)",
       "scrubberHandleBorderColor": "rgba(255,255,255,1)",
       "thumbnailPreview": true
+    },
+    "tooltips":{
+      "enabled":false
     }
   },
   "live": {

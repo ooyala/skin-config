@@ -121,5 +121,14 @@
   "Uniform": "Uniform",
   "Depressed": "Depressed",
   "Raised": "Raised",
-  "Shadow": "Shadow"
+  "Shadow": "Shadow",
+  "Play": "Play",
+  "Replay": "Replay",
+  "Pause": "Pause",
+  "Mute": "Mute",
+  "Unmute": "Unmute",
+  "Closed Captions":"Closed Captions",
+  "Full Screen": "Full Screen",
+  "Exit Full Screen": "Exit Full Screen",
+  "More Options": "More Options"
 }
