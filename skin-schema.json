@@ -56,6 +56,12 @@
            },
           "example": "\"loadingImage\": {\"imageResource\": {\"url\": \"assets/images/loading.png\"} }"
         },
+        "bufferingSpinnerDelay": {
+          "description": "The time in milliseconds that the player should wait before displaying the buffering spinner when playback stalls. Set to 0 in order to show the spinner immediately.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 60000
+        },
         "accentColor": {
           "description": "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
           "type": "string",
@@ -666,7 +672,7 @@
               "description": "Show the control bar items tooltips if set to true.  Hide the control bar items tooltips if set to false. Default is false.",
               "type": "boolean",
               "default": "false"
-            }    
+            }
           }
         }
       }
