@@ -211,15 +211,9 @@
       {"name":"closedCaption", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":45 },
       {"name":"quality", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":45 },
       {"name":"logo", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":125 },
-      {"name":"stereo", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":45 },
       {"name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":45 },
       {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":45 },
-
-      {"name":"arrowsBlack", "location":"moreOptions"},
-      {"name":"arrowsWhite", "location":"moreOptions"}
-//      {"name":"circleArrowsBlack", "location":"moreOptions"},
-//      {"name":"circleArrowsWhite", "location":"moreOptions"}
-
+      {"name":"arrowsBlack", "location": "mainView", "whenDoesNotFit":"keep"}
     ],
     "desktopAd": [
       {"name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":45 },
@@ -274,7 +268,7 @@
 
 
     "arrowsBlack": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u005B", "fontStyleClass": "oo-icon"},
-    "arrowsWhite": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u005B", "fontStyleClass": "oo-icon"},
+    "arrowsWhite": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u005C", "fontStyleClass": "oo-icon"},
     "circleArrowsBlack": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u005D", "fontStyleClass": "oo-icon"},
     "circleArrowsWhite": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u005E", "fontStyleClass": "oo-icon"},
 
