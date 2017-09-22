@@ -8,6 +8,7 @@
                   "scalingOption": "default",
                   "scalingPercentage": 20
     },
+    "bufferingSpinnerDelay": 750,
     "loadingImage": {"imageResource": {"url": "//player.ooyala.com/static/v4/candidate/latest/skin-plugin/assets/images/loader_svg.svg" } },
     "accentColor":"#448aff"
   },
