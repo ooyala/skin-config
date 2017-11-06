@@ -262,5 +262,9 @@
     "skip": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u0075", "fontStyleClass": "oo-icon oo-icon-skip-slick"},
     "warning": {"fontFamilyName": "fontawesome", "fontString": "\uf06a", "fontStyleClass": ""},
     "auto": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u0064", "fontStyleClass": "oo-icon oo-icon-system-auto"}
+  },
+  "stickyPlayerOptions":{
+    "enable": false,
+    "workOnlyOnPlayState": true
   }
 }

@@ -1296,6 +1296,25 @@
         },
         "weight": {"type": "string"}
       }
+    },
+
+    "stickyPlayerOptions": {
+      "description": "The player will be moved to the corner of page when player looses visible focus.",
+      "type": "object",
+      "properties": {
+        "enable": {
+          "description": "Show the sticky player if set true.",
+          "type": "boolean",
+          "default": false
+        },
+        "showOnlyOnPlayState": {
+          "description": "Show the sticky player if player state is true.",
+          "type": "boolean",
+          "default": true
+        }
+      }
     }
+
+
   }
 }
