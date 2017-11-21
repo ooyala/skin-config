@@ -108,6 +108,21 @@
       },
       "required": ["defaultLanguage"]
     },
+    "languageDirections": {
+      "ar": "rtl",
+      "dv": "rtl",
+      "he": "rtl",
+      "fa": "rtl",
+      "ks": "rtl",
+      "ku": "rtl",
+      "pa": "rtl",
+      "ps": "rtl",
+      "sd": "rtl",
+      "tk": "rtl",
+      "ug": "rtl",
+      "ur": "rtl",
+      "yi": "rtl"
+    },
     "responsive": {
       "description": "Defines values needed for Responsive Design Rules",
       "properties": {
