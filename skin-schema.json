@@ -108,6 +108,21 @@
       },
       "required": ["defaultLanguage"]
     },
+    "languageDirections": {
+      "ar": "rtl",
+      "dv": "rtl",
+      "he": "rtl",
+      "fa": "rtl",
+      "ks": "rtl",
+      "ku": "rtl",
+      "pa": "rtl",
+      "ps": "rtl",
+      "sd": "rtl",
+      "tk": "rtl",
+      "ug": "rtl",
+      "ur": "rtl",
+      "yi": "rtl"
+    },
     "responsive": {
       "description": "Defines values needed for Responsive Design Rules",
       "properties": {
@@ -672,6 +687,18 @@
               "description": "Show the control bar items tooltips if set to true.  Hide the control bar items tooltips if set to false. Default is false.",
               "type": "boolean",
               "default": "false"
+            }
+          }
+        },
+        "qualitySelection":{
+          "description":"Configuration for the control bar quality selection panel/popover",
+          "type":"object",
+          "properties":{
+            "format":{
+              "description":"Determine the format of the quality options. Available formats: bitrate only, resolution only, and resolution + bitrate.",
+              "type":"string",
+              "enum": ["bitrate", "resolution", "resolution bitrate"],
+              "default":"bitrate"
             }
           }
         }
