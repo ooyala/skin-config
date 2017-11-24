@@ -218,10 +218,12 @@
     "forceDvrDisabled": false
   },
   "isVrAnimationEnabled": {
-    "vrNotification": true
+    "vrNotification": true,
+    "vrIcon": true
   },
   "animationDurations": {
-    "vrNotification": 5
+    "vrNotification": 5,
+    "vrIcon": 4
   },
   "buttons": {
     "desktopContent": [
@@ -296,6 +298,7 @@
     "circleArrowsBlack": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u005D", "fontStyleClass": "oo-icon"},
     "circleArrowsWhite": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u005E", "fontStyleClass": "oo-icon"},
     "stereoOn": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u0057", "fontStyleClass": "oo-icon oo-icon-system-auto"},
-    "stereoOff": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u0052", "fontStyleClass": "oo-icon oo-icon-system-auto"}
+    "stereoOff": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u0052", "fontStyleClass": "oo-icon oo-icon-system-auto"},
+    "vrIcon": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u0059", "fontStyleClass": "oo-icon"}
   }
 }
