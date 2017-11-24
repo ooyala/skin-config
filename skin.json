@@ -209,6 +209,9 @@
     },
     "tooltips":{
       "enabled":false
+    },
+    "qualitySelection":{
+      "format": "bitrate"
     }
   },
   "live": {

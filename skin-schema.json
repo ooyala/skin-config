@@ -689,6 +689,18 @@
               "default": "false"
             }
           }
+        },
+        "qualitySelection":{
+          "description":"Configuration for the control bar quality selection panel/popover",
+          "type":"object",
+          "properties":{
+            "format":{
+              "description":"Determine the format of the quality options. Available formats: bitrate only, resolution only, and resolution + bitrate.",
+              "type":"string",
+              "enum": ["bitrate", "resolution", "resolution bitrate"],
+              "default":"bitrate"
+            }
+          }
         }
       }
     },
