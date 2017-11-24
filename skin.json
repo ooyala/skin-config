@@ -219,7 +219,7 @@
   },
   "isVrAnimationEnabled": {
     "vrNotification": true,
-    "vrIcon": true
+    "vrIcon": false
   },
   "animationDurations": {
     "vrNotification": 5,
