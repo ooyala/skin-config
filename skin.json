@@ -218,8 +218,8 @@
     "forceDvrDisabled": false
   },
   "isVrAnimationEnabled": {
-    "vrNotification": true,
-    "vrIcon": false
+    "vrNotification": false,
+    "vrIcon": true
   },
   "animationDurations": {
     "vrNotification": 5,
