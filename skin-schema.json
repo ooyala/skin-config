@@ -1226,7 +1226,7 @@
     "buttonNames": {
       "description": "These are the only buttons currently supported by the UI SDK.",
       "additionalProperties": false,
-      "enum": ["playPause", "volume", "timeDuration", "flexibleSpace", "discovery", "fullscreen", "stereoscopic",  "moreOptions", "arrowsBlack", "logo", "share", "closedCaption", "bitrateSelector", "quality", "live"]
+      "enum": ["playPause", "volume", "timeDuration", "flexibleSpace", "discovery", "fullscreen", "stereoscopic",  "moreOptions", "arrowsBlack", "logo", "share", "closedCaption", "bitrateSelector", "quality", "live", "multiAudio"]
     },
     "buttonArray": {
       "description": "Used to list the buttons for a single platform (desktop vs. mobile).",
