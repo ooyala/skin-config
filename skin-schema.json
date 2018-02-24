@@ -1256,7 +1256,7 @@
       "required": ["name", "location", "whenDoesNotFit", "minWidth"],
       "properties": {
         "name": { "$ref": "#/definitions/buttonNames" },
-        "location": { "enum": ["controlBar"] },
+        "location": { "enum": ["controlBar", "mainView"] },
         "whenDoesNotFit": {
           "description": "Sets how the button should be dealt with when it doesn't fit in the control bar. Keep: keep the button visible in the control bar. Drop: hide it from the UI. MoveToMoreOptions: show it in the more options / overflow UI.",
           "enum": ["keep", "drop", "moveToMoreOptions"]
