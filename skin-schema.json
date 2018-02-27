@@ -717,7 +717,7 @@
       }
     },
     "isVrAnimationEnabled": {
-      "description": "Shows if vr inform animation is enabled",
+      "description": "Show vrNotification or vrIcon if vrNotification or vrNotification are marked as true",
       "type": "object",
       "properties": {
         "vrNotification": {
@@ -726,23 +726,23 @@
           "default": "If no value is provided for vrNotification, vrNotification will default to true."
         },
         "vrIcon": {
-          "description": "Vr icon should be  shown",
+          "description": "Vr icon should be shown",
           "type": "boolean",
           "default": "If no value is provided for vrIcon, vrIcon will default to false."
         }
       }
     },
     "animationDurations": {
-      "description": "Sets duration for vr animation",
+      "description": "Sets duration for VR animation",
       "type": "object",
       "vrNotification": {
-        "description": "Duration for vrNotification",
-        "type": "boolean",
+        "description": "Duration for VR Notification",
+        "type": "number",
         "default": 5
       },
       "vrIcon": {
         "description": "Duration for vrIcon",
-        "type": "boolean",
+        "type": "number",
         "default": 4
       }
     },
@@ -1206,7 +1206,7 @@
         }
       },
       "multiAudio": {
-        "description": "Set the styling for the multiaudio",
+        "description": "Set the styling for the multiaudio icon",
         "type": "object",
         "required": ["fontFamilyName", "fontString", "fontStyleClass"],
         "fontFamilyName": {
