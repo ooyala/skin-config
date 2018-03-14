@@ -38,6 +38,12 @@
         "languageFile": "",
         "androidResource": "skin-config/languageFiles/ja.json",
         "iosResource": "ja"
+      },
+      {
+        "language": "ko",
+        "languageFile": "",
+        "androidResource": "skin-config/languageFiles/ko.json",
+        "iosResource": "ko"
       }
     ]
   },
