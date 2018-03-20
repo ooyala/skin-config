@@ -733,11 +733,11 @@
       }
     },
     "audio": {
-      "description": "Configuration for multi audio",
+      "description": "Configuration for audio",
       "type": "object",
       "properties": {
         "audioLanguage": {
-          "description": "Set the default multi audio language. This is a string of the form \"en\" for English, \"fr\" for French, etc.",
+          "description": "Set the default audio language. This is a string of the form \"en\" for English, \"fr\" for French, etc.",
           "type": "string",
           "default": "en"
         }
