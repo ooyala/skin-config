@@ -732,6 +732,17 @@
         }
       }
     },
+    "audio": {
+      "description": "Configuration for audio",
+      "type": "object",
+      "properties": {
+        "audioLanguage": {
+          "description": "Set the default audio language. This is a string of the form \"en\" for English, \"fr\" for French, etc.",
+          "type": "string",
+          "default": "en"
+        }
+      }
+    },
     "animationDurations": {
       "description": "Sets duration for VR animation",
       "type": "object",
@@ -762,7 +773,7 @@
       "description": "The set of all required icons, for rendering all the various buttons' states.",
       "type": "object",
       "patternProperties": { "": { "$ref": "#/definitions/icon" } },
-      "required": ["play", "pause", "volume", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn", "left", "right"],
+      "required": ["play", "pause", "volume", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn", "left", "right", "audioAndCC", "selected"],
       "example": ["\"icons\": {",
         "\"play\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0068\", \"fontStyleClass\": \"icon icon-play\"},",
         "\"pause\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0067\", \"fontStyleClass\": \"icon icon-pause\"},",
@@ -784,6 +795,8 @@
         "\"right\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0073\", \"fontStyleClass\": \"icon icon-right\"},",
         "\"learn\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0074\", \"fontStyleClass\": \"icon icon-learn\"},",
         "\"skip\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0075\", \"fontStyleClass\": \"icon icon-skip\"}",
+        "\"audioAndCC\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u005F\", \"fontStyleClass\": \"icon icon-audio-and-cc\"}",    
+        "\"selected\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0040\", \"fontStyleClass\": \"icon icon-selected\"}",            
         "}"],
       "play": {
         "description": "Set the styling for the play icon on mobile devices.",
@@ -1205,8 +1218,8 @@
           "default": "icon icon-auto"
         }
       },
-      "multiAudio": {
-        "description": "Set the styling for the multiaudio icon",
+      "audioAndCC": {
+        "description": "Set the styling for the audio and cc icon",
         "type": "object",
         "required": ["fontFamilyName", "fontString", "fontStyleClass"],
         "fontFamilyName": {
@@ -1217,12 +1230,32 @@
         "fontString": {
           "description": "The string used for displaying the icon. (Usually a single Unicode code point.)",
           "type": "string",
-          "default": "\\u0062"
+          "default": "\\u005F"
         },
         "fontStyleClass": {
           "description": "The CSS class string for displaying the icon, which only applies to HTML5 player",
           "type": "string",
-          "default": "icon icon-multiaudio"
+          "default": "icon icon-audio-and-cc"
+        }
+      },
+      "selected": {
+        "description": "Set the styling for the selected row in list (checkmark) icon",
+        "type": "object",
+        "required": ["fontFamilyName", "fontString", "fontStyleClass"],
+        "fontFamilyName": {
+          "description": "The name of the font family to use.",
+          "type": "string",
+          "default": "alice"
+        },
+        "fontString": {
+          "description": "The string used for displaying the icon. (Usually a single Unicode code point.)",
+          "type": "string",
+          "default": "\\u0040"
+        },
+        "fontStyleClass": {
+          "description": "The CSS class string for displaying the icon, which only applies to HTML5 player",
+          "type": "string",
+          "default": "icon icon-selected"
         }
       }
     }
@@ -1276,7 +1309,7 @@
     "buttonNames": {
       "description": "These are the only buttons currently supported by the UI SDK.",
       "additionalProperties": false,
-      "enum": ["playPause", "volume", "live", "timeDuration", "flexibleSpace", "share", "discovery", "closedCaption", "quality", "logo", "stereoscopic", "fullscreen", "moreOptions", "arrowsBlack", "multiAudio", "bitrateSelector"]
+      "enum": ["playPause", "volume", "live", "timeDuration", "flexibleSpace", "share", "discovery", "closedCaption", "quality", "logo", "stereoscopic", "fullscreen", "moreOptions", "arrowsBlack", "audioAndCC", "bitrateSelector"]
     },
     "buttonArray": {
       "description": "Used to list the buttons for a single platform (desktop vs. mobile).",
