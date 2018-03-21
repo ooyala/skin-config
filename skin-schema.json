@@ -1,5 +1,5 @@
 {
-  "description": "This JSON schema describes the base UI configuration for the Ooyala Player, which can be customized in the <a href=\"https://github.com/ooyala/skin-config.git\">skin.json</a> file. Also see <a href=\"https://facebook.github.io/react\">https://facebook.github.io/react</a> and <a href=\"https://facebook.github.io/react-native\">https://facebook.github.io/react-native</a>.",
+  "description": "This JSON schema describes the base UI configuration for the Ooyala Player, which can be customized in the <a href=\"https://github.com/ooyala/skin-config.git\">skin.json</a> file.  For an overview, see the <a href=\"http://help.ooyala.com/video-platform/concepts/pbv4_about.html\">Ooyala Player</a> documentation.  For background information, see <a href=\"https://facebook.github.io/react\">https://facebook.github.io/react</a> and <a href=\"https://facebook.github.io/react-native\">https://facebook.github.io/react-native</a>.",
   "type": "object",
   "additionalProperties": false,
   "required": ["general", "startScreen", "pauseScreen", "endScreen", "upNext", "moreOptionsScreen", "discoveryScreen", "closedCaptionOptions", "icons", "buttons", "controlBar", "shareScreen", "localization"],
