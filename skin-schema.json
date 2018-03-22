@@ -79,18 +79,18 @@
         "defaultLanguage": {
           "description": "The default language of the localizable strings on the player.",
           "type": "string", "pattern": "^[a-z]{2}$",
-          "valid values": "\"en\", \"es\", \"zh\", \"ja\"",
+          "valid values": "\"en\", \"es\", \"zh\", \"ja\", \"ko\"",
           "default": "en"
         },
         "availableLanguageFile": {
           "description": "An array of languages. Defines the string values used in the player. Languages listed in the array require a separate json file included in the bundle, named '<language>.json' e.g. 'en.json'.",
           "type": "array",
           "items": {"type": "object", "pattern": "^[a-z]{2}$"},
-          "default": "{\"language\": \"en\", \"languageFile\": \"config/en.json\"}, {\"language\": \"es\", \"languageFile\": \"config/es.json\"}, {\"language\": \"zh\", \"languageFile\": \"config/zh.json\"}, {\"language\": \"ja\", \"languageFile\": \"config/ja.json\"}",
+          "default": "{\"language\": \"en\", \"languageFile\": \"config/en.json\"}, {\"language\": \"es\", \"languageFile\": \"config/es.json\"}, {\"language\": \"zh\", \"languageFile\": \"config/zh.json\"}, {\"language\": \"ja\", \"languageFile\": \"config/ja.json\"}, {\"language\": \"ko\", \"languageFile\": \"config/ko.json\"}",
           "language": {
-            "description": "Defines the language. For this release, valid languages are English (en), Spanish (es), Simplified Chinese (zh) and Japanese (ja).",
+            "description": "Defines the language. For this release, valid languages are English (en), Spanish (es), Simplified Chinese (zh), Japanese (ja) and Korean (ko).",
             "type": "string",
-            "valid values": "\"en\" | \"es\" | \"zh\" | \"ja\""
+            "valid values": "\"en\" | \"es\" | \"zh\" | \"ja\" | \"ko\""
           },
           "languageFile": {
             "description": "Path to the localized language file.",
@@ -732,6 +732,17 @@
         }
       }
     },
+    "audio": {
+      "description": "Configuration for audio",
+      "type": "object",
+      "properties": {
+        "audioLanguage": {
+          "description": "Set the default audio language. This is a string of the form \"en\" for English, \"fr\" for French, etc.",
+          "type": "string",
+          "default": "en"
+        }
+      }
+    },
     "animationDurations": {
       "description": "Sets duration for VR animation",
       "type": "object",
@@ -762,7 +773,7 @@
       "description": "The set of all required icons, for rendering all the various buttons' states.",
       "type": "object",
       "patternProperties": { "": { "$ref": "#/definitions/icon" } },
-      "required": ["play", "pause", "volume", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn", "left", "right"],
+      "required": ["play", "pause", "volume", "volumeOff", "expand", "compress", "ellipsis", "replay", "share", "cc", "discovery", "quality", "setting", "dismiss", "toggleOff", "toggleOn", "left", "right", "audioAndCC", "selected"],
       "example": ["\"icons\": {",
         "\"play\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0068\", \"fontStyleClass\": \"icon icon-play\"},",
         "\"pause\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0067\", \"fontStyleClass\": \"icon icon-pause\"},",
@@ -784,8 +795,8 @@
         "\"right\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0073\", \"fontStyleClass\": \"icon icon-right\"},",
         "\"learn\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0074\", \"fontStyleClass\": \"icon icon-learn\"},",
         "\"skip\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0075\", \"fontStyleClass\": \"icon icon-skip\"}",
-        "\"multiAudio\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u005F\", \"fontStyleClass\": \"icon icon-multiaudio\"}",
-        "\"check\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0040\", \"fontStyleClass\": \"icon icon-check\"}",
+        "\"audioAndCC\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u005F\", \"fontStyleClass\": \"icon icon-audio-and-cc\"}",
+        "\"selected\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0040\", \"fontStyleClass\": \"icon icon-selected\"}",            
         "}"],
       "play": {
         "description": "Set the styling for the play icon on mobile devices.",
@@ -1207,8 +1218,8 @@
           "default": "icon icon-auto"
         }
       },
-      "multiAudio": {
-        "description": "Set the styling for the multiaudio icon",
+      "audioAndCC": {
+        "description": "Set the styling for the audio and cc icon",
         "type": "object",
         "required": ["fontFamilyName", "fontString", "fontStyleClass"],
         "fontFamilyName": {
@@ -1219,16 +1230,16 @@
         "fontString": {
           "description": "The string used for displaying the icon. (Usually a single Unicode code point.)",
           "type": "string",
-          "default": "\\u0062"
+          "default": "\\u005F"
         },
         "fontStyleClass": {
           "description": "The CSS class string for displaying the icon, which only applies to HTML5 player",
           "type": "string",
-          "default": "icon icon-multiaudio"
+          "default": "icon icon-audio-and-cc"
         }
       },
-      "check": {
-        "description": "Set the styling for the check button.",
+      "selected": {
+        "description": "Set the styling for the selected row in list (checkmark) icon",
         "type": "object",
         "required": ["fontFamilyName", "fontString", "fontStyleClass"],
         "fontFamilyName": {
@@ -1244,7 +1255,7 @@
         "fontStyleClass": {
           "description": "The CSS class string for displaying the icon, which only applies to HTML5 player",
           "type": "string",
-          "default": "icon icon-check"
+          "default": "icon icon-selected"
         }
       }
     }
@@ -1298,7 +1309,7 @@
     "buttonNames": {
       "description": "These are the only buttons currently supported by the UI SDK.",
       "additionalProperties": false,
-      "enum": ["playPause", "volume", "live", "timeDuration", "flexibleSpace", "share", "discovery", "closedCaption", "quality", "logo", "stereoscopic", "fullscreen", "moreOptions", "arrowsBlack", "multiAudio", "bitrateSelector"]
+      "enum": ["playPause", "volume", "live", "timeDuration", "flexibleSpace", "share", "discovery", "closedCaption", "quality", "logo", "stereoscopic", "fullscreen", "moreOptions", "arrowsBlack", "audioAndCC", "bitrateSelector"]
     },
     "buttonArray": {
       "description": "Used to list the buttons for a single platform (desktop vs. mobile).",

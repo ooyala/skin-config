@@ -38,6 +38,12 @@
         "languageFile": "",
         "androidResource": "skin-config/languageFiles/ja.json",
         "iosResource": "ja"
+      },
+      {
+        "language": "ko",
+        "languageFile": "",
+        "androidResource": "skin-config/languageFiles/ko.json",
+        "iosResource": "ko"
       }
     ]
   },
@@ -221,6 +227,9 @@
     "vrNotification": true,
     "vrIcon": false
   },
+  "audio": {
+    "audioLanguage": "en"
+  },
   "animationDurations": {
     "vrNotification": 5,
     "vrIcon": 4
@@ -242,6 +251,7 @@
       {"name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":45 },
       {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":45 },
       {"name":"arrowsBlack", "location": "mainView", "whenDoesNotFit":"keep", "minWidth":45 },
+      {"name":"audioAndCC", "location": "controlBar", "whenDoesNotFit":"keep", "minWidth":45 },
     ],
     "desktopAd": [
       {"name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":45 },
@@ -260,9 +270,9 @@
       {"name":"discovery", "location":"moreOptions" },
       {"name":"closedCaption", "location":"moreOptions" },
       {"name":"stereoscopic", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":50 },
+      {"name":"audioAndCC", "location": "controlBar", "whenDoesNotFit":"keep", "minWidth":50 },
       {"name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":50 },
-      {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":50 },
-      {"name":"multiAudio", "location": "controlBar", "whenDoesNotFit":"keep", "minWidth":50 }
+      {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":50 }
     ],
     "mobileAd": [
       {"name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":50 },
@@ -302,7 +312,7 @@
     "stereoOn": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u0057", "fontStyleClass": "oo-icon oo-icon-system-auto"},
     "stereoOff": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u0057", "fontStyleClass": "oo-icon oo-icon-system-auto"},
     "vrIcon": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u0059", "fontStyleClass": "oo-icon"},
-    "multiAudio": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u005F", "fontStyleClass": "oo-icon oo-icon-multiaudio"},
-    "check": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u0040", "fontStyleClass": "oo-icon oo-icon-check"}
+    "audioAndCC": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u005F", "fontStyleClass": "oo-icon oo-icon-audio-and-cc"},
+    "selected": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u0040", "fontStyleClass": "oo-icon oo-icon-selected"}
   }
 }
