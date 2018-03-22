@@ -123,5 +123,7 @@
   "Uniform": "なし",
   "Depressed": "凹",
   "Raised": "凸",
-  "Shadow": "影"
+  "Shadow": "影",
+  "Audio": "Audio",
+  "Subtitles": "Subtitles"
 }

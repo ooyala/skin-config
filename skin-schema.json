@@ -784,6 +784,8 @@
         "\"right\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0073\", \"fontStyleClass\": \"icon icon-right\"},",
         "\"learn\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0074\", \"fontStyleClass\": \"icon icon-learn\"},",
         "\"skip\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0075\", \"fontStyleClass\": \"icon icon-skip\"}",
+        "\"multiAudio\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u005F\", \"fontStyleClass\": \"icon icon-multiaudio\"}",
+        "\"check\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0040\", \"fontStyleClass\": \"icon icon-check\"}",
         "}"],
       "play": {
         "description": "Set the styling for the play icon on mobile devices.",
@@ -1223,6 +1225,26 @@
           "description": "The CSS class string for displaying the icon, which only applies to HTML5 player",
           "type": "string",
           "default": "icon icon-multiaudio"
+        }
+      },
+      "check": {
+        "description": "Set the styling for the check button.",
+        "type": "object",
+        "required": ["fontFamilyName", "fontString", "fontStyleClass"],
+        "fontFamilyName": {
+          "description": "The name of the font family to use.",
+          "type": "string",
+          "default": "alice"
+        },
+        "fontString": {
+          "description": "The string used for displaying the icon. (Usually a single Unicode code point.)",
+          "type": "string",
+          "default": "\\u0040"
+        },
+        "fontStyleClass": {
+          "description": "The CSS class string for displaying the icon, which only applies to HTML5 player",
+          "type": "string",
+          "default": "icon icon-check"
         }
       }
     }
