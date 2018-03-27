@@ -132,5 +132,8 @@
   "Closed Captions":"隐藏式字幕",
   "Full Screen": "全屏",
   "Exit Full Screen": "退出全屏",
-  "More Options": "更多选项"
+  "More Options": "更多选项",
+  "Audio": "Audio",
+  "Subtitles": "Subtitles",
+  "Undefined language": "Undefined language"
 }

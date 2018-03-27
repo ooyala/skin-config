@@ -131,6 +131,9 @@
   "Unmute": "Sonido",
   "Closed Captions":"Subtítulos",
   "Full Screen": "Pantalla completa",
-  "Exit Full Screen": "Salir de la pantalla completa",
-  "More Options": "Más opciones"
+  "Exit Full Screen": "Salir pantalla completa",
+  "More Options": "Más Opciones",
+  "Audio": "Audio",
+  "Subtitles": "Subtitles",
+  "Undefined language": "Undefined language"
 }

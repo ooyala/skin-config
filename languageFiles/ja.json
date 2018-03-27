@@ -132,5 +132,8 @@
   "Closed Captions":"クローズドキャプション",
   "Full Screen": "全画面",
   "Exit Full Screen": "全画面表示を終了",
-  "More Options": "その他のオプション"
+  "More Options": "その他のオプション",
+  "Audio": "Audio",
+  "Subtitles": "Subtitles",
+  "Undefined language": "Undefined language"
 }

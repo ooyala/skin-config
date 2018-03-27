@@ -132,5 +132,8 @@
   "Closed Captions":"선택 자막",
   "Full Screen": "전체 화면",
   "Exit Full Screen": "전체 화면 나가기",
-  "More Options": "추가 옵션"
+  "More Options": "추가 옵션",
+  "Audio": "Audio",
+  "Subtitles": "Subtitles",
+  "Undefined language": "Undefined language"
 }
