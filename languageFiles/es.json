@@ -118,7 +118,7 @@
   "Small": "Pequeña",
   "Medium": "Mediana",
   "Large": "Grande",
-  "Extra Large": "Extragrande",
+  "Extra Large": "Extra grande",
   "Text enhancement": "Mejora en el texto",
   "Uniform": "Uniforme",
   "Depressed": "Aplastada",
@@ -134,6 +134,7 @@
   "Exit Full Screen": "Salir pantalla completa",
   "More Options": "Más Opciones",
   "Audio": "Audio",
-  "Subtitles": "Subtitles",
-  "Undefined language": "Undefined language"
+  "Subtitles": "Subtítulos",
+  "Undefined language": "Lenguaje indefinido",
+  "No linguistic content": "Contenido no lingüístico",
 }
