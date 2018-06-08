@@ -175,6 +175,11 @@
     "showUpNext": true,
     "timeToShow": 10
   },
+  "skipControls": {
+    "enabled": true,
+    "skipBackwardsTime": 10,
+    "skipForwardTime": 10
+  },
   "controlBar": {
     "volumeControl": {
       "color": ""
