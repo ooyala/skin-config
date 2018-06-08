@@ -177,8 +177,26 @@
   },
   "skipControls": {
     "enabled": true,
-    "skipBackwardsTime": 10,
-    "skipForwardTime": 10
+    "skipBackwardTime": 10,
+    "skipForwardTime": 10,
+    "buttons": {
+      "previousVideo": {
+        "enabled": true,
+        "index": 1
+      },
+      "skipBackward": {
+        "enabled": true,
+        "index": 2
+      },
+      "skipForward": {
+        "enabled": true,
+        "index": 3
+      },
+      "nextVideo": {
+        "enabled": true,
+        "index": 4
+      }
+    }
   },
   "controlBar": {
     "volumeControl": {
