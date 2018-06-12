@@ -542,11 +542,11 @@
               "$ref": "#/definitions/skipControlsButton"
             },
             "skipBackward": {
-              "description": "Button that allows skipping a few seconds backward in the video.",
+              "description": "Button that allows skipping the video backward the amount of seconds defined in \"skipBackwardTime\".",
               "$ref": "#/definitions/skipControlsButton"
             },
             "skipForward": {
-              "description": "Button that allows skipping a few seconds forward in the video.",
+              "description": "Button that allows skipping the video forward the amount of seconds defined in \"skipForwardTime\".",
               "$ref": "#/definitions/skipControlsButton"
             },
             "nextVideo": {
