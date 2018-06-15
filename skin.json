@@ -176,7 +176,7 @@
     "timeToShow": 10
   },
   "skipControls": {
-    "enabled": true,
+    "enabled": false,
     "skipBackwardTime": 10,
     "skipForwardTime": 10,
     "buttons": {
