@@ -247,6 +247,11 @@
           "enum": ["default", "discovery"],
           "default": "default"
         },
+        "autoHide": {
+          "description": "The pause screen is automatically hidden when the mouse is not in the pause screen area if and only if this parameter is set to true.",
+          "type": "boolean",
+          "default": false
+        },
         // TODO: showPauseIcon could be folded into pauseIconPosition as a 'none' enum value.
         "showPauseIcon": {
           "description": "Show the pause icon on the pause screen if set to true.  Hide it if set to false.",
