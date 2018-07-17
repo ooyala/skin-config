@@ -512,6 +512,26 @@
         }
       }
     },
+    "playbackSpeed": {
+      "description": "Configuration values for the \"Playback Speed\" controls",
+      "type": "object",
+      "required": [ "options" ],
+      "properties": {
+        "options": {
+          "description": "The list of playback speed rates that are shown in the \"Playback Speed\" menu",
+          "type": "array",
+          "default": "Will contain the following values by default: 0.5, 0.75, 1, 1.25, 1.5, 2",
+          "minItems": 2,
+          "maxItems": 10,
+          "uniqueItems": true,
+          "items": {
+            "type": "number",
+            "minimum": 0.5,
+            "maximum": 2
+          }
+        }
+      }
+    },
     "skipControls": {
       "description": "Toolbar which contains buttons that allow skipping back or forward and switching to the previous or next videos.",
       "type": "object",
