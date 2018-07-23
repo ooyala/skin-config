@@ -256,6 +256,9 @@
   "audio": {
     "audioLanguage": "none"
   },
+  "seekFwd": {
+    "seekValue": 10
+  },
   "animationDurations": {
     "vrNotification": 5,
     "vrIcon": 4

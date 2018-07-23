@@ -808,6 +808,17 @@
         }
       }
     },
+    "seekFwd": {
+      "description": "Configuration forward and backward buttons",
+      "type": "object",
+      "properties": {
+        "seekValue": {
+          "description": "Set the default value for fast seek. The default value is 10 and measure is seconds",
+          "type": "number",
+          "default": 10
+        }
+      }
+    },
     "animationDurations": {
       "description": "Sets duration for VR animation",
       "type": "object",
