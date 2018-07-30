@@ -91,6 +91,7 @@
     "showPromo": true
   },
   "pauseScreen": {
+    "autoHide": false,
     "showPauseIcon": true,
     "pauseIconPosition": "center",
     "PauseIconStyle": {
