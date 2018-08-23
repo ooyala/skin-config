@@ -254,7 +254,8 @@
     "vrIcon": false
   },
   "audio": {
-    "audioLanguage": "none"
+    "audioLanguage": "none",
+    "audioOnly": true
   },
   "animationDurations": {
     "vrNotification": 5,
@@ -304,6 +305,11 @@
       {"name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
       {"name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":50 },
       {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":50 }
+    ],
+    "audioOnly": [
+      {"name":"centeredVolume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":240 },
+      {"name":"skipControls", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":240 },
+      {"name":"centeredPlayPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":240 }
     ]
   },
   "icons": {
