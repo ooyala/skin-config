@@ -199,6 +199,28 @@
         "enabled": true,
         "index": 4
       }
+    },
+    "audioOnlyButtons": {
+      "previousVideo": {
+        "enabled": true,
+        "index": 1
+      },
+      "skipBackward": {
+        "enabled": true,
+        "index": 2
+      },
+      "playPause": {
+        "enabled": true,
+        "index": 3
+      },
+      "skipForward": {
+        "enabled": true,
+        "index": 4
+      },
+      "nextVideo": {
+        "enabled": true,
+        "index": 5
+      }
     }
   },
   "controlBar": {
