@@ -329,9 +329,9 @@
       {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":50 }
     ],
     "audioOnly": [
-      {"name":"centeredVolume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":200 },
+      {"name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":200 },
       {"name":"skipControls", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":200 },
-      {"name":"audioOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":50 },
+      {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":50 },
       {"name":"share", "location":"moreOptions" },
       {"name":"playbackSpeed", "location":"moreOptions" }
     ]
