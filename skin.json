@@ -64,6 +64,7 @@
   },
   "responsive": {
     "breakpoints": {
+      "audioOnly": {"id": "audioOnly", "name": "oo-xsmall", "multiplier": 0.7},
       "xs": {"id": "xs", "name": "oo-xsmall", "maxWidth": 559, "multiplier": 0.7},
       "sm": {"id": "sm", "name": "oo-small", "minWidth": 560, "maxWidth": 839, "multiplier": 1},
       "md": {"id": "md", "name": "oo-medium", "minWidth": 840, "maxWidth": 1279, "multiplier": 1},
