@@ -278,7 +278,7 @@
   },
   "audio": {
     "audioLanguage": "none",
-    "audioOnly": true
+    "audioOnly": false
   },
   "animationDurations": {
     "vrNotification": 5,
