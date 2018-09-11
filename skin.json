@@ -201,7 +201,7 @@
         "index": 4
       }
     },
-    "audioOnlyButtons": {
+    "buttonsWithPlayPause": {
       "previousVideo": {
         "enabled": true,
         "index": 1
