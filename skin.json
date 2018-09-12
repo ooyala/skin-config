@@ -201,7 +201,7 @@
         "index": 4
       }
     },
-    "controlBarButtons": {
+    "controlBarSkipControls": {
       "previousVideo": {
         "enabled": true,
         "index": 1

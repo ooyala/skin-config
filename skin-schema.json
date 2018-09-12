@@ -535,7 +535,7 @@
     "skipControls": {
       "description": "Toolbar which contains buttons that allow skipping back or forward and switching to the previous or next videos.",
       "type": "object",
-      "required": [ "enabled", "skipBackwardTime", "skipForwardTime", "buttons", "controlBarButtons" ],
+      "required": [ "enabled", "skipBackwardTime", "skipForwardTime", "buttons", "controlBarSkipControls" ],
       "properties": {
         "enabled": {
           "description": "Show the \"Skip Controls\" toolbar if set to true, hide if set to false.",
@@ -575,7 +575,7 @@
             }
           }
         },
-        "controlBarButtons": {
+        "controlBarSkipControls": {
           "description": "The collection of skip controls buttons that can be displayed in the control bar.",
           "type": "object",
           "properties": {
