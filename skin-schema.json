@@ -897,6 +897,8 @@
         "\"skip\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0075\", \"fontStyleClass\": \"icon icon-skip\"}",
         "\"audioAndCC\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u005F\", \"fontStyleClass\": \"icon icon-audio-and-cc\"}",
         "\"selected\": { \"fontFamilyName\": \"alice\", \"fontString\": \"\\u0040\", \"fontStyleClass\": \"icon icon-selected\"}",
+        "\"chromecast-connected\": {\"fontFamilyName\": \"ooyala-slick-type\", \"fontString\": \"\\u003B\", \"fontStyleClass\": \"oo-icon\"}",
+        "\"chromecast-disconnected\": {\"fontFamilyName\": \"ooyala-slick-type\", \"fontString\": \"\\u003A\", \"fontStyleClass\": \"oo-icon\"}",
         "}"],
       "play": {
         "description": "Set the styling for the play icon on mobile devices.",
@@ -1409,7 +1411,23 @@
     "buttonNames": {
       "description": "These are the only buttons currently supported by the UI SDK.",
       "additionalProperties": false,
-      "enum": ["playPause", "volume", "live", "timeDuration", "flexibleSpace", "share", "discovery", "closedCaption", "quality", "logo", "stereoscopic", "fullscreen", "moreOptions", "arrowsBlack", "audioAndCC", "bitrateSelector"]
+      "enum": ["playPause",
+               "volume",
+               "live",
+               "timeDuration",
+               "flexibleSpace",
+               "share",
+               "discovery",
+               "closedCaption",
+               "quality",
+               "logo",
+               "stereoscopic",
+               "fullscreen", 
+               "moreOptions",
+               "arrowsBlack",
+               "audioAndCC",
+               "bitrateSelector",
+               "chromecast"]
     },
     "buttonArray": {
       "description": "Used to list the buttons for a single platform (desktop vs. mobile).",
