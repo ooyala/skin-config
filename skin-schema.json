@@ -1422,6 +1422,7 @@
                "quality",
                "logo",
                "stereoscopic",
+               "playbackSpeed",
                "fullscreen",
                "moreOptions",
                "arrowsBlack",
