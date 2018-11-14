@@ -319,15 +319,15 @@
       {"name":"share", "location":"moreOptions" },
       {"name":"discovery", "location":"moreOptions" },
       {"name":"closedCaption", "location":"moreOptions" },
-      {"name":"stereoscopic", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":28 },
-      {"name":"audioAndCC", "location": "controlBar", "whenDoesNotFit":"keep", "minWidth":28 },
-      {"name":"Fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":28 },
+      {"name":"stereoscopic", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":28 },
+      {"name":"audioAndCC", "location": "controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":28 },
+      {"name":"Fullscreen", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":28 },
       {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":28 }
     ],
     "mobileAd": [
       {"name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":28 },
-      {"name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
-      {"name":"Fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":28 },
+      {"name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":1 },
+      {"name":"Fullscreen", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":28 },
       {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":28 }
     ],
     "audioOnly": [
