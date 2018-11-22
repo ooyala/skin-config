@@ -307,7 +307,7 @@
       {"name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":240 },
       {"name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
       {"name":"logo", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":125 },
-      {"name":"fullsreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":45 },
+      {"name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":45 },
       {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":45 }
     ],
     "mobileContent": [
@@ -321,13 +321,13 @@
       {"name":"closedCaption", "location":"moreOptions" },
       {"name":"stereoscopic", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":28 },
       {"name":"audioAndCC", "location": "controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":28 },
-      {"name":"fullsreen", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":28 },
+      {"name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":28 },
       {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":28 }
     ],
     "mobileAd": [
       {"name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":28 },
       {"name":"flexibleSpace", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":1 },
-      {"name":"fullsreen", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":28 },
+      {"name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":28 },
       {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":28 }
     ],
     "audioOnly": [
