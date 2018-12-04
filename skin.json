@@ -330,13 +330,18 @@
       {"name":"fullscreen", "location":"controlBar", "whenDoesNotFit":"moveToMoreOptions", "minWidth":28 },
       {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":28 }
     ],
-    "audioOnly": [
-      {"name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":200 },
-      {"name":"skipControls", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":200 },
-      {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":50 },
-      {"name":"share", "location":"moreOptions" },
-      {"name":"playbackSpeed", "location":"moreOptions" }
-    ]
+    "audioOnly": {
+      "desktop": [{"name":"skipControls", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":200 }],
+      "mobile": [
+        {"name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":60 },
+        {"name":"seekBackwards", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":60 },
+        {"name":"playPause", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":60 },
+        {"name":"seekForward", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":60 },
+        {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":50 },
+        {"name":"share", "location":"moreOptions" },
+        {"name":"playbackSpeed", "location":"moreOptions" }
+      ]
+    }
   },
   "icons": {
     "play": {"fontFamilyName": "ooyala-slick-type", "fontString": "\u003e", "fontStyleClass": "oo-icon oo-icon-play-slick"},
