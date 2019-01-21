@@ -225,6 +225,7 @@
     }
   },
   "controlBar": {
+    "enabled": true,
     "volumeControl": {
       "color": ""
     },
