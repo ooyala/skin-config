@@ -606,10 +606,14 @@
     "controlBar": {
       "description": "The playback control bar. Generally contains a play-pause button, scrubber control, etc. The set of items to show comes from the 'buttons' part of the schema.",
       "type": "object",
-      "enabled": true,
       "additionalProperties": false,
       "required": [ "height", "autoHide", "logo" ],
       "properties": {
+        "enabled": {
+            "description": "Show the control bar if set to true. Hide the control bar if set to false. Default is true.",
+            "type": "boolean",
+            "default": true
+        },
         "volumeControl": {
           "description": "Defines color of volume control in control bar.",
           "type": "object",
