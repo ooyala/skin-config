@@ -606,6 +606,7 @@
     "controlBar": {
       "description": "The playback control bar. Generally contains a play-pause button, scrubber control, etc. The set of items to show comes from the 'buttons' part of the schema.",
       "type": "object",
+      "enabled": true,
       "additionalProperties": false,
       "required": [ "height", "autoHide", "logo" ],
       "properties": {
