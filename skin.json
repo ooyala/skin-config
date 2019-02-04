@@ -334,7 +334,13 @@
       {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":28 }
     ],
     "audioOnly": {
-      "desktop": [{"name":"skipControls", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":200 }],
+      "desktop": [
+        {"name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":200 },
+        {"name":"skipControls", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":200 },
+        {"name":"moreOptions", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":50 },
+        {"name":"share", "location":"moreOptions" },
+        {"name":"playbackSpeed", "location":"moreOptions" }
+      ],
       "mobile": [
         {"name":"volume", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":60 },
         {"name":"seekBackwards", "location":"controlBar", "whenDoesNotFit":"keep", "minWidth":60 },
