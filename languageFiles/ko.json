@@ -141,5 +141,10 @@
   "Undefined language": "정의되지 않은 언어",
   "No linguistic content": "언어 콘텐츠 없음",
   "Speed": "속도",
-  "Normal": "보통"
+  "Normal": "보통",
+  "Move left": "Move left",
+  "Move right": "Move right",
+  "Move up": "Move up",
+  "Move down": "Move down",
+  "Reset View": "Reset View"
 }

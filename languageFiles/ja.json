@@ -141,5 +141,10 @@
   "Undefined language": "未定義の言語",
   "No linguistic content": "言語コンテンツなし",
   "Speed": "速度",
-  "Normal": "標準"
+  "Normal": "標準",
+  "Move left": "Move left",
+  "Move right": "Move right",
+  "Move up": "Move up",
+  "Move down": "Move down",
+  "Reset View": "Reset View"
 }
