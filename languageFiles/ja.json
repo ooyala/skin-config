@@ -142,9 +142,9 @@
   "No linguistic content": "言語コンテンツなし",
   "Speed": "速度",
   "Normal": "標準",
-  "Move left": "Move left",
-  "Move right": "Move right",
-  "Move up": "Move up",
-  "Move down": "Move down",
-  "Reset View": "Reset View"
+  "Move left": "左に移動",
+  "Move right": "右に移動",
+  "Move up": "上に移動",
+  "Move down": "下に移動",
+  "Reset View": "表示をリセット"
 }

@@ -142,9 +142,9 @@
   "No linguistic content": "Sin contenido lingüístico",
   "Speed": "Velocidad",
   "Normal": "Normal",
-  "Move left": "Move left",
-  "Move right": "Move right",
-  "Move up": "Move up",
-  "Move down": "Move down",
-  "Reset View": "Reset View"
+  "Move left": "Mover a la izquierda",
+  "Move right": "Mover a la derecha",
+  "Move up": "Subir",
+  "Move down": "Bajar",
+  "Reset View": "Restablecer vista"
 }
