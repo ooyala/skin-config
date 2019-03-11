@@ -224,6 +224,39 @@
       }
     }
   },
+  "castControls": {
+    "enabled": false,
+    "skipBackwardTime": 30,
+    "skipForwardTime": 30,
+    "buttons": {
+      "previousVideo": {
+        "enabled": true,
+        "index": 1
+      },
+      "skipBackward": {
+        "enabled": true,
+        "index": 2
+      },
+      "skipForward": {
+        "enabled": true,
+        "index": 3
+      },
+      "nextVideo": {
+        "enabled": true,
+        "index": 4
+      }
+    }
+  },
+  "castDevicesScreen": {
+    "iconStyle": {
+      "active": {
+        "color": "#3eb5f7"
+      },
+      "inactive": {
+        "color": "#FFFFFF"
+      }
+    }
+  },
   "controlBar": {
     "enabled": true,
     "volumeControl": {
