@@ -675,6 +675,11 @@
       "additionalProperties": false,
       "required": [ "height", "autoHide", "logo" ],
       "properties": {
+        "enabled": {
+          "description": "Show the control bar if set to true. Hide the control bar if set to false. Default is true.",
+          "type": "boolean",
+          "default": true
+        },
         "volumeControl": {
           "description": "Defines color of volume control in control bar.",
           "type": "object",
@@ -924,7 +929,7 @@
         "desktopAd": { "$ref": "#/definitions/buttonArray" },
         "mobileContent": { "$ref": "#/definitions/buttonArray" },
         "mobileAd": { "$ref": "#/definitions/buttonArray" },
-        "audioOnly": { 
+        "audioOnly": {
           "description": "Defines the buttons that can appear in the audio only view on the controlBar and/or the moreOptions panel. Desktop and Mobile platforms can be configured individually.",
           "type": "object",
           "required": ["desktop", "mobile"],
