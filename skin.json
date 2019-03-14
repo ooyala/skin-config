@@ -225,9 +225,9 @@
     }
   },
   "castControls": {
-    "enabled": false,
-    "skipBackwardTime": 30,
-    "skipForwardTime": 30,
+    "enabled": true,
+    "skipBackwardTime": 10,
+    "skipForwardTime": 10,
     "buttons": {
       "previousVideo": {
         "enabled": true,
@@ -245,9 +245,7 @@
         "enabled": true,
         "index": 4
       }
-    }
-  },
-  "castDevicesScreen": {
+    },
     "iconStyle": {
       "active": {
         "color": "#3eb5f7"

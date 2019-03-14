@@ -2,7 +2,7 @@
   "description": "This JSON schema describes the base UI configuration for the Ooyala Player, which can be customized in the <a href=\"https://github.com/ooyala/skin-config.git\">skin.json</a> file. Also see <a href=\"https://facebook.github.io/react\">https://facebook.github.io/react</a> and <a href=\"https://facebook.github.io/react-native\">https://facebook.github.io/react-native</a>.",
   "type": "object",
   "additionalProperties": false,
-  "required": ["general", "startScreen", "pauseScreen", "endScreen", "upNext", "moreOptionsScreen", "castDevicesScreen", "discoveryScreen", "closedCaptionOptions", "icons", "buttons", "controlBar", "shareScreen", "localization"],
+  "required": ["general", "startScreen", "pauseScreen", "endScreen", "upNext", "moreOptionsScreen", "castControls", "discoveryScreen", "closedCaptionOptions", "icons", "buttons", "controlBar", "shareScreen", "localization"],
   "properties": {
     "general": {
       "description": "Configuration of things that do not appear in only one part of the UI.",
@@ -478,20 +478,6 @@
         }
       }
     },
-    "castDevicesScreen": {
-      "description": "The Cast devices overflow panel. The set of items that shows list of available cast devices",
-      "type": "object",
-      "required": ["iconSize", "color"],
-      "additionalProperties": false,
-      "properties": {
-        "iconSize": {"type": "number"},
-        "color": {"$ref": "#/definitions/color"},
-        "iconStyle": {
-          "description": "Default color is white with an opacity of 1",
-          "$ref": "#/definitions/iconStyle"
-        }
-      }
-    },
     "closedCaptionOptions": {
       "description": "Settings regarding closed captioning.",
       "type": "object",
@@ -622,28 +608,30 @@
       "type": "object",
       "required": [
         "enabled",
-        "previousVideo",
-        "skipBackward",
-        "skipForward",
-        "nextVideo",
-        "buttons"
+        "skipBackwardTime",
+        "skipForwardTime",
+        "buttons",
+        "iconStyle"
       ],
       "properties": {
         "enabled": {
           "description": "Show the \"Cast button\" if set to true, hide if set to false.",
-          "type": "boolean"
+          "type": "boolean",
+          "default": false
         },
         "skipBackwardTime": {
           "description": "An integer number ranging from 1 to 60. Controls the amount of seconds that the playhead moves when the \"Skip Backward\" button is clicked in cast mode.",
           "type": "number",
           "minimum": 1,
-          "maximum": 99
+          "maximum": 60,
+          "default": 15
         },
         "skipForwardTime": {
           "description": "An integer number ranging from 1 to 60. Controls the amount of seconds that the playhead moves when the \"Skip Forward\" button is clicked in cast mode.",
           "type": "number",
           "minimum": 1,
-          "maximum": 99
+          "maximum": 60,
+          "default": 15
         },
         "buttons": {
           "description": "The collection of buttons that can be displayed on the \"Cast Controls\" toolbar.",
@@ -651,19 +639,40 @@
           "properties": {
             "previousVideo": {
               "description": "Button that allows switching to the last video that was played or to the previous video in a playlist.",
-              "$ref": "#/definitions/skipControlsButton"
+              "$ref": "#/definitions/castControlsButton"
             },
             "skipBackward": {
               "description": "Button that allows skipping the video backward the amount of seconds defined in \"skipBackwardTime\".",
-              "$ref": "#/definitions/skipControlsButton"
+              "$ref": "#/definitions/castControlsButton"
             },
             "skipForward": {
               "description": "Button that allows skipping the video forward the amount of seconds defined in \"skipForwardTime\".",
-              "$ref": "#/definitions/skipControlsButton"
+              "$ref": "#/definitions/castControlsButton"
             },
             "nextVideo": {
               "description": "Button that allows switching to the next video recommendation or to the next video in a playlist.",
-              "$ref": "#/definitions/skipControlsButton"
+              "$ref": "#/definitions/castControlsButton"
+            }
+          }
+        },
+        "iconStyle": {
+          "description": "Provide possibility to change color of cast elements. The default color is #3eb5f7",
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "active": {
+              "color": {
+                "description": "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+                "type": "string",
+                "default": "#3eb5f7"
+              }
+            },
+            "inactive": {
+              "color": {
+                "description": "Any valid CSS color value (named colors, three-digit hex color, six-digit hex color, RGB colors).",
+                "type": "string",
+                "default": "#FFFFFF"
+              }
             }
           }
         }
@@ -1522,6 +1531,24 @@
         "enabled": {
           "description": "Show the button if set to true, hide if set to false.",
           "type": "boolean"
+        },
+        "index": {
+          "description": "An integer number which determines the order in which the button will be shown within the toolbar. Buttons are sorted in ascending order.",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    },
+    "castControlsButton": {
+      "description": "Buttons displayed on the \"CastConnected\" screen.",
+      "type": "object",
+      "required": [ "enabled", "index" ],
+      "properties": {
+        "enabled": {
+          "description": "Show the button if set to true, hide if set to false.",
+          "type": "boolean",
+          "default": true
         },
         "index": {
           "description": "An integer number which determines the order in which the button will be shown within the toolbar. Buttons are sorted in ascending order.",
